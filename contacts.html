@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixMart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400,500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400,500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header class="header block-wrapper">
+        <a href="#" class="logo">
+            <img src="images/icons/logo.svg" width="108" height="24" alt="PixMart">
+        </a>
+        <nav class="header-nav">
+            <ul class="header-nav__list">
+                <li class="header-nav__item header-nav__item--active">
+                    <a href="index.html">About</a>
+                </li>
+                <li class="header-nav__item">
+                    <a href="products.html">Products</a>
+                </li>
+                <li class="header-nav__item">
+                    <a href="catalog.html">Creators</a>
+                </li>
+                <li class="header-nav__item">
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li class="header-nav__item">
+                    <a href="contacts.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <form class="search-form" action="/search">
+                <input class="search-form__input" type="search" placeholder="Search for Digital Assets" aria-label="Search"> 
+            </form >
+            <a href="#" class="btn btn--blue btn--square">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z" stroke="#F8F7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main class="contacts">
+        <article class="contacts__content block-wrapper">
+            <h2 class="title">CONTACT</h2>
+            <div class="contacts__wrapper">
+                <div class="contacts__block">  
+                    <strong class="intro-title">
+                        Get in Touch
+                        with Us
+                    </strong>  
+                    <p>We are here to help you navigate your creative journey. Reach out for any questions, support, or feedback.</p>
+                    <a href="#" class="btn btn--blue">Shop Now</a>
+
+                    <section class="contacts__info">
+                        <a href="tel:+1234567890">+123 456 7890</a>
+                        <a href="mailto:support@pixmart.com&body=Hello?subject=Question from PixMart website">support@pixmart.com</a>
+                    </section>
+
+                    <section class="contacts__map">
+                        <div class="contacts__location"></div>
+                    </section>
+
+                    <iframe class="map" src="https://www.google.com/maps/place/Old+Town+Bar/@42.0934828,19.1336553,17z/data=!3m1!4b1!4m6!3m5!1s0x134e747925fd55d9:0xe9748ed13db576bd!8m2!3d42.0934828!4d19.1336553!16s%2Fg%2F122xqlps?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" width="618" height="314" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+                <div class="contacts__block">   
+                    <form class="contacts__form" action="">
+
+                        <div class="form-control">
+                            <label class="form-control__label" for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control__input" placeholder="Amelia Robert Johnson" minlength="3" required>
+                        </div>
+
+                        <div class="form-control">
+                            <label class="form-control__label" for="email">Email</label>
+                            <input type="email" id="email" class="form-control__input" placeholder="amelia.robertjohnson@pixmart.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        </div>
+
+                        <div class="form-control">
+                            <label class="form-control__label" for="select">Subject</label>
+                                <select class="form-control__select" name="sort" id="sort">
+                                    <option class="select__option" value="">General Inquiry</option>
+                                    <option class="select__option" value="newest">Newest</option>
+                                    <option class="select__option" value="popular">Most popular</option>
+                                    <option class="select__option" value="increasing">Increasing in price</option>
+                                    <option class="select__option" value="lowering">Lowering the price</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="form-control">
+                            <label class="form-control__label" for="message">Message</label>
+                            <textarea id="message" class="form-control__input" placeholder="Enter your message ..." minlength="10" required></textarea>
+                        </div>
+
+                        <button class="btn btn--blue" type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </main>
+
+
+
+    <footer class="footer block-wrapper">
+        <div class="footer__main">
+            <div class="logo__wrapper">
+                <strong class="logo">
+                    <img src="images/icons/logo.svg" width="300" height="58" alt="PixMart">
+                </strong>
+                <div class="footer__description">Your premium digital assets solution with high quality and comprehensive range of products and services.</div>
+            </div>
+            <nav class="footer-nav">
+                <div class="footer-nav__block">
+                    <strong class="footer-nav__title">Company</strong>
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Homepage v1</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Homepage v2</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Homepage v3</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">About Us</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">About Us</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Blog Articles</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-nav__block">
+                    <strong class="footer-nav__title">Products</strong>
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Website</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Mobile App</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Social Media Feeds</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Presentation</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Product Mockups</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Illustrations</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-nav__block">
+                    <strong class="footer-nav__title">Account</strong>
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Your Cart</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Check Out</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Refund Policy</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Company Policy</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Send A Message</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#" class="footer-nav__link">Customer Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="footer__secondary">
+            <ul class="social">
+                <li class="social__item">
+                    <a href="#">
+                        <img src="images/icons/twitter.svg" width="24" height="24" alt="Twitter">
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#">
+                        <img src="images/icons/facebook.svg" width="24" height="24" alt="Facebook">
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#">
+                        <img src="images/icons/telegram.svg" width="24" height="24" alt="Telegram">
+                    </a>
+                </li>
+            </ul>
+            <form class="form-subscribe" action="" method="post">
+                <label class="form-subscribe__label" for="subscribe">Subscribe to
+                    Design Newsletter</label>
+                <input class="form-subscribe__input" type="email" id="subscribe" name="email" placeholder="Enter your email address ..." required>
+                <button class="btn btn--blue" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <div class="copyright__wrapper block-wrapper">
+            <ul class="copyright__list">
+                <li class="copyright__item">
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li class="copyright__item">
+                    <a href="#">Terms and Condition</a>
+                </li>
+                <li class="copyright__item">
+                    <a href="#">Site Map</a>
+                </li>
+            </ul>
+            <p>Copyright © 2024 Pixmart. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
