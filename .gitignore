@@ -37,4 +37,6 @@ coverage/
 .stylelintcache 
 
 # Project specific
-utils/ 
+utils/
+.stylelintrc.json
+.prettierrc 
