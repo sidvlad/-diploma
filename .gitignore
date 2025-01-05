@@ -35,3 +35,6 @@ coverage/
 .npm/
 .eslintcache
 .stylelintcache 
+
+# Project specific
+utils/ 
