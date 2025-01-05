@@ -160,19 +160,59 @@ figure {
   background-color: var(--color-white);
   color: #0d0d15;
 }
+.btn--white:hover {
+  background-color: rgba(41, 77, 117, 0.0901960784);
+  outline: 1px solid #3892F3;
+}
+.btn--white:focus {
+  background-color: rgba(41, 77, 117, 0.0901960784);
+}
+.btn--white:active {
+  outline: 4px solid #3892F3;
+  background-color: rgba(41, 77, 117, 0.0901960784);
+}
+.btn--white:disabled {
+  color: rgba(34, 52, 73, 0.4);
+}
 .btn--blue {
   background-color: var(--color-blue);
   color: #f5f8fb;
 }
+.btn--blue:hover {
+  background-color: #3892F3;
+}
+.btn--blue:focus {
+  background-color: var(--color-blue);
+  outline: 4px solid #3892F3;
+}
+.btn--blue:active {
+  background-color: #0054B6;
+}
+.btn--blue:disabled {
+  background-color: rgba(29, 54, 83, 0.168627451);
+  color: rgba(34, 52, 73, 0.4);
+}
 .btn--border {
-  border: 2px solid rgba(29, 54, 83, 0.168627451);
+  outline: 2px solid rgba(29, 54, 83, 0.168627451);
+}
+.btn--border:hover, .btn--border:active {
+  background-color: rgba(41, 77, 117, 0.0901960784);
+}
+.btn--border:focus {
+  background-color: rgba(41, 77, 117, 0.0901960784);
+  outline: 4px solid #3892F3;
+}
+.btn--border:disabled {
+  background-color: rgba(29, 54, 83, 0.168627451);
+  outline: 2px solid rgba(34, 52, 73, 0.4);
+  color: rgba(34, 52, 73, 0.4);
 }
 .btn--square {
   width: 40px;
   height: 40px;
   padding: 8px;
 }
-.btn--full {
+.btn--full-width {
   width: 100%;
 }
 .btn--transparent {
@@ -324,6 +364,7 @@ figure {
   padding: 24px;
   background-color: #f4f7fa;
   border-radius: 20px;
+  box-sizing: border-box;
 }
 .categories__card-title {
   font-family: var(--font-secondary);
@@ -345,13 +386,13 @@ figure {
   background: linear-gradient(360deg, #f0f6fd 0%, rgba(255, 255, 255, 0) 189.17%);
   pointer-events: none;
 }
-.categories__card:hover {
+.categories__card--blue {
   background-color: var(--color-blue);
 }
-.categories__card:hover .categories__card-title {
+.categories__card--blue .categories__card-title {
   color: #f8f7ff;
 }
-.categories__card:hover .categories__card-text {
+.categories__card--blue .categories__card-text {
   color: rgba(239, 245, 250, 0.8196078431);
 }
 
@@ -518,18 +559,19 @@ figure {
 .plan__list li:before {
   position: absolute;
   content: "";
-  top: 0;
-  left: 0;
+  top: 8px;
+  left: -32px;
   width: 16px;
   height: 16px;
-  background-image: url("/assets/images/icons/sprite.svg#icon-check");
+  background-image: url("../../images/icons/check.svg");
+  background-repeat: no-repeat;
 }
-.plan__item--active {
+.plan__item:hover {
   margin-top: -32px;
   margin-bottom: 32px;
   border: 2px solid #0265dc;
 }
-.plan__item--active::before {
+.plan__item--bestseller::before {
   content: "Best Seller";
   position: absolute;
   top: 0;

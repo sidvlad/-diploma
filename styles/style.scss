@@ -159,20 +159,61 @@ figure {
     &--white {
         background-color: var(--color-white);
         color: #0d0d15;
+        &:hover {
+            background-color: #294D7517;
+            outline: 1px solid #3892F3;
+        }
+        &:focus {
+            background-color: #294D7517;
+        }
+        &:active {
+            outline: 4px solid #3892F3;
+            background-color: #294D7517;
+        }
+        &:disabled {
+            color: #22344966;
+        }
     }
     &--blue {
         background-color: var(--color-blue);
         color: #f5f8fb;
+        &:hover {
+            background-color: #3892F3;
+        }
+        &:focus {
+            background-color: var(--color-blue);
+            outline: 4px solid #3892F3;
+        }
+        &:active {
+            background-color: #0054B6;
+        }
+        &:disabled {
+            background-color: #1D36532B;
+            color: #22344966;
+        }
     }
     &--border {
-        border: 2px solid #1d36532b;
+        outline: 2px solid #1d36532b;
+        &:hover,
+        &:active {
+            background-color: #294D7517;
+        }
+        &:focus {
+            background-color: #294D7517;
+            outline: 4px solid #3892F3;
+        }
+        &:disabled {
+            background-color: #1D36532B;
+            outline: 2px solid #22344966;
+            color: #22344966;
+        }
     }
     &--square {
         width: 40px;
         height: 40px;
         padding: 8px;
     }
-    &--full {
+    &--full-width {
         width: 100%;
     }
     &--transparent {
@@ -324,6 +365,7 @@ figure {
         padding: 24px;
         background-color: #f4f7fa;
         border-radius: 20px;
+        box-sizing: border-box;
     }
     &__card-title {
         font-family: var(--font-secondary);
@@ -349,14 +391,14 @@ figure {
         );
         pointer-events: none;
     }
-    &__card:hover {
+    &__card--blue {
         background-color: var(--color-blue);
-    }
-    &__card:hover .categories__card-title {
-        color: #f8f7ff;
-    }
-    &__card:hover .categories__card-text {
-        color: #eff5fad1;
+        & .categories__card-title {
+            color: #f8f7ff;
+        }
+        .categories__card-text {
+            color: #eff5fad1;
+        }
     }
 }
 
@@ -530,18 +572,19 @@ figure {
     &__list li:before {
         position: absolute;
         content: '';
-        top: 0;
-        left: 0;
+        top: 8px;
+        left: -32px;
         width: 16px;
         height: 16px;
-        background-image: url('/assets/images/icons/sprite.svg#icon-check');
+        background-image: url('../../images/icons/check.svg');
+        background-repeat: no-repeat;
     }
-    &__item--active {
+    &__item:hover {
         margin-top: -32px;
         margin-bottom: 32px;
         border: 2px solid #0265dc;
     }
-    &__item--active::before {
+    &__item--bestseller::before {
         content: 'Best Seller';
         position: absolute;
         top: 0;
