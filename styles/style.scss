@@ -199,6 +199,11 @@ figure {
         height: 40px;
         padding: 8px;
     }
+    &--square-big {
+        width: 64px;
+        height: 64px;
+        padding: 20px;
+    }
     &--full-width {
         width: 100%;
     }
@@ -219,7 +224,7 @@ figure {
 .header {
     display: flex;
     align-items: center;
-    padding: 30px 80px;
+    padding: 26px 80px;
     &-nav {
         margin-left: 32px;
         &__list {
@@ -353,6 +358,7 @@ figure {
     &__item {
         display: flex;
         flex-direction: column;
+        cursor: pointer;
     }
     &__item:hover {
         .products__image {
@@ -391,7 +397,7 @@ figure {
     &__line-wrapper {
         display: flex;
         column-gap: 20px;
-        height: 420px;
+        height: 460px;
         overflow-y: hidden;
         padding: 0 74px;
     }
@@ -411,6 +417,7 @@ figure {
         box-sizing: border-box;
     }
     &__card-title {
+        padding: 16px 0 8px 0;
         font-family: var(--font-secondary);
         font-size: 28px;
         font-weight: 700;
@@ -434,7 +441,8 @@ figure {
         );
         pointer-events: none;
     }
-    &__card:hover {
+    &__card:hover,
+    &__card--active {
         background-color: var(--color-blue);
         & .categories__card-title {
             color: #f8f7ff;
@@ -456,23 +464,13 @@ figure {
     );
 }
 
-.trending__navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.btn-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 64px;
-    height: 64px;
-    border-radius: 8px;
-    border: 2px solid #1d36532b;
-}
-
 .trending {
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 48px;
+    }
     &__wrapper {
         display: flex;
         column-gap: 16px;
@@ -545,6 +543,7 @@ figure {
         justify-content: center;
         align-items: center;
         background-color: #e7eef7a8;
+        border-radius: 20px;
     }
     &__image:before {
         opacity: 0;
@@ -556,7 +555,7 @@ figure {
         height: 56px;
         border-radius: 0 20px;
         background-color: var(--color-blue);
-        background-image: url('../images/icons/sprite.svg#icon-logo');
+        background-image: url('/images/icons/trophy.svg');
         background-size: 24px;
         background-position: center;
         background-repeat: no-repeat;
@@ -622,7 +621,7 @@ figure {
         left: -32px;
         width: 16px;
         height: 16px;
-        background-image: url('../images/icons/sprite.svg#icon-check');
+        background-image: url('/images/icons/check.svg');
         background-repeat: no-repeat;
     }
     &__item--bestseller {
@@ -652,9 +651,9 @@ figure {
     flex-direction: column;
     row-gap: 120px;
     backdrop-filter: blur(200px);
-    background-image: url('/assets/images/icons/sprite.svg#icon-faq-bg');
-    background-size: auto;
-    background-position: top center;
+    background-image: url('/images/icons/faq-bg.svg');
+    background-size: 30%;
+    background-position: 50% 70%;
     background-repeat: no-repeat;
     &__wrapper {
         display: flex;
@@ -715,18 +714,18 @@ summary::after {
     height: 32px;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('/assets/images/icons/sprite.svg#icon-chevron-down');
+    background-image: url('/images/icons/chevron-down.svg');
     border: 2px solid #1d36532b;
     border-radius: 8px;
 }
 
 details[open] {
-    border: 2px solid var(--color-blue);
+    outline: 2px solid var(--color-blue);
     animation: details-open 0.3s ease;
 }
 
 details[open] summary:after {
-    background-image: url('/assets/images/icons/sprite.svg#icon-chevron-up');
+    transform: rotate(180deg);
 }
 
 .latest-expert {
@@ -761,6 +760,13 @@ details[open] summary:after {
         font-weight: 700;
         line-height: 36px;
         color: #0d0d15;
+    }
+    &__link {
+        display: flex;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        color: var(--color-blue);
     }
     &__date {
         font-size: 16px;
@@ -836,22 +842,6 @@ details[open] summary:after {
 .social {
     display: flex;
     column-gap: 8px;
-    &__item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 64px;
-        height: 64px;
-        border-radius: 8px;
-        border: 2px solid #1d36532b;
-        box-sizing: border-box;
-    }
-    &__item a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 18px;
-    }
 }
 
 .copyright {
@@ -866,7 +856,7 @@ details[open] summary:after {
     }
 }
 
-.breadcrumbs {
+.privacy {
     display: flex;
     column-gap: 21px;
     &__item {
