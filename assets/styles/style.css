@@ -115,7 +115,7 @@ figure {
   line-height: 62px;
   letter-spacing: -0.5px;
   white-space: pre-line;
-  color: #0D0D15;
+  color: #0d0d15;
 }
 
 .intro-title span {
@@ -1011,7 +1011,7 @@ details[open] summary:after {
   font-size: 16px;
   line-height: 24px;
   text-align: right;
-  color: #0D0D15;
+  color: #0d0d15;
 }
 
 /* form checkbox */
@@ -1113,7 +1113,7 @@ details[open] summary:after {
 .form-switcher__text {
   font-size: 14px;
   line-height: 20px;
-  color: #0D0D15;
+  color: #0d0d15;
 }
 
 .form-checkbox,
@@ -1336,7 +1336,7 @@ details[open] summary:after {
   border-color: var(--color-blue);
 }
 .form-control__input:user-invalid {
-  border-color: #EA3829;
+  border-color: #ea3829;
 }
 .form-control__submit {
   width: 100%;
@@ -1344,7 +1344,7 @@ details[open] summary:after {
   font-size: 18px;
   line-height: 1.55em;
   font-weight: 600;
-  color: #F5F8FB;
+  color: #f5f8fb;
   background-color: var(--color-blue);
   border: none;
   cursor: pointer;
@@ -1355,7 +1355,7 @@ details[open] summary:after {
   flex-direction: column;
   font-size: 14px;
   line-height: 20px;
-  color: #0D0D15;
+  color: #0d0d15;
 }
 
 textarea.form-control__input {
@@ -1369,7 +1369,7 @@ select {
   padding: 20px 44px 20px 20px;
   font-size: 16px;
   line-height: 24px;
-  color: #0D0D15;
+  color: #0d0d15;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;

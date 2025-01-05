@@ -116,7 +116,7 @@ figure {
     line-height: 62px;
     letter-spacing: -0.5px;
     white-space: pre-line;
-    color: #0D0D15;
+    color: #0d0d15;
 }
 
 .intro-title span {
@@ -221,7 +221,7 @@ figure {
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #1d36532b;
-    color: #2A3541B2;
+    color: #2a3541b2;
     font-size: 14px;
     line-height: 16px;
 }
@@ -831,7 +831,7 @@ details[open] summary:after {
         left: -10px;
         width: 1px;
         height: 14px;
-        background-color: #E7EEF7A8;
+        background-color: #e7eef7a8;
     }
     &:first-child::before {
         display: none;
@@ -1024,7 +1024,7 @@ details[open] summary:after {
         font-size: 16px;
         line-height: 24px;
         text-align: right;
-        color: #0D0D15;
+        color: #0d0d15;
     }
 }
 
@@ -1130,7 +1130,7 @@ details[open] summary:after {
 .form-switcher__text {
     font-size: 14px;
     line-height: 20px;
-    color: #0D0D15;
+    color: #0d0d15;
 }
 
 .form-checkbox,
@@ -1335,7 +1335,7 @@ details[open] summary:after {
         padding: 20px;
         font-size: 16px;
         line-height: 24px;
-        color: #2A3541B2;
+        color: #2a3541b2;
         outline: none;
         border-radius: 3px;
         border: 2px solid rgba(208, 215, 251, 0.17);
@@ -1345,14 +1345,14 @@ details[open] summary:after {
         background-color: rgba(191, 197, 238, 0.12);
         pointer-events: none;
     }
-    &__input[type="date"]::-webkit-calendar-picker-indicator {
+    &__input[type='date']::-webkit-calendar-picker-indicator {
         opacity: 0;
     }
     &__input:hover {
         border-color: var(--color-blue);
     }
     &__input:user-invalid {
-        border-color: #EA3829;
+        border-color: #ea3829;
     }
     &__submit {
         width: 100%;
@@ -1360,18 +1360,18 @@ details[open] summary:after {
         font-size: 18px;
         line-height: 1.55em;
         font-weight: 600;
-        color: #F5F8FB;
+        color: #f5f8fb;
         background-color: var(--color-blue);
         border: none;
         cursor: pointer;
-        transition: background-color .2s ease;
+        transition: background-color 0.2s ease;
     }
     & label {
         display: flex;
         flex-direction: column;
         font-size: 14px;
         line-height: 20px;
-        color: #0D0D15;
+        color: #0d0d15;
     }
 }
 
@@ -1382,11 +1382,11 @@ textarea.form-control__input {
 
 select {
     background-color: var(--color-white);
-    border: 1px solid #1D36532B;
+    border: 1px solid #1d36532b;
     padding: 20px 44px 20px 20px;
     font-size: 16px;
     line-height: 24px;
-    color: #0D0D15;
+    color: #0d0d15;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1396,7 +1396,6 @@ select {
         border-color: #007bff;
     }
 }
-
 
 .form-select label {
     display: block;
@@ -1424,7 +1423,6 @@ select {
     background-color: #0056ff;
     color: #fff;
 }
-
 
 .catalog-list {
     position: relative;
@@ -1533,7 +1531,6 @@ select {
 .catalog-list__item:hover .catalog-list__price {
     color: var(--color-blue);
 }
-
 
 .contacts {
     background: linear-gradient(
