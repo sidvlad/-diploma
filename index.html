@@ -11,24 +11,25 @@
     <link rel="stylesheet" href="assets/styles/normalize.min.css">
     <link rel="stylesheet" href="assets/styles/style.min.css">
     <link rel="icon" href="favicon.ico" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
   <body>
-    <header class="header block-wrapper">
-      <h1 class="logo">
+    <header class="header container">
+      <a href="index.html" class="logo">
         <svg width="108" height="24" aria-label="PixMart logo" role="img">
           <use href="assets/images/icons/sprite.svg#icon-logo"></use>
         </svg>
-      </h1>
+      </a>
       <nav class="header-nav">
         <ul class="header-nav__list">
           <li class="header-nav__item header-nav__item--active">
             <a href="index.html">About</a>
           </li>
           <li class="header-nav__item">
-            <a href="products.html">Products</a>
+            <a href="catalog.html">Products</a>
           </li>
           <li class="header-nav__item">
-            <a href="catalog.html">Creators</a>
+            <a href="creators.html">Creators</a>
           </li>
           <li class="header-nav__item">
             <a href="blog.html">Blog</a>
@@ -57,7 +58,7 @@
     </header>
 
     <section class="intro">
-      <div class="intro__wrapper block-wrapper">
+      <div class="intro__wrapper container">
         <div class="intro__block">
           <strong class="intro-title"> Craft Your Success with Our <span>Digital</span> Assets </strong>
           <p class="intro__description">
@@ -78,13 +79,21 @@
         </div>
         <div class="intro__block">
           <div class="intro__bg">
-            <img src="assets/images/content/ornaments.webp" width="624" height="544" alt="projects example">
+            <img src="assets/images/content/intro-left.webp" alt class="intro__bg-left" width="281" height="422">
+            <img src="assets/images/content/intro-right.webp" alt class="intro__bg-right" width="291" height="164">
+            <img src="assets/images/content/intro-bottom.webp" alt class="intro__bg-bottom" width="514" height="299">
+            <svg class="intro__bg-icon-pen" width="100" height="100">
+              <use href="assets/images/icons/sprite.svg#icon-pen"></use>
+            </svg>
+            <svg class="intro__bg-icon-meter" width="100" height="100">
+              <use href="assets/images/icons/sprite.svg#icon-meter"></use>
+            </svg>
           </div>
         </div>
       </div>
     </section>
 
-    <main class="main block-wrapper">
+    <main class="main">
       <section class="products">
         <a href="#" class="products__item">
           <div class="products__image">
@@ -414,7 +423,7 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__wrapper block-wrapper">
+      <div class="footer__wrapper container">
         <div class="footer__main">
           <div class="logo__wrapper">
             <strong class="logo"
@@ -502,7 +511,7 @@
         </div>
       </div>
       <div class="copyright">
-        <div class="copyright__wrapper block-wrapper">
+        <div class="copyright__wrapper container">
           <ul class="breadcrumbs">
             <li class="breadcrumbs__item"><a href="#">Privacy Policy</a></li>
             <li class="breadcrumbs__item"><a href="#">Terms and Condition</a></li>
