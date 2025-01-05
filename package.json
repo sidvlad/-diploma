@@ -3,17 +3,10 @@
   "version": "1.0.0",
   "description": "Student — Bogov Vladimir",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.83.0"
-  },
-  "scripts": {
-  "build": "sass styles/style.scss dist/style.css",
-  "watch:scss": "sass --watch styles/style.scss:dist/style.css"
   }
 }
