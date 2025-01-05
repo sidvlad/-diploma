@@ -193,7 +193,34 @@
       </aside>
 
       <article class="catalog-content">
-        <section class="catalog-control"></section>
+        <section class="filter">
+            <div class="filter__controls">
+                <form class="form-select" action="#" method="get">
+                    <label>
+                        <select class="select" name="sort" id="sort">
+                            <option class="select__option" value="bestseller">Best Seller</option>
+                            <option class="select__option" value="newest">Newest</option>
+                            <option class="select__option" value="popular">Most popular</option>
+                            <option class="select__option" value="increasing">Increasing in price</option>
+                            <option class="select__option" value="lowering">Lowering the price</option>
+                        </select>
+                    </label>
+                </form>
+                <div class="filter__results">
+                  <p class="filter__text">Showing <span>12</span> out of <span>120</span> results.</p>
+                  <div class="block__btns">
+                    <a href="#" class="btn btn--blue btn--square"></a>
+                    <a href="#" class="btn btn--border btn--square"></a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="block__btns">  
+              <button type="button" class="btn btn--border">UI Kit</button>
+              <button type="button" class="btn btn--border">UI Kit</button>
+            </div>
+
+        </section>
 
         <section class="catalog-list">
           <div class="catalog-list__item label--sold-out">

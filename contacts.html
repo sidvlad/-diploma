@@ -60,7 +60,8 @@
         <h2 class="title">CONTACT</h2>
         <div class="contacts__wrapper">
           <div class="contacts__block">
-            <strong class="intro-title"> Get in Touch with Us </strong>
+            <strong class="intro-title"> Get in Touch 
+              with Us </strong>
             <p>
               We are here to help you navigate your creative journey. Reach out for any questions, support, or feedback.
             </p>
@@ -87,6 +88,9 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
+
+
+
           <div class="contacts__block">
             <form class="contacts__form" action>
               <div class="form-control">
@@ -133,8 +137,25 @@
                   minlength="10"
                   required></textarea>
               </div>
-
-              <button class="btn btn--blue" type="submit">Send Message</button>
+              <div class="contacts__submit">
+                <div class="contacts__block">
+                  <label class="form-checkbox">
+                    <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="education" required>
+                    <p class="form-checkbox__inner">
+                      <span class="form-checkbox__box"></span>
+                      <span class="form-checkbox__text">Education</span>
+                    </p>
+                  </label>
+                  <label class="form-checkbox">
+                    <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="entertainment" required>
+                    <p class="form-checkbox__inner">
+                      <span class="form-checkbox__box"></span>
+                      <span class="form-checkbox__text">Entertainment</span>
+                    </p>
+                  </label>
+                </div>
+                <button class="btn btn--blue" type="submit">Send Message</button>
+              </div>
             </form>
           </div>
         </div>
