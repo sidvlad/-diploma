@@ -68,6 +68,10 @@ img {
   vertical-align: top;
 }
 
+svg {
+  display: flex;
+}
+
 label {
   cursor: pointer;
   display: block;
@@ -1544,6 +1548,11 @@ select:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.contacts__subscribe {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */
