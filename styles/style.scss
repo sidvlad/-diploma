@@ -160,15 +160,15 @@ figure {
         background-color: var(--color-white);
         color: #0d0d15;
         &:hover {
-            background-color: #294D7517;
-            outline: 1px solid #3892F3;
+            background-color: #294d7517;
+            outline: 1px solid #3892f3;
         }
         &:focus {
-            background-color: #294D7517;
+            background-color: #294d7517;
         }
         &:active {
-            outline: 4px solid #3892F3;
-            background-color: #294D7517;
+            outline: 4px solid #3892f3;
+            background-color: #294d7517;
         }
         &:disabled {
             color: #22344966;
@@ -178,17 +178,17 @@ figure {
         background-color: var(--color-blue);
         color: #f5f8fb;
         &:hover {
-            background-color: #3892F3;
+            background-color: #3892f3;
         }
         &:focus {
             background-color: var(--color-blue);
-            outline: 4px solid #3892F3;
+            outline: 4px solid #3892f3;
         }
         &:active {
-            background-color: #0054B6;
+            background-color: #0054b6;
         }
         &:disabled {
-            background-color: #1D36532B;
+            background-color: #1d36532b;
             color: #22344966;
         }
     }
@@ -196,14 +196,14 @@ figure {
         outline: 2px solid #1d36532b;
         &:hover,
         &:active {
-            background-color: #294D7517;
+            background-color: #294d7517;
         }
         &:focus {
-            background-color: #294D7517;
-            outline: 4px solid #3892F3;
+            background-color: #294d7517;
+            outline: 4px solid #3892f3;
         }
         &:disabled {
-            background-color: #1D36532B;
+            background-color: #1d36532b;
             outline: 2px solid #22344966;
             color: #22344966;
         }
@@ -576,13 +576,13 @@ figure {
         left: -32px;
         width: 16px;
         height: 16px;
-        background-image: url('../../images/icons/check.svg');
+        background-image: url("../images/icons/sprite.svg#icon-check");
         background-repeat: no-repeat;
     }
-    &__item:hover {
+    &__item--bestseller {
         margin-top: -32px;
         margin-bottom: 32px;
-        border: 2px solid #0265dc;
+        outline: 2px solid #0265dc;
     }
     &__item--bestseller::before {
         content: 'Best Seller';
