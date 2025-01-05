@@ -368,8 +368,6 @@ figure {
     );
 }
 
-
-
 .trending__navigation {
     display: flex;
     justify-content: space-between;
@@ -482,7 +480,6 @@ figure {
         opacity: 1;
     }
 }
-
 
 .plan {
     &__wrapper {
@@ -681,7 +678,6 @@ details[open] summary:after {
     }
 }
 
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -724,7 +720,6 @@ details[open] summary:after {
         justify-content: space-between;
     }
 }
-
 
 .form-subscribe {
     display: flex;
@@ -781,7 +776,6 @@ details[open] summary:after {
     }
 }
 
-
 .breadcrumbs {
     display: flex;
     column-gap: 21px;
@@ -801,7 +795,6 @@ details[open] summary:after {
         }
     }
 }
-
 
 .blog {
     background: linear-gradient(
