@@ -84,6 +84,8 @@ figure {
 }
 
 .subtitle {
+    display: block;
+    margin-top: 15px;
     font-family: var(--font-secondary);
     font-size: 36px;
     font-weight: 700;
@@ -219,6 +221,19 @@ figure {
         display: flex;
         justify-content: center;
     }
+    &--col-gap-20 {
+        column-gap: 20px;
+    }
+}
+
+.hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 0.1rem;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 0.1rem;
 }
 
 .header {
@@ -280,7 +295,7 @@ figure {
     &__block:first-child {
         display: flex;
         flex-direction: column;
-        row-gap: 32px;
+        row-gap: 31px;
         max-width: 520px;
         padding: 120px 0;
     }
@@ -297,10 +312,10 @@ figure {
 
 .intro__bg {
     display: grid;
-    grid-template-columns: repeat(8, 78px);
-    grid-template-rows: repeat(8, 68px);
+    grid-template-columns: repeat(6, 104px);
+    grid-template-rows: repeat(6, 90px);
     &-left {
-        grid-column: 1;
+        grid-column: 2;
         grid-row: 1;
         z-index: 1;
         max-width: 281px;
@@ -308,41 +323,45 @@ figure {
         object-fit: cover;
         object-position: right;
         border-radius: 10px;
+        margin-left: -9px;
     }
     &-right {
         grid-column: 5;
-        grid-row: 2;
+        grid-row: 1;
         max-width: 291px;
         height: 164px;
-        margin-left: -20px;
+        margin-left: -6px;
+        margin-top: 45px;
         object-fit: cover;
         object-position: right;
         border-radius: 10px;
     }
     &-bottom {
-        grid-column: 2;
-        grid-row: 5;
+        grid-column: 3;
+        grid-row: 4;
         max-width: 514px;
         height: 299px;
-        margin-top: -25px;
+        margin-top: -30px;
+        margin-left: -5px;
         object-fit: cover;
         object-position: right;
         border-radius: 10px;
     }
     &-icon-pen {
-        grid-column: 7;
+        grid-column: 6;
         grid-row: 1;
         padding: 12px;
-        margin-top: 20px;
+        margin-left: 68px;
         box-shadow: 0px 4px 40px 0px #1D395F14;
         background-color: var(--color-white);
         border-radius: 5px;
         box-sizing: border-box;
     }
     &-icon-meter {
-        grid-column: 1;
-        grid-row: 7;
-        margin-top: 20px;
+        grid-column: 2;
+        grid-row: 6;
+        margin-bottom: 30px;
+        margin-left: 20px;
         padding: 12px;
         box-shadow: 0px 4px 40px 0px #1D395F14;
         background-color: var(--color-white);
@@ -353,7 +372,6 @@ figure {
 
 .products {
     display: flex;
-    justify-content: space-between;
     column-gap: 32px;
     &__item {
         display: flex;
@@ -394,6 +412,9 @@ figure {
     &__block {
         flex-basis: 50%;
     }
+    &__block:last-child {
+        padding: 78px 0;
+    }
     &__line-wrapper {
         display: flex;
         column-gap: 20px;
@@ -419,7 +440,7 @@ figure {
     &__card-title {
         padding: 16px 0 8px 0;
         font-family: var(--font-secondary);
-        font-size: 28px;
+        font-size: 27px;
         font-weight: 700;
         line-height: 36px;
     }
@@ -429,7 +450,8 @@ figure {
         color: #2a3541b2;
     }
     &__text {
-        font-size: 16px;
+        padding: 20px 0 35px;
+        font-size: 18px;
         line-height: 24px;
         color: #222222;
     }
@@ -479,7 +501,7 @@ figure {
         display: flex;
         flex-direction: column;
         max-width: 305px;
-        row-gap: 16px;
+        row-gap: 12px;
     }
     &__image {
         position: relative;
@@ -595,19 +617,19 @@ figure {
     &__price {
         margin-bottom: 32px;
         font-family: var(--font-secondary);
-        font-size: 36px;
+        font-size: 38px;
         font-weight: 700;
         line-height: 48px;
         letter-spacing: -0.5px;
     }
     &__price span {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 24px;
     }
     &__list {
         display: flex;
         flex-direction: column;
-        row-gap: 16px;
+        row-gap: 10px;
         padding: 40px 0 40px 32px;
         border-top: 1px solid #1f324745;
     }
@@ -691,7 +713,7 @@ figure {
     &__list {
         display: flex;
         flex-direction: column;
-        row-gap: 16px;
+        row-gap: 14px;
     }
 }
 
@@ -736,6 +758,8 @@ details[open] summary:after {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 45px;
+        margin-top: -10px;
     }
     &__wrapper {
         display: grid;
@@ -745,6 +769,7 @@ details[open] summary:after {
     &__item img {
         width: 100%;
         height: 289px;
+        border-radius: 20px;
         object-fit: cover;
     }
     &__item--big {
@@ -755,6 +780,7 @@ details[open] summary:after {
         height: 702px;
     }
     &__name {
+        margin-top: 26px;
         font-family: var(--font-secondary);
         font-size: 28px;
         font-weight: 700;
@@ -778,8 +804,8 @@ details[open] summary:after {
 .footer {
     display: flex;
     flex-direction: column;
-    row-gap: 80px;
-    padding-top: 64px;
+    row-gap: 128px;
+    padding-top: 185px;
     color: #0d0d15;
     &__wrapper {
         width: 100%;
@@ -804,9 +830,11 @@ details[open] summary:after {
     &-nav__list {
         display: flex;
         flex-direction: column;
-        row-gap: 8px;
+        row-gap: 4px;
+        font-size: 16px;
     }
     &__description {
+        padding-top: 8px;
         max-width: 320px;
         font-size: 16px;
         line-height: 24px;
@@ -853,6 +881,9 @@ details[open] summary:after {
         display: flex;
         justify-content: space-between;
         padding: 24px 80px;
+    }
+    &__text {
+        font-size: 16px;
     }
 }
 
