@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixMart</title>
+    <title>PixMart — About</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400,500;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 </head>
   <body>
     <header class="header container">
-      <a href="index.html" class="logo" disabled>
+      <a href="index.html" disabled>
         <svg width="108" height="24" aria-label="PixMart logo" role="img">
           <use href="assets/images/icons/sprite.svg#icon-logo"></use>
         </svg>
@@ -22,7 +22,7 @@
       <nav class="header-nav">
         <ul class="header-nav__list">
           <li class="header-nav__item header-nav__item--active">
-            <a href="index.html">About</a>
+            <a href="index.html" disabled>About</a>
           </li>
           <li class="header-nav__item">
             <a href="catalog.html">Products</a>
@@ -44,13 +44,8 @@
           <input class="search-form__input" type="search" placeholder="Search for Digital Assets" aria-label="Search">
         </form>
         <a href="#" class="btn btn--blue btn--square">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-              stroke="#F8F7FF"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
+          <svg width="24" height="24" aria-label="Product Bag" role="img">
+            <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
           </svg>
         </a>
       </div>
@@ -60,12 +55,13 @@
       <section class="intro">
         <div class="intro__wrapper container">
           <div class="intro__block">
-            <strong class="intro-title"> Craft Your Success with Our <span>Digital</span> Assets </strong>
+            <h1 class="hidden">Digital Assets for Creative Projects</h1>
+            <h2 class="intro-title"> Craft Your Success with Our <span>Digital</span> Assets </h2>
             <p class="intro__description">
               From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital
               design resources.
             </p>
-            <div class="block__btns block__btns--col-gap-20">
+            <div class="block-btns block-btns--col-gap-20">
               <a href="#" class="btn btn--blue">Shop Now</a>
               <a href="#" class="btn btn--white btn--icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,6 +93,7 @@
         </div>
       </section>
       <section class="products container">
+        <h2 class="hidden">Products</h2>
         <a href="#" class="products__item">
           <div class="products__image">
             <svg width="150" height="150" aria-label="UI Kits product card" role="img">
@@ -146,14 +143,14 @@
                 <svg width="48" height="48" aria-label="Templates categories card" role="img">
                   <use href="assets/images/icons/sprite.svg#icon-ui-kits"></use>
                 </svg>
-                <strong class="categories__card-title">Templates</strong>
+                <p class="categories__card-title">Templates</p>
                 <p class="categories__card-text">For all needs Modern</p>
               </a>
               <a href="#" class="categories__card">
                 <svg width="48" height="48" aria-label="Slides categories card" role="img">
                   <use href="assets/images/icons/sprite.svg#icon-presentation"></use>
                 </svg>
-                <strong class="categories__card-title">Slides</strong>
+                <p class="categories__card-title">Slides</p>
                 <p class="categories__card-text">Pitch-ready Creative</p>
               </a>
               <div class="categories__card categories__card--gradient"></div>
@@ -164,14 +161,14 @@
                 <svg width="48" height="48" aria-label="App Icons categories card" role="img">
                   <use href="assets/images/icons/sprite.svg#icon-social-media"></use>
                 </svg>
-                <strong class="categories__card-title">App Icons</strong>
+                <p class="categories__card-title">App Icons</p>
                 <p class="categories__card-text">For all needs Modern</p>
               </a>
               <a href="#" class="categories__card">
                 <svg width="48" height="48" aria-label="Slides categories card" role="img">
                   <use href="assets/images/icons/sprite.svg#icon-presentation"></use>
                 </svg>
-                <strong class="categories__card-title">Design Tools</strong>
+                <p class="categories__card-title">Design Tools</p>
                 <p class="categories__card-text">Pitch-ready Creative</p>
               </a>
             </div>
@@ -179,7 +176,7 @@
         </div>
         <div class="categories__block">
           <h2 class="title">Categories</h2>
-          <strong class="subtitle"> Discover Assets for Every Projects </strong>
+          <h3 class="subtitle"> Discover Assets for Every Projects </h3>
           <p class="categories__text">
             From fonts and icons to mockups and templates, our comprehensive categories ensure that you find exactly
             what you need to your projects.
@@ -188,10 +185,10 @@
         </div>
       </section>
       <section class="trending container">
-        <h2 class="title">Categories</h2>
+        <h2 class="title">Trending</h2>
         <div class="trending__navigation">
-          <strong class="subtitle">Popular Products</strong>
-          <div class="block__btns">
+          <h3 class="subtitle">Popular Products</h3>
+          <div class="block-btns">
             <button class="btn btn--border btn--square-big">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -223,11 +220,11 @@
                 height="272"
                 alt="Travel Hero popular product card">
               <div class="trending__item-overlay">
-                <a href="#" class="btn btn--blue">Go to product</a>
+                <a href="#" class="btn btn--blue btn--full-width">Go to product</a>
               </div>
             </div>
             <div class="trending__content">
-              <strong class="trending__name">Travel Hero</strong>
+              <p class="trending__name">Travel Hero</p>
               <p class="trending__price">€ <span>29.99</span></p>
             </div>
             <div class="trending__category">
@@ -243,11 +240,11 @@
                 height="272"
                 alt="Healthcare Pro popular product card">
               <div class="trending__item-overlay">
-                <a href="#" class="btn btn--blue">Go to product</a>
+                <a href="#" class="btn btn--blue btn--full-width">Go to product</a>
               </div>
             </div>
             <div class="trending__content">
-              <strong class="trending__name">Healthcare Pro</strong>
+              <p class="trending__name">Healthcare Pro</p>
               <p class="trending__price">€ <span>15.99</span></p>
             </div>
             <div class="trending__category">
@@ -263,11 +260,11 @@
                 height="272"
                 alt="Foodish Delight popular product card">
               <div class="trending__item-overlay">
-                <a href="#" class="btn btn--blue">Go to product</a>
+                <a href="#" class="btn btn--blue btn--full-width">Go to product</a>
               </div>
             </div>
             <div class="trending__content">
-              <strong class="trending__name">Foodish Delight</strong>
+              <p class="trending__name">Foodish Delight</p>
               <p class="trending__price">€ <span>31.99</span></p>
             </div>
             <div class="trending__category">
@@ -283,11 +280,11 @@
                 height="272"
                 alt="Real Estate popular product card">
               <div class="trending__item-overlay">
-                <a href="#" class="btn btn--blue">Go to product</a>
+                <a href="#" class="btn btn--blue btn--full-width">Go to product</a>
               </div>
             </div>
             <div class="trending__content">
-              <strong class="trending__name">Real Estate</strong>
+              <p class="trending__name">Real Estate</p>
               <p class="trending__price">€ <span>40.99</span></p>
             </div>
             <div class="trending__category">
@@ -300,7 +297,7 @@
       <section class="plan container">
         <div class="block-center">
           <h2 class="title">Pricing Plan</h2>
-          <strong class="subtitle">Choose The Perfect Plan for Creative Potential</strong>
+          <h3 class="subtitle">Choose The Perfect Plan for Creative Potential</h3>
         </div>
         <div class="plan__wrapper">
           <div class="plan__item">
@@ -343,7 +340,7 @@
           <div class="faq__block">
             <div class="faq__content">
               <h2 class="title">F.A.Q</h2>
-              <strong class="subtitle">Answers to Your Questions</strong>
+              <h3 class="subtitle">Answers to Your Questions</h3>
               <a href="#" class="btn btn--border btn--transparent">Ask Us A Question</a>
             </div>
           </div>
@@ -391,7 +388,8 @@
       </section>
       <section class="latest-expert container">
         <div class="latest-expert__header">
-          <strong class="subtitle">Latest Expert</strong>
+          <h2 class="hidden">Articles Latest Expert</h2>
+          <h3 class="subtitle">Latest Expert</h3>
           <a href="#" class="latest-expert__link"
             >Explore All Articles
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -406,16 +404,19 @@
         </div>
         <div class="latest-expert__wrapper">
           <a href="#" class="latest-expert__item latest-expert__item--big">
+            <div class="tag">Tag</div>
             <img src="assets/images/content/creative-blog.webp" width="624" height="702" alt="neon sceleton">
             <p class="latest-expert__name">Creative Blog</p>
             <time datetime="2022-06-20" class="latest-expert__date">15 APRIL 2024</time>
           </a>
           <a href="#" class="latest-expert__item">
+            <div class="tag">Tag</div>
             <img src="assets/images/content/best-dishes.webp" width="624" height="289" alt="neon sceleton">
             <p class="latest-expert__name">Best Dishes</p>
             <time datetime="2022-06-20" class="latest-expert__date">5 MAY 2024</time>
           </a>
           <a href="#" class="latest-expert__item">
+            <div class="tag">Tag</div>
             <img src="assets/images/content/contact-us.webp" width="624" height="289" alt="neon sceleton">
             <p class="latest-expert__name">Contact Us</p>
             <time datetime="2022-06-20" class="latest-expert__date">10 JUNE 2024</time>
@@ -426,18 +427,17 @@
     <footer class="footer">
       <div class="footer__wrapper container">
         <div class="footer__main">
-          <div class="logo__wrapper">
-            <strong class="logo"
-              ><svg width="300" height="58" aria-label="PixMart" role="img">
-                <use href="assets/images/icons/sprite.svg#icon-logo-footer"></use></svg
-            ></strong>
+          <div class="footer__logo">
+            <svg width="300" height="58" aria-label="PixMart big logo" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-logo-footer"></use>
+              </svg>
             <div class="footer__description">
               Your premium digital assets solution with high quality and comprehensive range of products and services.
             </div>
           </div>
           <nav class="footer-nav">
             <div class="footer-nav__block">
-              <strong class="footer-nav__title">Company</strong>
+              <p class="footer-nav__title">Company</p>
               <ul class="footer-nav__list">
                 <li class="footer-nav__item"><a href="#" class="footer-nav__link">Homepage v1</a></li>
                 <li class="footer-nav__item"><a href="#" class="footer-nav__link">Homepage v2</a></li>
@@ -448,7 +448,7 @@
               </ul>
             </div>
             <div class="footer-nav__block">
-              <strong class="footer-nav__title">Products</strong>
+              <p class="footer-nav__title">Products</p>
               <ul class="footer-nav__list">
                 <li class="footer-nav__item"><a href="#" class="footer-nav__link">Website</a></li>
                 <li class="footer-nav__item"><a href="#" class="footer-nav__link">Mobile App</a></li>
@@ -463,7 +463,7 @@
               </ul>
             </div>
             <div class="footer-nav__block">
-              <strong class="footer-nav__title">Account</strong>
+              <p class="footer-nav__title">Account</p>
               <ul class="footer-nav__list">
                 <li class="footer-nav__item"><a href="#" class="footer-nav__link">Your Cart</a></li>
                 <li class="footer-nav__item"><a href="#" class="footer-nav__link">Check Out</a></li>

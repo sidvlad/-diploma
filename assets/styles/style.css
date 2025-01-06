@@ -26,6 +26,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a[disabled] {
+  pointer-events: none;
+}
 
 a:hover {
   text-decoration: none;
@@ -140,6 +143,7 @@ figure {
   border-radius: 8px;
   font-weight: 600;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .btn--icon {
   column-gap: 8px;
@@ -212,15 +216,15 @@ figure {
   background-color: transparent;
 }
 
-.block__btns {
+.block-btns {
   display: flex;
   column-gap: 8px;
 }
-.block__btns--center {
+.block-btns--center {
   display: flex;
   justify-content: center;
 }
-.block__btns--col-gap-20 {
+.block-btns--col-gap-20 {
   column-gap: 20px;
 }
 
@@ -232,6 +236,20 @@ figure {
   position: absolute;
   white-space: nowrap;
   width: 0.1rem;
+}
+
+.tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: var(--color-blue);
+  color: var(--color-primary-white);
+  border-radius: 20px;
 }
 
 .header {
@@ -550,8 +568,10 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 16px;
   background-color: rgba(231, 238, 247, 0.6588235294);
   border-radius: 20px;
+  box-sizing: border-box;
 }
 .trending__image:before {
   opacity: 0;
@@ -749,6 +769,9 @@ details[open] summary:after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+}
+.latest-expert__item {
+  position: relative;
 }
 .latest-expert__item img {
   width: 100%;
@@ -1495,11 +1518,6 @@ select:focus {
   gap: 16px;
 }
 
-.catalog-list__item.label--sold-out {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
 .catalog-list__item.label--sold-out::after {
   position: absolute;
   content: "Sold Out";
@@ -1545,7 +1563,7 @@ select:focus {
   color: var(--color-primary-white);
 }
 
-.catalog-list__item.label--sold-out .block__btns {
+.catalog-list__item.label--sold-out .block-btns {
   opacity: 0;
 }
 
