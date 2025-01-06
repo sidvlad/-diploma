@@ -925,6 +925,9 @@ details[open] summary:after {
 .privacy__item:first-child::before {
   display: none;
 }
+.privacy__item a:hover {
+  color: var(--color-white);
+}
 
 .blog {
   background: linear-gradient(0.23deg, rgba(255, 255, 255, 0) 0.2%, #f0f6fd 99.8%);

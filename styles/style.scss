@@ -943,6 +943,9 @@ details[open] summary:after {
             display: none;
         }
     }
+    &__item a:hover {
+        color: var(--color-white);
+    }
 }
 
 .blog {
