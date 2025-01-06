@@ -499,9 +499,30 @@ figure {
   line-height: 36px;
 }
 .categories__card-text {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 21px;
+  column-gap: 18px;
   font-size: 16px;
   line-height: 24px;
   color: rgba(42, 53, 65, 0.6980392157);
+  overflow-x: hidden;
+}
+.categories__card-text span {
+  position: relative;
+}
+.categories__card-text span:after {
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: -11px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: rgba(42, 53, 65, 0.6980392157);
+}
+.categories__card-text span:first-child:after {
+  display: none;
 }
 .categories__text {
   padding: 20px 0 35px;
@@ -524,6 +545,9 @@ figure {
 }
 .categories__card:hover svg, .categories__card--active svg {
   filter: brightness(10);
+}
+.categories__card:hover .categories__card-text span:after, .categories__card--active .categories__card-text span:after {
+  background-color: rgba(239, 245, 250, 0.8196078431);
 }
 
 .trending__navigation {
@@ -585,7 +609,7 @@ figure {
 .trending__category span:after {
   position: absolute;
   content: "";
-  top: 10px;
+  top: 12px;
   left: -11px;
   width: 3px;
   height: 3px;
@@ -1678,6 +1702,7 @@ select:focus {
   border-radius: 8px;
   color: #0d0d15;
   border: 1px solid rgba(29, 54, 83, 0.168627451);
+  outline: 1px solid transparent;
   transition: all 0.3s ease-in-out;
 }
 .input:hover {
