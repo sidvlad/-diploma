@@ -827,7 +827,7 @@ details[open] summary:after {
 .footer {
     display: flex;
     flex-direction: column;
-    row-gap: 128px;
+    row-gap: 62px;
     padding-top: 185px;
     color: #0d0d15;
     &__wrapper {
@@ -836,7 +836,7 @@ details[open] summary:after {
     &__main {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 72px;
+        margin-bottom: 5px;
     }
     &-nav {
         display: flex;
@@ -865,6 +865,7 @@ details[open] summary:after {
     &__secondary {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 70px;
     }
 }
 
