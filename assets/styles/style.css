@@ -151,6 +151,7 @@ figure {
   font-weight: 600;
   box-sizing: border-box;
   cursor: pointer;
+  white-space: nowrap;
 }
 .btn--icon {
   -moz-column-gap: 8px;
@@ -236,12 +237,16 @@ figure {
   filter: brightness(1.5) contrast(0.8);
 }
 
-.block-btns {
+.btn-group {
   display: flex;
   -moz-column-gap: 8px;
        column-gap: 8px;
 }
-.block-btns--col-gap-20 {
+.btn-group--center {
+  display: flex;
+  justify-content: center;
+}
+.btn-group--col-gap-20 {
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
@@ -1627,10 +1632,6 @@ select:focus {
   background-color: var(--color-blue);
   border-radius: 20px;
   color: var(--color-primary-white);
-}
-
-.catalog-list__item.label--sold-out .block-btns {
-  opacity: 0;
 }
 
 .catalog-list__name,
