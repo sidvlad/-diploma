@@ -218,10 +218,16 @@ figure {
     }
     &--link {
         padding: 4px;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 600;
         line-height: 24px;
         color: var(--color-blue);
+        &:hover {
+            color: #3892f3;
+        }
+        &:hover svg {
+            filter: brightness(1.5) contrast(0.8);
+        }
     }
 }
 
@@ -267,6 +273,11 @@ figure {
     padding: 26px 80px;
     &-nav {
         margin-left: 32px;
+        &__item a:focus {
+            outline: 4px solid #3892f3;
+            color: var(--color-blue);
+            border-radius: 5px;
+        }
         &__list {
             display: flex;
             gap: 30px;
@@ -276,21 +287,23 @@ figure {
             font-weight: 600;
             line-height: 20px;
         }
-        &__item--active {
+        &__item a.active {
+            color: var(--color-blue);
+            pointer-events: none;
         }
         &__item a {
             color: #0d0d15;
             padding: 4px;
         }
-        &__item a:hover {
-            color: #3892f3;
-        }
-        &__item a:focus {
-            outline: 4px solid #3892f3;
-            border-radius: 5px;
-        }
         &__item a:visited {
             color: #0054b6;
+        }
+        &__item a:disabled {
+            color: #22344966;
+            pointer-events: none;
+        }
+        &__item a:hover {
+            color: #3892f3;
         }
     }
     &-actions {
@@ -633,9 +646,6 @@ figure {
         border-radius: 20px;
         box-shadow: 0px 4px 40px 0px #1d395f14;
     }
-    &__item:hover {
-        cursor: pointer;
-    }
     &__name {
         margin-bottom: 16px;
         font-family: var(--font-secondary);
@@ -786,7 +796,7 @@ details[open] summary:after {
     &__header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
         margin-bottom: 45px;
         margin-top: -10px;
     }
@@ -862,6 +872,9 @@ details[open] summary:after {
         flex-direction: column;
         row-gap: 4px;
         font-size: 16px;
+    }
+    &-nav__list a:hover {
+        color: #3892f3;
     }
     &__description {
         padding-top: 8px;
@@ -1668,11 +1681,14 @@ select {
 .input {
     border-radius: 8px;
     color: #0d0d15;
+    border: 1px solid #1D36532B;
     &:hover {
-        outline: 2px solid #3892f3;
+        outline: 1px solid #3892f3;
+        border: 1px solid #3892f3;
     }
     &:focus {
         outline: 3px solid #3892f3;
+        border: 1px solid #3892f3;
     }
     &::placeholder {
         color: #2a3541b2;
