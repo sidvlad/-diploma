@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pixmart offers premium digital assets for creative projects. Explore UI/UX kits, illustrations, templates, fonts, and more to elevate your designs effortlessly.">
+    <meta name="keywords" content="digital assets, UI/UX kits, illustrations, templates, fonts, creative projects">
     <title>PixMart — About</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +16,7 @@
 </head>
   <body>
     <header class="header container">
-      <a href="index.html" disabled>
+      <a href="index.html" class="active">
         <svg width="108" height="24" aria-label="PixMart logo" role="img">
           <use href="assets/images/icons/sprite.svg#icon-logo"></use>
         </svg>
@@ -40,8 +42,8 @@
       </nav>
 
       <div class="header-actions">
-        <form class="form-search" action="/search">
-          <input class="input input--small" type="search" placeholder="Search for Digital Assets" aria-label="Search">
+        <form class="form-search" action="/search" method="post">
+          <input class="input input--small" type="search" placeholder="Search for Digital Assets" aria-label="Search" name="search">
         </form>
         <a href="#" class="btn btn--blue btn--square">
           <svg width="24" height="24" aria-label="Product Bag" role="img">
@@ -188,12 +190,12 @@
         <div class="trending__navigation">
           <h3 class="subtitle">Popular Products</h3>
           <div class="block-btns">
-            <button class="btn btn--border btn--square-big">
+            <button class="btn btn--border btn--square-big" type="button">
               <svg width="24" height="24" aria-label="to left" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-chevron-left"></use>
               </svg>
             </button>
-            <button class="btn btn--border btn--square-big">
+            <button class="btn btn--border btn--square-big" type="button">
               <svg width="24" height="24" aria-label="to right" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-chevron-right"></use>
               </svg>
@@ -420,7 +422,7 @@
         </div>
         <nav class="footer-nav">
           <div class="footer-nav__block">
-            <strong class="footer-nav__title">Company</strong>
+            <p class="footer-nav__title">Company</p>
             <ul class="footer-nav__list">
               <li><a href="#">Homepage v1</a></li>
               <li><a href="#">Homepage v2</a></li>
@@ -431,7 +433,7 @@
             </ul>
           </div>
           <div class="footer-nav__block">
-            <strong class="footer-nav__title">Products</strong>
+            <p class="footer-nav__title">Products</p>
             <ul class="footer-nav__list">
               <li><a href="#">Website</a></li>
               <li><a href="#">Mobile App</a></li>
@@ -442,7 +444,7 @@
             </ul>
           </div>
           <div class="footer-nav__block">
-            <strong class="footer-nav__title">Account</strong>
+            <p class="footer-nav__title">Account</p>
             <ul class="footer-nav__list">
               <li><a href="#">Your Cart</a></li>
               <li><a href="#">Check Out</a></li>
@@ -476,7 +478,7 @@
           </li>
         </ul>
 
-        <form class="form-subscribe" action method="post">
+        <form class="form-subscribe" action="/subscribe" method="post">
           <label class="form-subscribe__label" for="subscribe">Subscribe to Design Newsletter</label>
           <input
             class="form-subscribe__input input input--large"
