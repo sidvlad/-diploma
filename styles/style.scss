@@ -84,10 +84,6 @@ button {
     transition: all 0.3s ease-in-out;
 }
 
-figure {
-    margin: 0 0 30px;
-}
-
 .title {
     font-size: 16px;
     line-height: 24px;
@@ -1049,13 +1045,19 @@ details[open] summary:after {
             line-height: 32px;
             color: #0D0D15
         }
+        & > p:last-child {
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
         blockquote {
             position: relative;
             padding-left: 80px;
             font-family: var(--font-secondary);
             font-size: 24px;
             font-weight: 700;
-            line-height: 32px;
+            line-height: 38px;
             color: #0D0D15;
             &::before {
                 content: '';
@@ -1068,6 +1070,21 @@ details[open] summary:after {
                 background-repeat: no-repeat;
                 background-position: center;
             }
+        }
+        figure {
+            margin: 0 0 7px;
+            img {
+                margin-bottom: 15px;
+                object-fit: cover;
+                width: 980px;
+                height: 462px;
+                border-radius: 20px;
+            }
+        }
+        figcaption {
+            font-size: 16px;
+            line-height: 24px;
+            color: #222222;
         }
     }
 }
@@ -1107,19 +1124,22 @@ details[open] summary:after {
     line-height: 24px;
     color: #2a3541d9;
     &__wrapper {
-        padding: 40px 0;
+        padding: 43px 0 27px;
         border-top: 2px solid #0d0d15;
     }
     &__article {
-        padding-bottom: 24px;
+        padding-bottom: 50px;
         border-top: 1px solid #22222226;
+        & p {
+            padding-bottom: 10px;
+        }
     }
     &__article:first-child {
         border: none;
     }
     &__title {
         display: block;
-        margin-bottom: 27px;
+        margin-bottom: 20px;
         font-family: var(--font-secondary);
         font-size: 24px;
         font-weight: 700;
@@ -1128,10 +1148,11 @@ details[open] summary:after {
     }
     & li {
         line-height: 24px;
-        margin-bottom: 8px;
+        margin-bottom: 9px;
     }
     & ul > li > ul > li {
-        padding-left: 20px;
+        margin-top: 7px;
+        padding-left: 13px;
         font-weight: 600;
     }
     & ul > li::before {
@@ -1154,6 +1175,7 @@ details[open] summary:after {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 25px;
     }
     &__list {
         display: flex;
@@ -1174,7 +1196,7 @@ details[open] summary:after {
     }
     &__image {
         position: relative;
-        margin-bottom: 32px;
+        margin-bottom: 15px;
     }
     &__image img {
         border-radius: 20px;
@@ -1184,12 +1206,14 @@ details[open] summary:after {
         height: 272px;
     }
     &__item p {
+        padding-left: 15px;
         font-family: var(--font-secondary);
         font-size: 20px;
         font-weight: 700;
         line-height: 26px;
     }
     &__item time {
+        padding-left: 15px;
         font-size: 16px;
         line-height: 24px;
         color: #2a3541d9;
