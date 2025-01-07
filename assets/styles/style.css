@@ -1028,20 +1028,22 @@ details[open] summary:after {
   grid-template-columns: 1fr 4fr;
   -moz-column-gap: 40px;
        column-gap: 40px;
-  padding: 0 80px 120px;
+  padding: 0 80px 85px;
 }
 .blog__content {
   display: flex;
   flex-direction: column;
-  row-gap: 32px;
 }
 .blog__content h3 {
-  padding-bottom: 15px;
+  margin-bottom: 14px;
   font-family: var(--font-secondary);
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
   color: #0D0D15;
+}
+.blog__content p {
+  margin-bottom: 34px;
 }
 .blog__content > p:last-child {
   -webkit-line-clamp: 2;
@@ -1051,6 +1053,7 @@ details[open] summary:after {
 }
 .blog__content blockquote {
   position: relative;
+  margin-bottom: 25px;
   padding-left: 80px;
   font-family: var(--font-secondary);
   font-size: 24px;
@@ -1070,7 +1073,7 @@ details[open] summary:after {
   background-position: center;
 }
 .blog__content figure {
-  margin: 0 0 7px;
+  margin: 0 0 36px;
 }
 .blog__content figure img {
   margin-bottom: 15px;
@@ -1126,7 +1129,6 @@ details[open] summary:after {
 }
 .blog-sidebar__article {
   padding-bottom: 50px;
-  border-top: 1px solid rgba(34, 34, 34, 0.1490196078);
 }
 .blog-sidebar__article p {
   padding-bottom: 10px;
