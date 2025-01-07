@@ -1231,10 +1231,6 @@ details[open] summary:after {
   border-color: #2e2f3c;
 }
 
-.form-checkbox__input:user-invalid + .form-checkbox__inner .form-checkbox__box {
-  border: 2px solid #ea3829;
-}
-
 .form-checkbox__box {
   position: relative;
   margin-left: auto;
@@ -1579,6 +1575,14 @@ select:focus {
   flex-wrap: wrap;
   gap: 32px;
 }
+.catalog-list__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.catalog-list__item:hover {
+  cursor: pointer;
+}
 
 .catalog-list::after {
   position: absolute;
@@ -1658,6 +1662,7 @@ select:focus {
 }
 
 .catalog-list__image {
+  margin-bottom: 20px;
   border-radius: 20px;
 }
 
@@ -1665,6 +1670,7 @@ select:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 18px;
 }
 
 .catalog-list__item:hover .catalog-list__price {
