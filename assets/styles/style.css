@@ -281,6 +281,8 @@ figure {
 
 .tag {
   position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
   top: 16px;
   right: 16px;
   padding: 8px 16px;
@@ -291,6 +293,10 @@ figure {
   background-color: var(--color-blue);
   color: var(--color-primary-white);
   border-radius: 20px;
+}
+.tag--bottom {
+  left: 16px;
+  top: 250px;
 }
 
 .header {
@@ -1000,22 +1006,68 @@ details[open] summary:after {
 .blog {
   background: linear-gradient(0.23deg, rgba(255, 255, 255, 0) 0.2%, #f0f6fd 99.8%);
 }
+.blog__intro {
+  display: block;
+  margin: 0 auto;
+  padding: 64px 80px 0;
+}
 .blog__label {
-  background-color: var(--color-blue);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 24px;
   padding: 8px 16px;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   color: #f5f8fb;
   border-radius: 20px;
+  background-color: var(--color-blue);
 }
-
+.blog__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 64px 0 48px;
+}
 .blog__wrapper {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   -moz-column-gap: 40px;
        column-gap: 40px;
-  padding: 0 80px;
+  padding: 0 80px 120px;
+}
+.blog__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+.blog__content h3 {
+  padding-bottom: 15px;
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #0D0D15;
+}
+.blog__content blockquote {
+  position: relative;
+  padding-left: 80px;
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #0D0D15;
+}
+.blog__content blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  background-image: url("../../images/icons/quote.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .blog-author {
@@ -1024,52 +1076,62 @@ details[open] summary:after {
   -moz-column-gap: 16px;
        column-gap: 16px;
   color: #222222;
+  margin-bottom: 40px;
 }
-
 .blog-author__image {
   width: 60px;
   height: 60px;
   border-radius: 50%;
 }
-
 .blog-author__info {
   display: flex;
   flex-direction: column;
 }
-
 .blog-author__name {
   font-family: var(--font-secondary);
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
 }
-
 .blog-author__date {
   font-size: 16px;
   line-height: 24px;
 }
 
 .blog-sidebar {
+  min-width: 260px;
   font-size: 16px;
   line-height: 24px;
   color: rgba(42, 53, 65, 0.8509803922);
 }
-
 .blog-sidebar__wrapper {
-  margin-top: 40px;
-  padding-top: 40px;
-  border-top: 1px solid #0d0d15;
+  padding: 40px 0;
+  border-top: 2px solid #0d0d15;
 }
-
+.blog-sidebar__article {
+  padding-bottom: 24px;
+  border-top: 1px solid rgba(34, 34, 34, 0.1490196078);
+}
+.blog-sidebar__article:first-child {
+  border: none;
+}
+.blog-sidebar__title {
+  display: block;
+  margin-bottom: 27px;
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #0d0d15;
+}
 .blog-sidebar li {
   line-height: 24px;
   margin-bottom: 8px;
 }
-
 .blog-sidebar ul > li > ul > li {
   padding-left: 20px;
+  font-weight: 600;
 }
-
 .blog-sidebar ul > li::before {
   content: "";
   width: 8px;
@@ -1078,15 +1140,6 @@ details[open] summary:after {
   border-radius: 50%;
   display: inline-block;
   margin-right: 8px;
-}
-
-.blog-sidebar__article {
-  padding-bottom: 24px;
-  border-bottom: 1px solid rgba(34, 34, 34, 0.1490196078);
-}
-
-.blog-sidebar__article:last-child {
-  border-bottom: none;
 }
 
 .related-articles {
@@ -1115,13 +1168,21 @@ details[open] summary:after {
   box-shadow: 0px 4px 30px 0px rgba(29, 57, 95, 0.0509803922);
   border-radius: 20px;
 }
-.related-articles__item img {
-  height: 272px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 20px;
+.related-articles__item:hover {
+  outline: 2px solid var(--color-blue);
 }
-.related-articles__item strong {
+.related-articles__image {
+  position: relative;
+  margin-bottom: 32px;
+}
+.related-articles__image img {
+  border-radius: 20px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-width: 370px;
+  height: 272px;
+}
+.related-articles__item p {
   font-family: var(--font-secondary);
   font-size: 20px;
   font-weight: 700;
@@ -1131,6 +1192,7 @@ details[open] summary:after {
   font-size: 16px;
   line-height: 24px;
   color: rgba(42, 53, 65, 0.8509803922);
+  text-transform: uppercase;
 }
 
 .catalog {
