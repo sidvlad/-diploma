@@ -1567,7 +1567,7 @@ details[open] summary:after {
         line-height: 24px;
         color: #2a3541b2;
         outline: none;
-        border-radius: 3px;
+        border-radius: 8px;
         border: 2px solid rgba(208, 215, 251, 0.17);
         box-sizing: border-box;
     }
@@ -1820,16 +1820,22 @@ select {
         rgba(255, 255, 255, 0) 99.8%
     );
     &__content {
-        padding: 64px 80px 0;
+        flex-basis: 50%;
+    }
+    &__header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        margin-bottom: 32px;
     }
     &__wrapper {
         display: flex;
+        align-items: flex-end;
         column-gap: 40px;
-    }
-    &__block {
-        flex-basis: 50%;
+        padding: 64px 80px 0 80px;
     }
     &__form {
+        flex-basis: 50%;
         padding: 32px;
         background-color: var(--color-white);
         box-shadow: 0px 4px 40px 0px #1d395f14;
@@ -1845,6 +1851,22 @@ select {
         bottom: 0;
         right: 0;
     }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        margin: 32px 0 48px;
+        &-item {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+        &-item svg {
+            margin-right: 8px;
+        }
+    }
     &__submit {
         display: flex;
         justify-content: space-between;
@@ -1854,6 +1876,26 @@ select {
         display: flex;
         flex-direction: column;
         row-gap: 8px;
+        & .form-checkbox {
+            margin-bottom: 0;
+        }
+    }
+    &__map {
+        position: relative;
+    }
+    &__map iframe {
+        border-radius: 20px;
+        filter: grayscale(1)
+    }
+    &__location {
+        width: 347px;
+        height: 72px;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        border-radius: 10px;
+        background-color: var(--color-white);
+        box-shadow: 0px 4px 40px 0px #1D395F14;
     }
 }
 

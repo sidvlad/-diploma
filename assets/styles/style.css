@@ -896,9 +896,6 @@ details[open] summary:after {
   padding-top: 185px;
   color: #0d0d15;
 }
-.footer__wrapper {
-  width: 100%;
-}
 .footer__main {
   display: flex;
   justify-content: space-between;
@@ -1564,7 +1561,7 @@ details[open] summary:after {
   line-height: 24px;
   color: rgba(42, 53, 65, 0.6980392157);
   outline: none;
-  border-radius: 3px;
+  border-radius: 8px;
   border: 2px solid rgba(208, 215, 251, 0.17);
   box-sizing: border-box;
 }
@@ -1804,17 +1801,23 @@ select:focus {
   background: linear-gradient(180.23deg, #f0f6fd 0.2%, rgba(255, 255, 255, 0) 99.8%);
 }
 .contacts__content {
-  padding: 64px 80px 0;
+  flex-basis: 50%;
+}
+.contacts__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-bottom: 32px;
 }
 .contacts__wrapper {
   display: flex;
+  align-items: flex-end;
   -moz-column-gap: 40px;
        column-gap: 40px;
-}
-.contacts__block {
-  flex-basis: 50%;
+  padding: 64px 80px 0 80px;
 }
 .contacts__form {
+  flex-basis: 50%;
   padding: 32px;
   background-color: var(--color-white);
   box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.0784313725);
@@ -1830,6 +1833,22 @@ select:focus {
   bottom: 0;
   right: 0;
 }
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin: 32px 0 48px;
+}
+.contacts__info-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.contacts__info-item svg {
+  margin-right: 8px;
+}
 .contacts__submit {
   display: flex;
   justify-content: space-between;
@@ -1839,6 +1858,26 @@ select:focus {
   display: flex;
   flex-direction: column;
   row-gap: 8px;
+}
+.contacts__subscribe .form-checkbox {
+  margin-bottom: 0;
+}
+.contacts__map {
+  position: relative;
+}
+.contacts__map iframe {
+  border-radius: 20px;
+  filter: grayscale(1);
+}
+.contacts__location {
+  width: 347px;
+  height: 72px;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.0784313725);
 }
 
 .input {
