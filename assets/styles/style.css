@@ -1015,6 +1015,7 @@ details[open] summary:after {
   color: #f5f8fb;
   border-radius: 20px;
   background-color: var(--color-blue);
+  text-transform: uppercase;
 }
 .blog__image {
   width: 100%;
@@ -1129,9 +1130,6 @@ details[open] summary:after {
 }
 .blog-sidebar__article p {
   padding-bottom: 10px;
-}
-.blog-sidebar__article:first-child {
-  border: none;
 }
 .blog-sidebar__title {
   display: block;
@@ -1827,11 +1825,29 @@ select:focus {
   position: relative;
 }
 .contacts__location {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  align-items: center;
   position: absolute;
   width: 347px;
   height: auto;
-  bottom: 0;
-  right: 0;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
+.contacts__location img {
+  grid-row: span 2;
+}
+.contacts__location-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #0D0D15;
+}
+.contacts__location-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(42, 53, 65, 0.8509803922);
 }
 .contacts__info {
   display: flex;

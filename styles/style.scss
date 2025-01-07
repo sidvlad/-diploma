@@ -1021,6 +1021,7 @@ details[open] summary:after {
         color: #f5f8fb;
         border-radius: 20px;
         background-color: var(--color-blue);
+        text-transform: uppercase;
     }
     &__image {
         width: 100%;
@@ -1133,9 +1134,6 @@ details[open] summary:after {
         & p {
             padding-bottom: 10px;
         }
-    }
-    &__article:first-child {
-        border: none;
     }
     &__title {
         display: block;
@@ -1845,11 +1843,29 @@ select {
         position: relative;
     }
     &__location {
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+        align-items: center;
         position: absolute;
         width: 347px;
         height: auto;
-        bottom: 0;
-        right: 0;
+        padding: 12px 16px;
+        box-sizing: border-box;
+    }
+    &__location img {
+        grid-row: span 2;
+    }
+    &__location-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #0D0D15;
+    }
+    &__location-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #2A3541D9;
     }
     &__info {
         display: flex;
