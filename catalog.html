@@ -70,8 +70,10 @@
       </section>
 
       <section class="catalog container">
+
         <aside class="catalog-sidebar">
           <form class="form-catalog" action="#" method="get">
+
             <div class="catalog-sidebar__wrapper">
               <p class="catalog-sidebar__title">Categories</p>
               <label class="form-checkbox">
@@ -144,6 +146,13 @@
                   <span class="form-checkbox__text">Others</span>
                 </p>
               </label>
+              <label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="others" required>
+                <p class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Others</span>
+                </p>
+              </label>
             </div>
 
             <div class="catalog-sidebar__wrapper">
@@ -183,6 +192,7 @@
                   <span class="form-radio__text">Adobe Illustration</span>
                 </span>
               </label>
+            </div>
 
               <div class="catalog-sidebar__wrapper">
                 <p class="catalog-sidebar__title">Style</p>
@@ -212,7 +222,19 @@
                   <label for="photocentric" class="form-switcher__text">Photocentric</label>
                 </div>
               </div>
-            </div>
+
+              <div class="catalog-sidebar__wrapper">
+                <p class="catalog-sidebar__title">Price</p>
+              </div>
+
+              <button type="button" class="btn btn--border btn--middle btn--full-width">
+                <svg width="24" height="24" aria-label="close" role="img">
+                  <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
+                </svg>
+                Clear all filters
+              </button>
+
+
           </form>
         </aside>
 
@@ -220,15 +242,14 @@
           <section class="filter">
             <div class="filter__controls">
               <form class="form-select" action="#" method="get">
-                <label>
-                  <select class="select" name="sort" id="sort">
-                    <option class="select__option" value="bestseller">Best Seller</option>
-                    <option class="select__option" value="newest">Newest</option>
-                    <option class="select__option" value="popular">Most popular</option>
-                    <option class="select__option" value="increasing">Increasing in price</option>
-                    <option class="select__option" value="lowering">Lowering the price</option>
-                  </select>
-                </label>
+                <select class="select" name="sort" id="sort">
+                  <option class="select__option" value="bestseller">Best Seller</option>
+                  <option class="select__option" value="newest">Newest</option>
+                  <option class="select__option" value="popular">Most popular</option>
+                  <option class="select__option" value="increasing">Increasing in price</option>
+                  <option class="select__option" value="lowering">Lowering the price</option>
+                </select>
+                <label for="sort" class="hidden">Sort by</label>
               </form>
               <div class="filter__results">
                 <p class="filter__text">Showing <span>12</span> out of <span>120</span> results.</p>
@@ -250,13 +271,13 @@
             <div class="btn-group">
               <button type="button" class="btn btn--border btn--small">
                 UI Kit
-                <svg width="16" height="16" aria-label="List View" role="img">
+                <svg width="16" height="16" aria-label="close" role="img">
                   <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
                 </svg>
               </button>
               <button type="button" class="btn btn--border btn--small">
                 UI Kit
-                <svg width="16" height="16" aria-label="List View" role="img">
+                <svg width="16" height="16" aria-label="close" role="img">
                   <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
                 </svg>
               </button>
@@ -264,6 +285,7 @@
           </section>
 
           <section class="catalog-list">
+
             <div class="catalog-list__item label--sold-out">
               <a href="#" class="catalog-list__link">
                 <img
@@ -274,31 +296,20 @@
                   alt="Catalog Item">
               </a>
               <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
               <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <p class="catalog-list__price">€ 29.99</p>
                 <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
                     </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
                     </svg>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -313,31 +324,20 @@
                   alt="Catalog Item">
               </a>
               <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="categories__card-text"><span>Photography</span><span>Creative</span></p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
               <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <p class="catalog-list__price">€ 29.99</p>
                 <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
                     </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
                     </svg>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -352,70 +352,51 @@
                   alt="Catalog Item">
               </a>
               <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
               <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <p class="catalog-list__price">€ 29.99</p>
                 <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
                     </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
                     </svg>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
 
-            <div class="catalog-list__item label--popular">
+
+
+
+            <div class="catalog-list__item label--sold-out">
               <a href="#" class="catalog-list__link">
                 <img
-                  src="assets/images/content/catalog-item-03.webp"
+                  src="assets/images/content/catalog-item-01.webp"
                   width="325"
                   height="260"
                   class="catalog-list__image"
                   alt="Catalog Item">
               </a>
               <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
               <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <p class="catalog-list__price">€ 29.99</p>
                 <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
                     </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
                     </svg>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -430,148 +411,20 @@
                   alt="Catalog Item">
               </a>
               <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
               <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <p class="catalog-list__price">€ 29.99</p>
                 <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
                     </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
                     </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="catalog-list__item label--sold-out">
-              <a href="#" class="catalog-list__link">
-                <img
-                  src="assets/images/content/catalog-item-01.webp"
-                  width="325"
-                  height="260"
-                  class="catalog-list__image"
-                  alt="Catalog Item">
-              </a>
-              <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
-              <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
-                <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="catalog-list__item label--sold-out">
-              <a href="#" class="catalog-list__link">
-                <img
-                  src="assets/images/content/catalog-item-01.webp"
-                  width="325"
-                  height="260"
-                  class="catalog-list__image"
-                  alt="Catalog Item">
-              </a>
-              <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
-              <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
-                <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="catalog-list__item label--sold-out">
-              <a href="#" class="catalog-list__link">
-                <img
-                  src="assets/images/content/catalog-item-01.webp"
-                  width="325"
-                  height="260"
-                  class="catalog-list__image"
-                  alt="Catalog Item">
-              </a>
-              <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
-              <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
-                <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -586,109 +439,20 @@
                   alt="Catalog Item">
               </a>
               <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
               <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <p class="catalog-list__price">€ 29.99</p>
                 <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
                     </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
                     </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="catalog-list__item label--popular">
-              <a href="#" class="catalog-list__link">
-                <img
-                  src="assets/images/content/catalog-item-03.webp"
-                  width="325"
-                  height="260"
-                  class="catalog-list__image"
-                  alt="Catalog Item">
-              </a>
-              <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
-              <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
-                <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="catalog-list__item label--popular">
-              <a href="#" class="catalog-list__link">
-                <img
-                  src="assets/images/content/catalog-item-03.webp"
-                  width="325"
-                  height="260"
-                  class="catalog-list__image"
-                  alt="Catalog Item">
-              </a>
-              <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
-              <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
-                <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -703,34 +467,110 @@
                   alt="Catalog Item">
               </a>
               <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
               <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <p class="catalog-list__price">€ 29.99</p>
                 <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
                     </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
                     </svg>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
+
+            <div class="catalog-list__item label--popular">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-03.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="catalog-list__item label--new">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-02.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--popular">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-03.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            
 
             <div class="catalog-list__item label--sold-out">
               <a href="#" class="catalog-list__link">
@@ -742,34 +582,24 @@
                   alt="Catalog Item">
               </a>
               <strong class="catalog-list__name">Lens Chronicles</strong>
-              <p class="catalog-list__category">Photography · Creative</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
               <div class="catalog-list__actions">
-                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <p class="catalog-list__price">€ 29.99</p>
                 <div class="btn-group">
-                  <a href="#" class="btn btn--border btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                        stroke="#273544"
-                        stroke-opacity="0.55"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
                     </svg>
-                  </a>
-                  <a href="#" class="btn btn--blue btn--square">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                        stroke="#F8F7FF"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
                     </svg>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
+
           </section>
 
           <div class="btn-group--center">
@@ -828,19 +658,19 @@
       <div class="footer__secondary container">
         <ul class="social">
           <li>
-            <a href="#" class="btn btn--border btn--square-big">
+            <a href="https://x.com/" class="btn btn--border btn--square-big">
               <svg width="24" height="24" aria-label="Twitter" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-twitter"></use></svg
             ></a>
           </li>
           <li>
-            <a href="#" class="btn btn--border btn--square-big"
+            <a href="https://www.facebook.com/" class="btn btn--border btn--square-big"
               ><svg width="24" height="24" aria-label="Facebook" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-facebook"></use></svg
             ></a>
           </li>
           <li>
-            <a href="#" class="btn btn--border btn--square-big"
+            <a href="https://telegram.org/" class="btn btn--border btn--square-big"
               ><svg width="24" height="24" aria-label="Telegram" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-telegram"></use></svg
             ></a>
