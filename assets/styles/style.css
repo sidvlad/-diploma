@@ -996,12 +996,10 @@ details[open] summary:after {
 .privacy__item a:hover {
   color: var(--color-white);
 }
-.blog__header {
-  display: block;
-  margin: 0 auto;
-  padding: 64px 80px 0;
-}
 
+.blog {
+  background: linear-gradient(0.23deg, rgba(255, 255, 255, 0) 0.2%, #f0f6fd 99.8%);
+}
 .blog__label {
   background-color: var(--color-blue);
   padding: 8px 16px;
@@ -1465,7 +1463,7 @@ details[open] summary:after {
 }
 
 .form-switcher__input:focus + .form-switcher__box {
-  background-color: rgba(34, 52, 73, 0.4);
+  background-color: var(--color-blue);
 }
 
 /* form control */

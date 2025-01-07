@@ -1010,17 +1010,17 @@ details[open] summary:after {
         margin: 0 auto;
         padding: 64px 80px 0;
     }
+    &__label {
+        background-color: var(--color-blue);
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #f5f8fb;
+        border-radius: 20px;
+    }
 }
 
-.blog__label {
-    background-color: var(--color-blue);
-    padding: 8px 16px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    color: #f5f8fb;
-    border-radius: 20px;
-}
 
 .blog__wrapper {
     display: grid;
@@ -1473,7 +1473,7 @@ details[open] summary:after {
 }
 
 .form-switcher__input:focus + .form-switcher__box {
-    background-color: #22344966;
+    background-color: var(--color-blue);
 }
 
 /* form control */
