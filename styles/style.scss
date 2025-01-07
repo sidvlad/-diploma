@@ -1195,12 +1195,12 @@ details[open] summary:after {
 }
 
 .form-checkbox:hover .form-checkbox__box {
-    background-color: #f4f7fa;
+    background-color: #F4F7FA;
 }
 
 .form-checkbox:active .form-checkbox__box {
-    background-color: #b5deff;
-    border-color: #b5deff;
+    background-color: #B5DEFF;
+    border-color: #B5DEFF;
 }
 
 .form-checkbox:focus .form-checkbox__box {
@@ -1214,7 +1214,7 @@ details[open] summary:after {
 }
 
 .form-checkbox:invalid:hover .form-checkbox__box {
-    background-color: #294d7517;
+    background-color: #294D7517;
 }
 
 .form-checkbox__inner {
@@ -1240,8 +1240,9 @@ details[open] summary:after {
 }
 
 .form-checkbox__input:disabled + .form-checkbox__inner .form-checkbox__box {
-    background-color: #2e2f3c;
-    border-color: #2e2f3c;
+    background-color: #1D36532B;
+    border-color: #1D36532B;
+    cursor: not-allowed
 }
 
 .form-checkbox__box {
@@ -1298,64 +1299,56 @@ details[open] summary:after {
     opacity: 0;
 }
 
+
+
+/* form radio */
+
+
 .form-radio {
     cursor: pointer;
-}
-
-.form-radio--col {
-    display: block;
-    width: fit-content;
-}
-
-.form-radio:has(.form-radio__input:disabled) {
-    cursor: default;
-}
-
-.form-radio:hover .form-radio__box {
-    background-color: rgba(231, 241, 253, 0.49);
-}
-
-.form-radio:hover .form-radio__box::after {
-    background-color: #22232f;
-}
-
-.form-radio:has(.form-radio__input:checked):hover .form-radio__box {
-    background-color: #147af3;
-}
-
-.form-radio:active .form-radio__box {
-    background-color: rgba(231, 238, 247, 0.66);
-}
-
-.form-radio:active .form-radio__box::after {
-    background-color: #202834;
-}
-
-.form-radio:has(.form-radio__input:checked):active .form-radio__box {
-    background-color: #cae8ff;
-}
-
-.form-radio:has(.form-radio__input:checked):active .form-radio__box::after {
-    background-color: var(--color-blue);
-}
-
-.form-radio__input:disabled + .form-radio__inner .form-radio__box {
-    background-color: rgba(229, 236, 251, 0.36);
-}
-
-.form-radio__input:disabled + .form-radio__inner .form-radio__box::after {
-    opacity: 0;
-}
-
-.form-radio__input:checked:disabled + .form-radio__inner .form-radio__box {
-    background-color: rgba(212, 217, 242, 0.26);
-}
-
-.form-radio__input:checked:disabled
-    + .form-radio__inner
-    .form-radio__box::after {
-    opacity: 1;
-    background-color: #9da2aa;
+    &--col {
+        display: block;
+        width: fit-content;
+    }
+    &:has(.form-radio__input:disabled) {
+        cursor: default;
+    }
+    &:hover .form-radio__box {
+        background-color: rgba(231, 241, 253, 0.49);
+    }
+    &:hover .form-radio__box::after {
+        background-color: var(--color-white);
+    }
+    &:has(.form-radio__input:checked):hover .form-radio__box {
+        background-color: #147af3;
+    }
+    &:active .form-radio__box {
+        background-color: rgba(231, 238, 247, 0.66);
+    }
+    &:active .form-radio__box::after {
+        background-color: #202834;
+    }
+    &:has(.form-radio__input:checked):active .form-radio__box {
+        background-color: #cae8ff;
+    }
+    &:has(.form-radio__input:checked):active .form-radio__box::after {
+        background-color: var(--color-blue);
+    }
+    &__input:disabled + .form-radio__inner .form-radio__box {
+        background-color: rgba(229, 236, 251, 0.36);
+    }
+    &__input:disabled + .form-radio__inner .form-radio__box::after {
+        opacity: 0;
+    }
+    &__input:checked:disabled + .form-radio__inner .form-radio__box {
+        background-color: rgba(212, 217, 242, 0.26);
+    }
+    &__input:checked:disabled
+        + .form-radio__inner
+        .form-radio__box::after {
+        opacity: 1;
+        background-color: #9da2aa;
+    }
 }
 
 .form-radio__input:checked + .form-radio__inner .form-radio__box {
@@ -1375,17 +1368,21 @@ details[open] summary:after {
 }
 
 .form-radio__inner:hover .form-radio__box {
-    background-color: #f4f7fa;
+    background-color: var(--color-blue);
 }
 
 .form-radio__inner:active .form-radio__box {
     background-color: var(--color-blue);
 }
 
+.form-radio__inner:active .form-radio__box::after {
+    background-color: var(--color-white);
+}
+
 .form-radio__box {
     width: 14px;
     height: 14px;
-    border: 1px solid #1f324745;
+    border: 2px solid #1F324745;
     border-radius: 50%;
     background-color: var(--color-white);
     transition: background-color 0.2s ease;
@@ -1419,38 +1416,37 @@ details[open] summary:after {
     width: 40px;
     height: 20px;
     border-radius: 19px;
-    background-color: rgba(229, 236, 251, 0.36);
+    background-color: #22344966;
     position: relative;
     cursor: pointer;
     transition: background-color 0.2s ease;
-}
-.form-switcher__box::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: calc(100% + 6px);
-    height: calc(100% + 6px);
-    left: 50%;
-    top: 50%;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.2s ease;
-    pointer-events: none;
-    border: 2px solid var(--color-blue);
-    border-radius: 100px;
-}
-
-.form-switcher__box::after {
-    content: '';
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition-property: transform, background-color;
-    transition-duration: 0.2s;
+    &::after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        transition-property: transform, background-color;
+        transition-duration: 0.2s;
+    }
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        left: 50%;
+        top: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+        border: 2px solid #3892F3;
+        border-radius: 100px;
+    }
 }
 
 .form-switcher__input:checked + .form-switcher__box {
@@ -1470,10 +1466,14 @@ details[open] summary:after {
 }
 
 .form-switcher__box:hover {
-    background-color: rgba(212, 217, 242, 0.26);
+    background-color: #1F324745;
 }
 .form-switcher__input:checked + .form-switcher__box:hover {
-    background-color: var(--color-blue);
+    background-color: #3892F3;
+}
+
+.form-switcher__input:focus + .form-switcher__box {
+    background-color: #22344966;
 }
 
 /* form control */
