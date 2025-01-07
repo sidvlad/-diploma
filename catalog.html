@@ -3,18 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixMart</title>
+    <meta name="description" content="Pixmart offers premium digital assets for creative projects. Explore UI/UX kits, illustrations, templates, fonts, and more to elevate your designs effortlessly.">
+    <meta name="keywords" content="digital assets, UI/UX kits, illustrations, templates, fonts, creative projects">
+    <title>PixMart — Catalog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400,500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400,500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/normalize.min.css">
     <link rel="stylesheet" href="assets/styles/style.min.css">
+    <link rel="icon" href="favicon.ico" type="image/svg+xml">
 </head>
   <body>
-    <header class="header block-wrapper">
-      <a href="#" class="logo">
-        <svg width="108" height="24" aria-label="PixMart" role="img">
+    <header class="header container">
+      <a href="index.html">
+        <svg width="108" height="24" aria-label="PixMart logo" role="img">
           <use href="assets/images/icons/sprite.svg#icon-logo"></use>
         </svg>
       </a>
@@ -23,8 +26,8 @@
           <li class="header-nav__item">
             <a href="index.html">About</a>
           </li>
-          <li class="header-nav__item header-nav__item--active">
-            <a href="catalog.html">Products</a>
+          <li class="header-nav__item">
+            <a href="catalog.html" class="active">Products</a>
           </li>
           <li class="header-nav__item">
             <a href="creators.html">Creators</a>
@@ -39,793 +42,830 @@
       </nav>
 
       <div class="header-actions">
-        <form class="search-form" action="/search">
-          <input class="search-form__input" type="search" placeholder="Search for Digital Assets" aria-label="Search">
+        <form class="form-search" action="/search" method="post">
+          <input
+            class="input input--small"
+            type="search"
+            placeholder="Search for Digital Assets"
+            aria-label="Search"
+            name="search">
         </form>
         <a href="#" class="btn btn--blue btn--square">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-              stroke="#F8F7FF"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
+          <svg width="24" height="24" aria-label="Product Bag" role="img">
+            <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
           </svg>
         </a>
       </div>
     </header>
 
-    <section class="catalog-intro">
-      <div class="catalog-intro__wrapper block-wrapper">
-        <strong class="intro-title">
-          Explore Top
-          <span>UI Kits</span> Design Assets
-        </strong>
-      </div>
-    </section>
-
-    <main class="catalog block-wrapper">
-      <aside class="catalog-sidebar">
-        <form class="form-catalog" action="#" method="get">
-          <strong class="sidebar-title">Categories</strong>
-          <label class="form-checkbox">
-            <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="all" required>
-            <p class="form-checkbox__inner">
-              <span class="form-checkbox__box"></span>
-              <span class="form-checkbox__text">All Categories</span>
-            </p>
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="technology" required>
-            <p class="form-checkbox__inner">
-              <span class="form-checkbox__box"></span>
-              <span class="form-checkbox__text">Technology</span>
-            </p>
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="travel-tourism" required>
-            <p class="form-checkbox__inner">
-              <span class="form-checkbox__box"></span>
-              <span class="form-checkbox__text">Travel & Tourism</span>
-            </p>
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="health-fitness" required>
-            <p class="form-checkbox__inner">
-              <span class="form-checkbox__box"></span>
-              <span class="form-checkbox__text">Health & Fitness</span>
-            </p> </label
-          ><label class="form-checkbox">
-            <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="e-commerce" required>
-            <p class="form-checkbox__inner">
-              <span class="form-checkbox__box"></span>
-              <span class="form-checkbox__text">E-Commerce</span>
-            </p>
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="education" required>
-            <p class="form-checkbox__inner">
-              <span class="form-checkbox__box"></span>
-              <span class="form-checkbox__text">Education</span>
-            </p>
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="entertainment" required>
-            <p class="form-checkbox__inner">
-              <span class="form-checkbox__box"></span>
-              <span class="form-checkbox__text">Entertainment</span>
-            </p>
-          </label>
-          <label class="form-checkbox">
-            <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="others" required>
-            <p class="form-checkbox__inner">
-              <span class="form-checkbox__box"></span>
-              <span class="form-checkbox__text">Others</span>
-            </p>
-          </label>
-
-          <strong class="sidebar-title">Format Type</strong>
-          <label class="form-radio form-radio--col">
-            <input class="input-hidden form-radio__input" type="radio" name="yeas" value="figma">
-            <span class="form-radio__inner">
-              <span class="form-radio__box"></span>
-              <span class="form-radio__text">Figma</span>
-            </span>
-          </label>
-          <label class="form-radio form-radio--col">
-            <input class="input-hidden form-radio__input" type="radio" name="yeas" value="sketch">
-            <span class="form-radio__inner">
-              <span class="form-radio__box"></span>
-              <span class="form-radio__text">Sketch</span>
-            </span>
-          </label>
-          <label class="form-radio form-radio--col">
-            <input class="input-hidden form-radio__input" type="radio" name="yeas" value="adobe-xd">
-            <span class="form-radio__inner">
-              <span class="form-radio__box"></span>
-              <span class="form-radio__text">Adobe XD</span>
-            </span>
-          </label>
-          <label class="form-radio form-radio--col">
-            <input class="input-hidden form-radio__input" type="radio" name="yeas" value="adobe-ps">
-            <span class="form-radio__inner">
-              <span class="form-radio__box"></span>
-              <span class="form-radio__text">Adobe Photoshop</span>
-            </span>
-          </label>
-          <label class="form-radio form-radio--col">
-            <input class="input-hidden form-radio__input" type="radio" name="yeas" value="adobe-il">
-            <span class="form-radio__inner">
-              <span class="form-radio__box"></span>
-              <span class="form-radio__text">Adobe Illustration</span>
-            </span>
-          </label>
-
-          <strong class="sidebar-title">Style</strong>
-          <div class="form-switcher">
-            <input type="checkbox" class="input-hidden form-switcher__input" id="minimalist">
-            <label for="minimalist" class="form-switcher__box"></label>
-            <label for="minimalist" class="form-switcher__text">Minimalist</label>
-          </div>
-          <div class="form-switcher">
-            <input type="checkbox" class="input-hidden form-switcher__input" id="modern">
-            <label for="modern" class="form-switcher__box"></label>
-            <label for="modern" class="form-switcher__text">Modern</label>
-          </div>
-          <div class="form-switcher">
-            <input type="checkbox" class="input-hidden form-switcher__input" id="playful">
-            <label for="playful" class="form-switcher__box"></label>
-            <label for="playful" class="form-switcher__text">Playful</label>
-          </div>
-          <div class="form-switcher">
-            <input type="checkbox" class="input-hidden form-switcher__input" id="dark-mode">
-            <label for="dark-mode" class="form-switcher__box"></label>
-            <label for="dark-mode" class="form-switcher__text">Dark Mode</label>
-          </div>
-          <div class="form-switcher">
-            <input type="checkbox" class="input-hidden form-switcher__input" id="photocentric">
-            <label for="photocentric" class="form-switcher__box"></label>
-            <label for="photocentric" class="form-switcher__text">Photocentric</label>
-          </div>
-
-          <strong class="sidebar-title">Price</strong>
-        </form>
-      </aside>
-
-      <article class="catalog-content">
-        <section class="filter">
-          <div class="filter__controls">
-            <form class="form-select" action="#" method="get">
-              <label>
-                <select class="select" name="sort" id="sort">
-                  <option class="select__option" value="bestseller">Best Seller</option>
-                  <option class="select__option" value="newest">Newest</option>
-                  <option class="select__option" value="popular">Most popular</option>
-                  <option class="select__option" value="increasing">Increasing in price</option>
-                  <option class="select__option" value="lowering">Lowering the price</option>
-                </select>
-              </label>
-            </form>
-            <div class="filter__results">
-              <p class="filter__text">Showing <span>12</span> out of <span>120</span> results.</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--blue btn--square"></a>
-                <a href="#" class="btn btn--border btn--square"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="block__btns">
-            <button type="button" class="btn btn--border">UI Kit</button>
-            <button type="button" class="btn btn--border">UI Kit</button>
-          </div>
-        </section>
-
-        <section class="catalog-list">
-          <div class="catalog-list__item label--sold-out">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-01.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--new">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-02.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--popular">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-03.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--popular">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-03.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--new">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-02.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--sold-out">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-01.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--sold-out">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-01.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--sold-out">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-01.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--new">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-02.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--popular">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-03.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--popular">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-03.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--new">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-02.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog-list__item label--sold-out">
-            <a href="#" class="catalog-list__link">
-              <img
-                src="assets/images/content/catalog-item-01.webp"
-                width="325"
-                height="260"
-                class="catalog-list__image"
-                alt="Catalog Item">
-            </a>
-            <strong class="catalog-list__name">Lens Chronicles</strong>
-            <p class="catalog-list__category">Photography · Creative</p>
-            <div class="catalog-list__actions">
-              <p class="catalog-list__price"><span>$</span>29.99</p>
-              <div class="block__btns">
-                <a href="#" class="btn btn--border btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
-                      stroke="#273544"
-                      stroke-opacity="0.55"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn--blue btn--square">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
-                      stroke="#F8F7FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="block__btns--center">
-          <button class="btn btn--border">Load more</button>
+    <main>
+      <section class="catalog-intro">
+        <div class="catalog-intro__wrapper container">
+          <h1 class="hidden">Digital Assets for Creative Projects</h1>
+          <h2 class="intro-title">
+            Explore Top
+            <span>UI Kits</span> Design Assets
+          </h2>
         </div>
-      </article>
+      </section>
+
+      <section class="catalog container">
+        <aside class="catalog-sidebar">
+          <form class="form-catalog" action="#" method="get">
+            <div class="catalog-sidebar__wrapper">
+              <p class="catalog-sidebar__title">Categories</p>
+              <label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="all" required>
+                <p class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">All Categories</span>
+                </p>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="technology" required>
+                <p class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Technology</span>
+                </p>
+              </label>
+              <label class="form-checkbox">
+                <input
+                  type="checkbox"
+                  class="input-hidden form-checkbox__input"
+                  id="all"
+                  name="travel-tourism"
+                  required>
+                <p class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Travel & Tourism</span>
+                </p>
+              </label>
+              <label class="form-checkbox">
+                <input
+                  type="checkbox"
+                  class="input-hidden form-checkbox__input"
+                  id="all"
+                  name="health-fitness"
+                  required>
+                <p class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Health & Fitness</span>
+                </p> </label
+              ><label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="e-commerce" required>
+                <p class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">E-Commerce</span>
+                </p>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="education" required>
+                <p class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Education</span>
+                </p>
+              </label>
+              <label class="form-checkbox">
+                <input
+                  type="checkbox"
+                  class="input-hidden form-checkbox__input"
+                  id="all"
+                  name="entertainment"
+                  required>
+                <p class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Entertainment</span>
+                </p>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="all" name="others" required>
+                <p class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Others</span>
+                </p>
+              </label>
+            </div>
+
+            <div class="catalog-sidebar__wrapper">
+              <p class="catalog-sidebar__title">Format Type</p>
+              <label class="form-radio form-radio--col">
+                <input class="input-hidden form-radio__input" type="radio" name="yeas" value="figma">
+                <span class="form-radio__inner">
+                  <span class="form-radio__box"></span>
+                  <span class="form-radio__text">Figma</span>
+                </span>
+              </label>
+              <label class="form-radio form-radio--col">
+                <input class="input-hidden form-radio__input" type="radio" name="yeas" value="sketch">
+                <span class="form-radio__inner">
+                  <span class="form-radio__box"></span>
+                  <span class="form-radio__text">Sketch</span>
+                </span>
+              </label>
+              <label class="form-radio form-radio--col">
+                <input class="input-hidden form-radio__input" type="radio" name="yeas" value="adobe-xd">
+                <span class="form-radio__inner">
+                  <span class="form-radio__box"></span>
+                  <span class="form-radio__text">Adobe XD</span>
+                </span>
+              </label>
+              <label class="form-radio form-radio--col">
+                <input class="input-hidden form-radio__input" type="radio" name="yeas" value="adobe-ps">
+                <span class="form-radio__inner">
+                  <span class="form-radio__box"></span>
+                  <span class="form-radio__text">Adobe Photoshop</span>
+                </span>
+              </label>
+              <label class="form-radio form-radio--col">
+                <input class="input-hidden form-radio__input" type="radio" name="yeas" value="adobe-il">
+                <span class="form-radio__inner">
+                  <span class="form-radio__box"></span>
+                  <span class="form-radio__text">Adobe Illustration</span>
+                </span>
+              </label>
+
+              <div class="catalog-sidebar__wrapper">
+                <p class="catalog-sidebar__title">Style</p>
+                <div class="form-switcher">
+                  <input type="checkbox" class="input-hidden form-switcher__input" id="minimalist">
+                  <label for="minimalist" class="form-switcher__box"></label>
+                  <label for="minimalist" class="form-switcher__text">Minimalist</label>
+                </div>
+                <div class="form-switcher">
+                  <input type="checkbox" class="input-hidden form-switcher__input" id="modern">
+                  <label for="modern" class="form-switcher__box"></label>
+                  <label for="modern" class="form-switcher__text">Modern</label>
+                </div>
+                <div class="form-switcher">
+                  <input type="checkbox" class="input-hidden form-switcher__input" id="playful">
+                  <label for="playful" class="form-switcher__box"></label>
+                  <label for="playful" class="form-switcher__text">Playful</label>
+                </div>
+                <div class="form-switcher">
+                  <input type="checkbox" class="input-hidden form-switcher__input" id="dark-mode">
+                  <label for="dark-mode" class="form-switcher__box"></label>
+                  <label for="dark-mode" class="form-switcher__text">Dark Mode</label>
+                </div>
+                <div class="form-switcher">
+                  <input type="checkbox" class="input-hidden form-switcher__input" id="photocentric">
+                  <label for="photocentric" class="form-switcher__box"></label>
+                  <label for="photocentric" class="form-switcher__text">Photocentric</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </aside>
+
+        <article class="catalog-content">
+          <section class="filter">
+            <div class="filter__controls">
+              <form class="form-select" action="#" method="get">
+                <label>
+                  <select class="select" name="sort" id="sort">
+                    <option class="select__option" value="bestseller">Best Seller</option>
+                    <option class="select__option" value="newest">Newest</option>
+                    <option class="select__option" value="popular">Most popular</option>
+                    <option class="select__option" value="increasing">Increasing in price</option>
+                    <option class="select__option" value="lowering">Lowering the price</option>
+                  </select>
+                </label>
+              </form>
+              <div class="filter__results">
+                <p class="filter__text">Showing <span>12</span> out of <span>120</span> results.</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" aria-label="Cards View" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-cards"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" aria-label="List View" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-list"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn--border btn--small">
+                UI Kit
+                <svg width="16" height="16" aria-label="List View" role="img">
+                  <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
+                </svg>
+              </button>
+              <button type="button" class="btn btn--border btn--small">
+                UI Kit
+                <svg width="16" height="16" aria-label="List View" role="img">
+                  <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+
+          <section class="catalog-list">
+            <div class="catalog-list__item label--sold-out">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-01.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--new">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-02.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="categories__card-text"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--popular">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-03.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--popular">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-03.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--new">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-02.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--sold-out">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-01.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--sold-out">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-01.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--sold-out">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-01.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--new">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-02.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--popular">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-03.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--popular">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-03.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--new">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-02.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--sold-out">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-01.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item">
+              </a>
+              <strong class="catalog-list__name">Lens Chronicles</strong>
+              <p class="catalog-list__category">Photography · Creative</p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price"><span>$</span>29.99</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.5013 12.5719L12.0013 19.9999L4.50128 12.5719C4.00658 12.0905 3.61692 11.5119 3.35683 10.8726C3.09673 10.2332 2.97184 9.54688 2.99002 8.85687C3.00819 8.16685 3.16904 7.48807 3.46244 6.86327C3.75583 6.23847 4.17541 5.68119 4.69476 5.22651C5.21411 4.77184 5.82198 4.42962 6.48009 4.22141C7.1382 4.01321 7.83228 3.94352 8.51865 4.01673C9.20501 4.08995 9.86878 4.30449 10.4682 4.64684C11.0675 4.98919 11.5895 5.45193 12.0013 6.00593C12.4148 5.45595 12.9374 4.99725 13.5364 4.65854C14.1353 4.31982 14.7978 4.10838 15.4822 4.03745C16.1666 3.96652 16.8584 4.03763 17.5141 4.24632C18.1697 4.45502 18.7753 4.79681 19.2928 5.2503C19.8104 5.70379 20.2287 6.25922 20.5217 6.88182C20.8147 7.50443 20.976 8.18082 20.9956 8.86864C21.0152 9.55647 20.8925 10.2409 20.6354 10.8792C20.3783 11.5174 19.9922 12.0958 19.5013 12.5779"
+                        stroke="#273544"
+                        stroke-opacity="0.55"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9984 9V6C15.9984 3.79086 14.2076 2 11.9984 2C9.78928 2 7.99842 3.79086 7.99842 6V9M3.59042 10.352L2.99042 16.752C2.81982 18.5717 2.73452 19.4815 3.03647 20.1843C3.30171 20.8016 3.76653 21.3121 4.35643 21.6338C5.02794 22 5.94178 22 7.76946 22H16.2274C18.055 22 18.9689 22 19.6404 21.6338C20.2303 21.3121 20.6951 20.8016 20.9604 20.1843C21.2623 19.4815 21.177 18.5717 21.0064 16.752L20.4064 10.352C20.2624 8.81535 20.1903 8.04704 19.8448 7.46616C19.5404 6.95458 19.0908 6.54511 18.553 6.28984C17.9424 6 17.1707 6 15.6274 6L8.36946 6C6.82611 6 6.05443 6 5.44383 6.28984C4.90608 6.54511 4.45642 6.95458 4.15208 7.46616C3.80651 8.04704 3.73448 8.81534 3.59042 10.352Z"
+                        stroke="#F8F7FF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="btn-group--center">
+            <button class="btn btn--border">Load more</button>
+          </div>
+        </article>
+      </section>
     </main>
 
     <footer class="footer">
-      <div class="footer__wrapper block-wrapper">
-        <div class="footer__main">
-          <div class="logo__wrapper">
-            <strong class="logo"
-              ><svg width="300" height="58" aria-label="PixMart" role="img">
-                <use href="assets/images/icons/sprite.svg#icon-logo-footer"></use></svg
-            ></strong>
-            <div class="footer__description">
-              Your premium digital assets solution with high quality and comprehensive range of products and services.
-            </div>
+      <div class="footer__main container">
+        <div class="footer__logo">
+          <svg width="300" height="58" aria-label="PixMart big logo" role="img">
+            <use href="assets/images/icons/sprite.svg#icon-logo-footer"></use>
+          </svg>
+          <p class="footer__description">
+            Your premium digital assets solution with high quality and comprehensive range of products and services.
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <div class="footer-nav__block">
+            <p class="footer-nav__title">Company</p>
+            <ul class="footer-nav__list">
+              <li><a href="#">Homepage v1</a></li>
+              <li><a href="#">Homepage v2</a></li>
+              <li><a href="#">Homepage v3</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blog Articles</a></li>
+            </ul>
           </div>
-          <nav class="footer-nav">
-            <div class="footer-nav__block">
-              <strong class="footer-nav__title">Company</strong>
-              <ul class="footer-nav__list">
-                <li><a href="#">Homepage v1</a></li>
-                <li><a href="#">Homepage v2</a></li>
-                <li><a href="#">Homepage v3</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog Articles</a></li>
-              </ul>
-            </div>
-            <div class="footer-nav__block">
-              <strong class="footer-nav__title">Products</strong>
-              <ul class="footer-nav__list">
-                <li><a href="#">Website</a></li>
-                <li><a href="#">Mobile App</a></li>
-                <li><a href="#">Social Media Feeds</a></li>
-                <li><a href="#">Presentation</a></li>
-                <li><a href="#">Product Mockups</a></li>
-                <li><a href="#">Illustrations</a></li>
-              </ul>
-            </div>
-            <div class="footer-nav__block">
-              <strong class="footer-nav__title">Account</strong>
-              <ul class="footer-nav__list">
-                <li><a href="#">Your Cart</a></li>
-                <li><a href="#">Check Out</a></li>
-                <li><a href="#">Refund Policy</a></li>
-                <li><a href="#">Company Policy</a></li>
-                <li><a href="#">Send A Message</a></li>
-                <li><a href="#">Customer Support</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-        <div class="footer__secondary">
-          <ul class="social">
-            <li class="social__item">
-              <a href="#"
-                ><svg width="24" height="24" aria-label="Twitter" role="img">
-                  <use href="assets/images/icons/sprite.svg#icon-twitter"></use></svg
-              ></a>
-            </li>
-            <li class="social__item">
-              <a href="#"
-                ><svg width="24" height="24" aria-label="Facebook" role="img">
-                  <use href="assets/images/icons/sprite.svg#icon-facebook"></use></svg
-              ></a>
-            </li>
-            <li class="social__item">
-              <a href="#"
-                ><svg width="24" height="24" aria-label="Telegram" role="img">
-                  <use href="assets/images/icons/sprite.svg#icon-telegram"></use></svg
-              ></a>
-            </li>
-          </ul>
-          <form class="form-subscribe" action method="post">
-            <label class="form-subscribe__label" for="subscribe">Subscribe to Design Newsletter</label>
-            <input
-              class="form-subscribe__input"
-              type="email"
-              id="subscribe"
-              name="email"
-              placeholder="Enter your email address ..."
-              required>
-            <button class="btn btn--blue" type="submit">Subscribe</button>
-          </form>
-        </div>
+          <div class="footer-nav__block">
+            <p class="footer-nav__title">Products</p>
+            <ul class="footer-nav__list">
+              <li><a href="#">Website</a></li>
+              <li><a href="#">Mobile App</a></li>
+              <li><a href="#">Social Media Feeds</a></li>
+              <li><a href="#">Presentation</a></li>
+              <li><a href="#">Product Mockups</a></li>
+              <li><a href="#">Illustrations</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav__block">
+            <p class="footer-nav__title">Account</p>
+            <ul class="footer-nav__list">
+              <li><a href="#">Your Cart</a></li>
+              <li><a href="#">Check Out</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">Company Policy</a></li>
+              <li><a href="#">Send A Message</a></li>
+              <li><a href="#">Customer Support</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__secondary container">
+        <ul class="social">
+          <li>
+            <a href="#" class="btn btn--border btn--square-big">
+              <svg width="24" height="24" aria-label="Twitter" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-twitter"></use></svg
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="btn btn--border btn--square-big"
+              ><svg width="24" height="24" aria-label="Facebook" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-facebook"></use></svg
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="btn btn--border btn--square-big"
+              ><svg width="24" height="24" aria-label="Telegram" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-telegram"></use></svg
+            ></a>
+          </li>
+        </ul>
+        <form class="form-subscribe" action="/subscribe" method="post">
+          <label class="form-subscribe__label" for="subscribe">Subscribe to Design Newsletter</label>
+          <input
+            class="form-subscribe__input input input--large"
+            type="email"
+            id="subscribe"
+            name="email"
+            placeholder="Enter your email address ..."
+            required>
+          <button class="btn btn--blue" type="submit">Subscribe</button>
+        </form>
       </div>
       <div class="copyright">
-        <div class="copyright__wrapper block-wrapper">
-          <ul class="breadcrumbs">
-            <li class="breadcrumbs__item"><a href="#">Privacy Policy</a></li>
-            <li class="breadcrumbs__item"><a href="#">Terms and Condition</a></li>
-            <li class="breadcrumbs__item"><a href="#">Site Map</a></li>
+        <div class="copyright__wrapper container">
+          <ul class="privacy">
+            <li class="privacy__item"><a href="#">Privacy Policy</a></li>
+            <li class="privacy__item"><a href="#">Terms and Condition</a></li>
+            <li class="privacy__item"><a href="#">Site Map</a></li>
           </ul>
-          <p>Copyright © 2024 Pixmart. All rights reserved.</p>
+          <p class="copyright__text">Copyright © 2024 Pixmart. All rights reserved.</p>
         </div>
       </div>
     </footer>
