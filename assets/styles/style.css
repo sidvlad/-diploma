@@ -831,7 +831,7 @@ summary::after {
 
 details[open] {
   outline: 2px solid var(--color-blue);
-  animation: details-open 0.3s ease;
+  overflow: hidden;
 }
 
 details[open] summary:after {
@@ -1073,6 +1073,9 @@ details[open] summary:after {
   background-position: center;
 }
 .blog__content figure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 0 36px;
 }
 .blog__content figure img {

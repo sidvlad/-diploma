@@ -81,19 +81,19 @@
               <svg width="24" height="24" aria-label="to left" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-mail"></use>
               </svg>
-              <a href="mailto:support@pixmart.com&body=Hello?subject=Question from PixMart website"
+              <a href="mailto:support@pixmart.com&body=Hello?subject=Question"
                 >support@pixmart.com</a>
             </div>
             <div class="contacts__info-item">
               <svg width="24" height="24" aria-label="to left" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-clock"></use>
               </svg>
-              Monday to Friday : 9 AM - 5 PM EST
+              <time itemprop="openingHours" datetime="Mo, Tu, We, Th, Fr 9:00-17:00">Monday to Friday : 9 AM - 5 PM EST</time>
             </div>
           </article>
   
           <article class="contacts__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.3386815622966!2d27.704071376063634!3d42.69654897116363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a69e4d22cb958d%3A0xbd2a2a71601be29e!2sCasino%20Las%20Vegas!5e0!3m2!1sru!2s!4v1736270699981!5m2!1sru!2s" width="100%" height="318" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.3386815622966!2d27.704071376063634!3d42.69654897116363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a69e4d22cb958d%3A0xbd2a2a71601be29e!2sCasino%20Las%20Vegas!5e0!3m2!1sru!2s!4v1736270699981!5m2!1sru!2s" width="618" height="318" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="contacts__location">
               <img src="/images/icons/location.svg" width="24" height="24" alt="location">
               <p class="contacts__location-title">PixMart HQ</p>
@@ -103,12 +103,13 @@
         </div>
 
 
-        <form class="contacts__form" action>
+        <form class="contacts__form" action="/" method="post">
           <div class="form-control">
             <label class="form-control__label" for="name">Full Name</label>
             <input
               type="text"
               id="name"
+              name="name"
               class="form-control__input"
               placeholder="Amelia Robert Johnson"
               minlength="3"
@@ -127,9 +128,9 @@
           </div>
   
           <div class="form-control">
-            <label class="form-control__label" for="select"
+            <label class="form-control__label" for="subject"
               >Subject
-              <select class="form-control__select" name="sort" id="sort">
+              <select class="form-control__select" name="subject" id="subject">
                 <option class="select__option" value>General Inquiry</option>
                 <option class="select__option" value="newest">Newest</option>
                 <option class="select__option" value="popular">Most popular</option>
@@ -157,10 +158,10 @@
                   id="subscribe"
                   name="subscribe"
                   required>
-                <p class="form-checkbox__inner">
+                <span class="form-checkbox__inner">
                   <span class="form-checkbox__box"></span>
                   <span class="form-checkbox__text">Subscribe me to Newsletter</span>
-                </p>
+                </span>
               </label>
               <label class="form-checkbox">
                 <input
@@ -169,10 +170,10 @@
                   id="policy"
                   name="policy"
                   required>
-                <p class="form-checkbox__inner">
+                <span class="form-checkbox__inner">
                   <span class="form-checkbox__box"></span>
                   <span class="form-checkbox__text">I have read the User & Privacy Policy</span>
-                </p>
+                </span>
               </label>
             </div>
             <button class="btn btn--blue" type="submit">Send Message</button>
@@ -249,12 +250,12 @@
           </li>
         </ul>
         <form class="form-subscribe" action="/subscribe" method="post">
-          <label class="form-subscribe__label" for="subscribe">Subscribe to Design Newsletter</label>
+          <label class="form-subscribe__label" for="subscribe-email">Subscribe to Design Newsletter</label>
           <input
             class="form-subscribe__input input input--large"
             type="email"
-            id="subscribe"
-            name="email"
+            id="subscribe-email"
+            name="subscribe-email"
             placeholder="Enter your email address ..."
             required>
           <button class="btn btn--blue" type="submit">Subscribe</button>
