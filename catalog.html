@@ -225,6 +225,29 @@
 
               <div class="catalog-sidebar__wrapper">
                 <p class="catalog-sidebar__title">Price</p>
+                <div class="range-container">
+                  <div class="range-values">
+                    <span id="minValueLabel">€5</span>
+                    <span id="maxValueLabel">€50</span>
+                  </div>
+                  <div class="slider-track"></div>
+                  <input
+                    id="rangeMin"
+                    type="range"
+                    min="5"
+                    max="50"
+                    value="5"
+                    oninput="updateSlider()"
+                  />
+                  <input
+                    id="rangeMax"
+                    type="range"
+                    min="5"
+                    max="50"
+                    value="50"
+                    oninput="updateSlider()"
+                  />
+                </div>
               </div>
 
               <button type="reset" class="btn btn--border btn--middle btn--full-width">
@@ -384,7 +407,6 @@
                   height="260"
                   class="catalog-list__image"
                   alt="Lens Chronicles"
-                  aria-label="Catalog Item"
                   aria-label="Catalog Item">
               </a>
               <p class="catalog-list__name">Lens Chronicles</p>
@@ -711,5 +733,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
