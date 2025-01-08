@@ -459,7 +459,7 @@ button {
   background-color: var(--color-blue);
 }
 .products__item:hover svg {
-  filter: brightness(10);
+  filter: brightness(100);
 }
 .products__image {
   display: flex;
@@ -567,7 +567,7 @@ button {
   color: rgba(239, 245, 250, 0.8196078431);
 }
 .categories__card:hover svg, .categories__card--active svg {
-  filter: brightness(10);
+  filter: brightness(100);
 }
 .categories__card:hover .categories__card-text span:after, .categories__card--active .categories__card-text span:after {
   background-color: rgba(239, 245, 250, 0.8196078431);

@@ -451,7 +451,7 @@ button {
             background-color: var(--color-blue);
         }
         svg {
-            filter: brightness(10);
+            filter: brightness(100);
         }
     }
     &__image {
@@ -562,7 +562,7 @@ button {
             color: #eff5fad1;
         }
         & svg {
-            filter: brightness(10);
+            filter: brightness(100);
         }
         .categories__card-text span:after {
             background-color: #eff5fad1;
