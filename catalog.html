@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catalog page">
+    <meta name="keywords" content="digital assets, UI/UX kits, illustrations, templates, fonts, creative projects">
+    <title>PixMart — Catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400,500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400,500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/normalize.min.css">
+    <link rel="stylesheet" href="assets/styles/style.min.css">
+    <link rel="icon" href="favicon.ico" type="image/svg+xml">
+</head>
+  <body>
+    <header class="header container">
+      <a href="index.html">
+        <svg width="108" height="24" aria-label="PixMart logo" role="img">
+          <use href="assets/images/icons/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <nav class="header-nav">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a href="index.html">About</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="catalog.html" class="active">Products</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="creators.html">Creators</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="blog.html">Blog</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="contacts.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <form class="form-search" action="/search" method="post">
+          <input
+            class="input input--small"
+            type="search"
+            placeholder="Search for Digital Assets"
+            aria-label="Search"
+            name="search">
+        </form>
+        <a href="#" class="btn btn--blue btn--square">
+          <svg width="24" height="24" aria-label="Product Bag" role="img">
+            <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="catalog-intro">
+        <div class="catalog-intro__wrapper container">
+          <h1 class="hidden">Digital Assets for Creative Projects</h1>
+          <h2 class="intro-title">
+            Explore Top
+            <span>UI Kits</span> Design Assets
+          </h2>
+        </div>
+      </section>
+
+      <section class="catalog container">
+
+        <aside class="catalog-sidebar">
+          <form class="form-catalog" action="#" method="get">
+
+            <div class="catalog-sidebar__wrapper">
+              <p class="catalog-sidebar__title">Categories</p>
+              <label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="all-categories" name="all-categories" required>
+                <span class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">All Categories</span>
+                </span>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="technology" name="technology" required>
+                <span class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Technology</span>
+                </span>
+              </label>
+              <label class="form-checkbox">
+                <input
+                  type="checkbox"
+                  class="input-hidden form-checkbox__input"
+                  id="travel-tourism"
+                  name="travel-tourism"
+                  required>
+                <span class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Travel & Tourism</span>
+                </span>
+              </label>
+              <label class="form-checkbox">
+                <input
+                  type="checkbox"
+                  class="input-hidden form-checkbox__input"
+                  id="health-fitness"
+                  name="health-fitness"
+                  required>
+                <span class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Health & Fitness</span>
+                </span> </label
+              ><label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="e-commerce" name="e-commerce" required>
+                <span class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">E-Commerce</span>
+                </span>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="education" name="education" required>
+                <span class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Education</span>
+                </span>
+              </label>
+              <label class="form-checkbox">
+                <input
+                  type="checkbox"
+                  class="input-hidden form-checkbox__input"
+                  id="entertainment"
+                  name="entertainment"
+                  required>
+                <span class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Entertainment</span>
+                </span>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="others" name="others" required>
+                <span class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Others</span>
+                </span>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="others-two" name="others-two" required>
+                <span class="form-checkbox__inner">
+                  <span class="form-checkbox__box"></span>
+                  <span class="form-checkbox__text">Others</span>
+                </span>
+              </label>
+            </div>
+
+            <div class="catalog-sidebar__wrapper">
+              <p class="catalog-sidebar__title">Format Type</p>
+              <label class="form-radio form-radio--col">
+                <input class="input-hidden form-radio__input" type="radio" name="yeas" value="figma">
+                <span class="form-radio__inner">
+                  <span class="form-radio__box"></span>
+                  <span class="form-radio__text">Figma</span>
+                </span>
+              </label>
+              <label class="form-radio form-radio--col">
+                <input class="input-hidden form-radio__input" type="radio" name="yeas" value="sketch">
+                <span class="form-radio__inner">
+                  <span class="form-radio__box"></span>
+                  <span class="form-radio__text">Sketch</span>
+                </span>
+              </label>
+              <label class="form-radio form-radio--col">
+                <input class="input-hidden form-radio__input" type="radio" name="yeas" value="adobe-xd">
+                <span class="form-radio__inner">
+                  <span class="form-radio__box"></span>
+                  <span class="form-radio__text">Adobe XD</span>
+                </span>
+              </label>
+              <label class="form-radio form-radio--col">
+                <input class="input-hidden form-radio__input" type="radio" name="yeas" value="adobe-ps">
+                <span class="form-radio__inner">
+                  <span class="form-radio__box"></span>
+                  <span class="form-radio__text">Adobe Photoshop</span>
+                </span>
+              </label>
+              <label class="form-radio form-radio--col">
+                <input class="input-hidden form-radio__input" type="radio" name="yeas" value="adobe-il">
+                <span class="form-radio__inner">
+                  <span class="form-radio__box"></span>
+                  <span class="form-radio__text">Adobe Illustration</span>
+                </span>
+              </label>
+            </div>
+
+              <div class="catalog-sidebar__wrapper">
+                <p class="catalog-sidebar__title">Style</p>
+                <div class="form-switcher">
+                  <input type="checkbox" class="input-hidden form-switcher__input" id="minimalist" name="minimalist">
+                  <label for="minimalist" class="form-switcher__box"></label>
+                  <label for="minimalist" class="form-switcher__text">Minimalist</label>
+                </div>
+                <div class="form-switcher">
+                  <input type="checkbox" class="input-hidden form-switcher__input" id="modern" name="modern">
+                  <label for="modern" class="form-switcher__box"></label>
+                  <label for="modern" class="form-switcher__text">Modern</label>
+                </div>
+                <div class="form-switcher">
+                  <input type="checkbox" class="input-hidden form-switcher__input" id="playful" name="playful">
+                  <label for="playful" class="form-switcher__box"></label>
+                  <label for="playful" class="form-switcher__text">Playful</label>
+                </div>
+                <div class="form-switcher">
+                  <input type="checkbox" class="input-hidden form-switcher__input" id="dark-mode" name="dark-mode">
+                  <label for="dark-mode" class="form-switcher__box"></label>
+                  <label for="dark-mode" class="form-switcher__text">Dark Mode</label>
+                </div>
+                <div class="form-switcher">
+                  <input type="checkbox" class="input-hidden form-switcher__input" id="photocentric" name="photocentric">
+                  <label for="photocentric" class="form-switcher__box"></label>
+                  <label for="photocentric" class="form-switcher__text">Photocentric</label>
+                </div>
+              </div>
+
+              <div class="catalog-sidebar__wrapper">
+                <p class="catalog-sidebar__title">Price</p>
+                <div class="range-container">
+                  <div class="range-values">
+                    <span id="minValueLabel">€5</span>
+                    <span id="maxValueLabel">€50</span>
+                  </div>
+                  <div class="slider-track"></div>
+                  <input
+                    id="rangeMin"
+                    type="range"
+                    min="5"
+                    max="50"
+                    value="5"
+                    oninput="updateSlider()"
+                  />
+                  <input
+                    id="rangeMax"
+                    type="range"
+                    min="5"
+                    max="50"
+                    value="50"
+                    oninput="updateSlider()"
+                  />
+                </div>
+              </div>
+
+              <button type="reset" class="btn btn--border btn--middle btn--full-width">
+                <svg width="24" height="24" aria-label="close" role="img">
+                  <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
+                </svg>
+                Clear all filters
+              </button>
+
+
+          </form>
+        </aside>
+
+        <article class="catalog-content">
+          <section class="filter">
+            <div class="filter__controls">
+              <form class="form-select" action="#" method="get">
+                <select class="select" name="sort" id="sort">
+                  <option class="select__option" value="bestseller">Best Seller</option>
+                  <option class="select__option" value="newest">Newest</option>
+                  <option class="select__option" value="popular">Most popular</option>
+                  <option class="select__option" value="increasing">Increasing in price</option>
+                  <option class="select__option" value="lowering">Lowering the price</option>
+                </select>
+                <label for="sort" class="hidden">Sort by</label>
+              </form>
+              <div class="filter__results">
+                <p class="filter__text">Showing 12 out of 120 results.</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--blue btn--square">
+                    <svg width="24" height="24" aria-label="Cards View" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-cards"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn btn--border btn--square">
+                    <svg width="24" height="24" aria-label="List View" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-list"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn--border btn--small">
+                UI Kit
+                <svg width="16" height="16" aria-label="close" role="img">
+                  <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
+                </svg>
+              </button>
+              <button type="button" class="btn btn--border btn--small">
+                UI Kit
+                <svg width="16" height="16" aria-label="close" role="img">
+                  <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+
+          <section class="catalog-list">
+
+            <div class="catalog-list__item label--sold-out">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-01.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Lens Chronicles"
+                  aria-label="Lens Chronicles">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--new">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-02.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Lens Chronicles"
+                  aria-label="Lens Chronicles">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--popular">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-03.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Lens Chronicles"
+                  aria-label="Lens Chronicles">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="catalog-list__item label--sold-out">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-01.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Lens Chronicles"
+                  aria-label="Catalog Item">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--new">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-02.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item"
+                  aria-label="Catalog Item">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--new">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-02.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item"
+                  aria-label="Catalog Item">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--new">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-02.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item"
+                  aria-label="Catalog Item">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--popular">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-03.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item"
+                  aria-label="Catalog Item">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="catalog-list__item label--new">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-02.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item"
+                  aria-label="Catalog Item">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-list__item label--popular">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-03.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item"
+                  aria-label="Catalog Item">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            
+
+            <div class="catalog-list__item label--sold-out">
+              <a href="#" class="catalog-list__link">
+                <img
+                  src="assets/images/content/catalog-item-01.webp"
+                  width="325"
+                  height="260"
+                  class="catalog-list__image"
+                  alt="Catalog Item"
+                  aria-label="Catalog Item">
+              </a>
+              <p class="catalog-list__name">Lens Chronicles</p>
+              <p class="catalog-list__category"><span>Photography</span><span>Creative</span></p>
+              <div class="catalog-list__actions">
+                <p class="catalog-list__price">€ 29.99</p>
+                <div class="btn-group">
+                  <button class="btn btn--border btn--square" type="button">
+                    <svg width="24" height="24" aria-label="to left" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--square" type="button">
+                    <svg width="24" height="24" aria-label="Product Bag" role="img">
+                      <use href="assets/images/icons/sprite.svg#icon-shopping-bag"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <div class="btn-group--center">
+            <button class="btn btn--border" type="button">Load more</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__main container">
+        <div class="footer__logo">
+          <svg width="300" height="58" aria-label="PixMart big logo" role="img">
+            <use href="assets/images/icons/sprite.svg#icon-logo-footer"></use>
+          </svg>
+          <p class="footer__description">
+            Your premium digital assets solution with high quality and comprehensive range of products and services.
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <div class="footer-nav__block">
+            <p class="footer-nav__title">Company</p>
+            <ul class="footer-nav__list">
+              <li><a href="#">Homepage v1</a></li>
+              <li><a href="#">Homepage v2</a></li>
+              <li><a href="#">Homepage v3</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blog Articles</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav__block">
+            <p class="footer-nav__title">Products</p>
+            <ul class="footer-nav__list">
+              <li><a href="#">Website</a></li>
+              <li><a href="#">Mobile App</a></li>
+              <li><a href="#">Social Media Feeds</a></li>
+              <li><a href="#">Presentation</a></li>
+              <li><a href="#">Product Mockups</a></li>
+              <li><a href="#">Illustrations</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav__block">
+            <p class="footer-nav__title">Account</p>
+            <ul class="footer-nav__list">
+              <li><a href="#">Your Cart</a></li>
+              <li><a href="#">Check Out</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">Company Policy</a></li>
+              <li><a href="#">Send A Message</a></li>
+              <li><a href="#">Customer Support</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__secondary container">
+        <ul class="social">
+          <li>
+            <a href="https://x.com/" target="_blank" class="btn btn--border btn--square-big">
+              <svg width="24" height="24" aria-label="Twitter" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-twitter"></use></svg
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="_blank" class="btn btn--border btn--square-big"
+              ><svg width="24" height="24" aria-label="Facebook" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-facebook"></use></svg
+            ></a>
+          </li>
+          <li>
+            <a href="https://telegram.org/" target="_blank" class="btn btn--border btn--square-big"
+              ><svg width="24" height="24" aria-label="Telegram" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-telegram"></use></svg
+            ></a>
+          </li>
+        </ul>
+        <form class="form-subscribe" action="/subscribe" method="post">
+          <label class="form-subscribe__label" for="subscribe">Subscribe to Design Newsletter</label>
+          <input
+            class="form-subscribe__input input input--large"
+            type="email"
+            id="subscribe"
+            name="email"
+            placeholder="Enter your email address ..."
+            required>
+          <button class="btn btn--blue" type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="copyright">
+        <div class="copyright__wrapper container">
+          <ul class="privacy">
+            <li class="privacy__item"><a href="#">Privacy Policy</a></li>
+            <li class="privacy__item"><a href="#">Terms and Condition</a></li>
+            <li class="privacy__item"><a href="#">Site Map</a></li>
+          </ul>
+          <p class="copyright__text">Copyright © 2024 Pixmart. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
