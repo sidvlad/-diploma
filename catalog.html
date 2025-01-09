@@ -224,16 +224,16 @@
                   <input
                     id="rangeMin"
                     type="range"
-                    min="5"
-                    max="50"
+                    min="0"
+                    max="70"
                     value="5"
                     oninput="updateSlider()"
                   />
                   <input
                     id="rangeMax"
                     type="range"
-                    min="5"
-                    max="50"
+                    min="0"
+                    max="70"
                     value="50"
                     oninput="updateSlider()"
                   />
@@ -250,7 +250,7 @@
         <div class="catalog-content">
           <section class="filter">
             <div class="filter__controls">
-              <form class="form-select" action="#" method="get">
+              <form class="form-select form-select--middle" action="#" method="get">
                 <select class="select" name="sort" id="sort">
                   <option class="select__option" value="bestseller">Best Seller</option>
                   <option class="select__option" value="newest">Newest</option>
@@ -263,16 +263,16 @@
               <div class="filter__results">
                 <p class="filter__text">Showing 12 out of 120 results.</p>
                 <div class="btn-group">
-                  <a href="#" class="btn btn--blue btn--square">
+                  <button type="button" class="btn btn--blue btn--square">
                     <svg width="24" height="24" aria-label="Cards View" role="img">
                       <use href="assets/images/icons/sprite.svg#icon-cards"></use>
                     </svg>
-                  </a>
-                  <a href="#" class="btn btn--border btn--square">
+                  </button>
+                  <button type="button" class="btn btn--border btn--square">
                     <svg width="24" height="24" aria-label="List View" role="img">
                       <use href="assets/images/icons/sprite.svg#icon-list"></use>
                     </svg>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

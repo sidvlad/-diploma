@@ -194,14 +194,14 @@ button {
   color: var(--color-dark-grey-transparent);
 }
 .btn--border {
-  outline: 2px solid var(--color-grey-disabled-transparent);
+  outline: 1px solid var(--color-grey-disabled-transparent);
 }
 .btn--border:hover, .btn--border:active {
   background-color: var(--color-light-blue-transparent);
 }
 .btn--border:focus {
   background-color: var(--color-light-blue-transparent);
-  outline: 4px solid var(--color-light-blue);
+  outline: 3px solid var(--color-light-blue);
 }
 .btn--border:disabled {
   background-color: var(--color-grey-disabled-transparent);
@@ -345,12 +345,13 @@ button {
   color: var(--color-black);
 }
 .categories__card--gradient {
-  background: linear-gradient(360deg, #f0f6fd 0%, rgba(255, 255, 255, 0) 189%);
+  background: linear-gradient(360deg, #ffffff 0%, #f0f6fd 110%);
   pointer-events: none;
   border-radius: 20px 20px 0 0;
 }
 .categories__card--gradient:first-child {
   border-radius: 0 0 20px 20px;
+  background: linear-gradient(360deg, #f0f6fd 0%, #ffffff 110%);
 }
 .categories__card:hover, .categories__card--active {
   background-color: var(--color-blue);
@@ -369,13 +370,10 @@ button {
 }
 
 .hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 0.1rem;
-  overflow: hidden;
   position: absolute;
-  white-space: nowrap;
-  width: 0.1rem;
+  visibility: hidden;
+  top: -9999px;
+  left: -9999px;
 }
 
 .header {
@@ -1007,7 +1005,6 @@ details[open] summary:after {
   background: linear-gradient(0.23deg, rgba(255, 255, 255, 0) 0.2%, #f0f6fd 99.8%);
 }
 .blog__intro {
-  display: block;
   margin: 0 auto;
   padding: 64px 80px 0;
 }
@@ -1100,26 +1097,26 @@ details[open] summary:after {
   color: var(--color-black);
 }
 
-.blog-author {
+.blog-upstairs {
   display: grid;
   grid-template-columns: 2fr 5fr;
   align-items: center;
   color: var(--color-black);
   margin-bottom: 40px;
 }
-.blog-author__image {
+.blog-upstairs__image {
   grid-row: span 2;
   width: 60px;
   height: 60px;
   border-radius: 50%;
 }
-.blog-author__name {
+.blog-upstairs__name {
   font-family: var(--font-secondary);
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
 }
-.blog-author__date {
+.blog-upstairs__date {
   font-size: 16px;
   line-height: 24px;
 }
@@ -1263,18 +1260,13 @@ details[open] summary:after {
   color: var(--color-dark);
 }
 
-.catalog-sidebar__title:last-child {
-  margin-bottom: 0;
-}
-
 .filter {
   margin-bottom: 48px;
 }
 .filter__controls {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  align-items: flex-start;
 }
 .filter__results {
   display: flex;
@@ -1602,7 +1594,7 @@ details[open] summary:after {
 
 /* form control */
 .form-control {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .form-control__input {
   width: 100%;
@@ -1644,12 +1636,14 @@ details[open] summary:after {
   flex-direction: column;
   font-size: 14px;
   line-height: 20px;
+  margin-bottom: 5px;
   color: var(--color-dark);
 }
 
 textarea.form-control__input {
   height: 180px;
   resize: none;
+  color: var(--color-grey);
 }
 
 .select {
@@ -1674,8 +1668,11 @@ textarea.form-control__input {
   outline: none;
   border-color: var(--color-blue);
 }
-.select .select--large {
+.select--large {
+  width: 100%;
   padding: 20px;
+  font-weight: 400;
+  color: var(--color-grey);
 }
 
 .form-select {
@@ -1683,18 +1680,22 @@ textarea.form-control__input {
   cursor: pointer;
 }
 .form-select label {
-  display: block;
   position: relative;
 }
 .form-select::after {
-  content: url("../../images/icons/chevron-down.svg");
+  content: url("../../images/icons/chevron-input.svg");
   position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 20px;
+  right: 20px;
+  pointer-events: none;
+}
+.form-select--middle::after {
   width: 24px;
   height: 24px;
-  top: 9px;
-  right: 23px;
-  transform: scale(1.5);
-  pointer-events: none;
+  top: 10px;
+  right: 24px;
 }
 
 .select__option {
@@ -1719,7 +1720,7 @@ textarea.form-control__input {
 }
 .catalog-list__item {
   display: flex;
-  flex-basis: 30%;
+  flex-basis: 31%;
   flex-direction: column;
   position: relative;
 }
@@ -1760,7 +1761,7 @@ textarea.form-control__input {
   width: 100%;
   height: 52px;
   left: 0;
-  bottom: 0;
+  bottom: -3px;
   background-color: transparent;
   background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
   background-size: 100% 52px;
