@@ -104,7 +104,7 @@ button {
 }
 
 .subtitle {
-    margin-top: 15px;
+margin-top: 15px;
     font-family: var(--font-secondary);
     font-size: 36px;
     font-weight: 700;
@@ -1345,7 +1345,6 @@ details[open] summary:after {
 .form-checkbox__input:disabled + .form-checkbox__inner .form-checkbox__box {
     background-color: #1D36532B;
     border-color: #1D36532B;
-    cursor: not-allowed;
 }
 
 .form-checkbox__box {
@@ -1401,8 +1400,6 @@ details[open] summary:after {
     pointer-events: none;
     opacity: 0;
 }
-
-
 
 /* form radio */
 
@@ -1497,8 +1494,6 @@ details[open] summary:after {
         transition-duration: 0.2s;
     }
 }
-
-
 /* form switcher */
 
 .form-switcher {
@@ -1746,12 +1741,16 @@ select {
     background-repeat: no-repeat;
 }
 
+
 .catalog-list__item.label--disabled {
+
     opacity: 0.5;
     pointer-events: none;
 }
 
+
 .catalog-list__item.label--disabled::after {
+
     position: absolute;
     content: 'Sold Out';
     top: 16px;
@@ -1800,7 +1799,6 @@ select {
     opacity: 0;
     pointer-events: none;
 }
-
 
 .catalog-list__name,
 .catalog-list__price {
