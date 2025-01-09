@@ -1338,7 +1338,6 @@ details[open] summary:after {
 .form-checkbox__input:disabled + .form-checkbox__inner .form-checkbox__box {
   background-color: rgba(29, 54, 83, 0.168627451);
   border-color: rgba(29, 54, 83, 0.168627451);
-  cursor: not-allowed;
 }
 
 .form-checkbox__box {
