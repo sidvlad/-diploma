@@ -267,7 +267,7 @@ button {
   display: flex;
   justify-content: center;
 }
-.btn-group--col-gap-20 {
+.btn-group--col-gap {
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
@@ -894,6 +894,7 @@ details[open] summary:after {
   font-size: 16px;
   line-height: 24px;
   color: var(--color-dark-transparent);
+  text-transform: uppercase;
 }
 
 .footer {
@@ -1458,13 +1459,13 @@ details[open] summary:after {
   background-color: var(--color-blue);
 }
 .form-radio__input:disabled + .form-radio__inner .form-radio__box {
-  background-color: rgba(229, 236, 251, 0.36);
+  background-color: var(--color-grey-disabled-transparent);
 }
 .form-radio__input:disabled + .form-radio__inner .form-radio__box::after {
   opacity: 0;
 }
 .form-radio__input:checked:disabled + .form-radio__inner .form-radio__box {
-  background-color: rgba(212, 217, 242, 0.26);
+  background-color: var(--color-grey-disabled-transparent);
 }
 .form-radio__input:checked:disabled + .form-radio__inner .form-radio__box::after {
   opacity: 1;
@@ -1582,7 +1583,7 @@ details[open] summary:after {
 }
 
 .form-switcher__input:disabled + .form-switcher__box {
-  background-color: rgba(208, 215, 251, 0.17);
+  background-color: var(--color-grey-disabled-transparent);
   cursor: default;
   opacity: 0.5;
 }
@@ -1611,10 +1612,10 @@ details[open] summary:after {
   color: var(--color-dark-transparent);
   outline: none;
   border-radius: 8px;
-  border: 2px solid rgba(208, 215, 251, 0.17);
+  border: 2px solid var(--color-light-transparent);
 }
 .form-control__input:disabled {
-  background-color: rgba(191, 197, 238, 0.12);
+  background-color: var(--color-grey-blue-transparent);
   pointer-events: none;
 }
 .form-control__input[type=date]::-webkit-calendar-picker-indicator {
@@ -1651,7 +1652,7 @@ textarea.form-control__input {
   resize: none;
 }
 
-select {
+.select {
   background-color: var(--color-white);
   border: 1px solid var(--color-grey-disabled-transparent);
   border-radius: 8px;
@@ -1664,14 +1665,17 @@ select {
   -moz-appearance: none;
   cursor: pointer;
 }
-select:hover {
+.select:hover {
   border-color: var(--color-blue);
   outline: 3px solid var(--color-blue);
   background-color: var(--color-light-blue-transparent);
 }
-select:focus {
+.select:focus {
   outline: none;
   border-color: var(--color-blue);
+}
+.select .select--large {
+  padding: 20px;
 }
 
 .form-select {
@@ -1729,7 +1733,7 @@ select:focus {
   column-gap: 18px;
   font-size: 16px;
   line-height: 24px;
-  color: rgba(42, 53, 65, 0.7);
+  color: var(--color-grey);
   max-width: 325px;
   overflow-x: hidden;
 }
