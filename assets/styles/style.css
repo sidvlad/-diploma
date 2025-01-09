@@ -1647,7 +1647,7 @@ select:focus {
   position: relative;
 }
 .form-select::after {
-  content: url("/images/icons/chevron-down.svg");
+  content: url("../../images/icons/chevron-down.svg");
   position: absolute;
   width: 24px;
   height: 24px;
