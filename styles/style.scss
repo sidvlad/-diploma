@@ -109,7 +109,7 @@ button {
     font-size: 36px;
     font-weight: 700;
     line-height: 48px;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     color: var(--color-black);
     white-space: pre-line;
 }
@@ -119,7 +119,7 @@ button {
     font-size: 52px;
     font-weight: 700;
     line-height: 62px;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     white-space: pre-line;
     color: var(--color-dark);
     & span {
@@ -555,7 +555,7 @@ button {
         font-size: 38px;
         font-weight: 700;
         line-height: 48px;
-        letter-spacing: -0.5px;
+        letter-spacing: -1px;
     }
     &__price span {
         font-size: 18px;
@@ -1030,7 +1030,13 @@ details[open] summary:after {
         text-transform: uppercase;
     }
     &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 64px 0 48px;
+        padding: 75px 120px 55px;
+        background-color: #4565d0;
+        border-radius: 20px;
     }
     &__wrapper {
         display: grid;
@@ -1418,19 +1424,34 @@ details[open] summary:after {
         cursor: default;
     }
     &:hover .form-radio__box {
-        background-color: rgba(231, 241, 253, 0.49);
+        background-color: #1F324745;
     }
     &:hover .form-radio__box::after {
-        background-color: var(--color-white);
+        opacity: 0;
     }
     &:has(.form-radio__input:checked):hover .form-radio__box {
-        background-color: #147af3;
+        background-color: #1F324745;
     }
     &:active .form-radio__box {
-        background-color: rgba(231, 238, 247, 0.66);
+        background-color: #B5DEFF;
+        border-color: #B5DEFF;
     }
     &:active .form-radio__box::after {
-        background-color: #202834;
+        background-color: var(--color-blue);
+        border-color: var(--color-blue);
+        &::after {
+            background-color: var(--color-white);
+        }
+    }
+    &:focus .form-radio__box {
+        background-color: var(--color-grey);
+        border: 1px solid var(--color-white);
+        outline: 2px solid var(--color-blue);
+        box-shadow: 0 0 0 1px var(--color-light-blue);
+        &::after {
+            width: 9px;
+            height: 9px;
+        }
     }
     &:has(.form-radio__input:checked):active .form-radio__box {
         background-color: #cae8ff;
@@ -1467,10 +1488,10 @@ details[open] summary:after {
         column-gap: 5px;
     }
     &__inner:hover .form-radio__box {
-        background-color: var(--color-blue);
+        background-color: #1F324745;
     }
     &__inner:active .form-radio__box {
-        background-color: var(--color-blue);
+        background-color: #1F324745;
     }
     &__inner:active .form-radio__box::after {
         background-color: var(--color-white);
@@ -1964,6 +1985,7 @@ select {
         line-height: 16px;
     }
     &--large {
+        width: 245px;
         padding: 20px;
         font-size: 16px;
         line-height: 24px;
