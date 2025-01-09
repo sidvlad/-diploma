@@ -21,6 +21,10 @@ body {
     color: var(--color-grey);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h2 {
     font-weight: 400;
 }
@@ -100,7 +104,6 @@ button {
 }
 
 .subtitle {
-    display: block;
     margin-top: 15px;
     font-family: var(--font-secondary);
     font-size: 36px;
@@ -112,7 +115,6 @@ button {
 }
 
 .intro-title {
-    display: block;
     font-family: var(--font-secondary);
     font-size: 52px;
     font-weight: 700;
@@ -130,7 +132,6 @@ button {
     padding: 0 80px;
     max-width: 1440px;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .block-center {
@@ -145,7 +146,6 @@ button {
     padding: 18px 32px;
     border-radius: 8px;
     font-weight: 600;
-    box-sizing: border-box;
     cursor: pointer;
     white-space: nowrap;
     &--icon {
@@ -244,12 +244,15 @@ button {
         font-weight: 600;
         line-height: 24px;
     }
+    /* these monstrous styles are needed for the link under the <figure>, since
+     it is absolutely impossible to hang it on the <figure> without a .class */
     &--blog {
+        display: block;
+        width: 100%;
         text-align: right;
         margin-top: -67px;
-        display: block;
         padding-bottom: 35px;
-        width: 100%;
+        cursor: pointer;
     }
 }
 
@@ -294,7 +297,6 @@ button {
         padding: 24px;
         background-color: #f4f7fa;
         border-radius: 20px;
-        box-sizing: border-box;
     }
     &__card-title {
         padding: 16px 0 8px 0;
@@ -342,6 +344,10 @@ button {
             rgba(255, 255, 255, 0) 189%
         );
         pointer-events: none;
+        border-radius: 20px 20px 0 0;
+    }
+    &__card--gradient:first-child {
+        border-radius: 0 0 20px 20px;
     }
     &__card:hover,
     &__card--active {
@@ -508,7 +514,6 @@ button {
         box-shadow: 0px 4px 40px 0px #1d395f14;
         background-color: var(--color-white);
         border-radius: 5px;
-        box-sizing: border-box;
     }
     &-icon-meter {
         grid-column: 2;
@@ -519,7 +524,6 @@ button {
         box-shadow: 0px 4px 40px 0px #1d395f14;
         background-color: var(--color-white);
         border-radius: 5px;
-        box-sizing: border-box;
     }
 }
 
@@ -735,7 +739,6 @@ button {
         padding: 0 16px;
         background-color: #e7eef7a8;
         border-radius: 20px;
-        box-sizing: border-box;
     }
     &__image:before {
         opacity: 0;
@@ -915,7 +918,6 @@ details[open] summary:after {
         column-gap: 64px;
     }
     &-nav__title {
-        display: block;
         margin-bottom: 16px;
         font-family: var(--font-secondary);
         font-size: 20px;
@@ -1027,8 +1029,6 @@ details[open] summary:after {
         text-transform: uppercase;
     }
     &__image {
-        width: 100%;
-        object-fit: cover;
         margin: 64px 0 48px;
     }
     &__wrapper {
@@ -1133,13 +1133,19 @@ details[open] summary:after {
         border-top: 2px solid var(--color-dark);
     }
     &__article {
-        padding-bottom: 50px;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid var(--color-dark);
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
         & p {
             padding-bottom: 10px;
         }
     }
     &__title {
-        display: block;
         margin-bottom: 20px;
         font-family: var(--font-secondary);
         font-size: 24px;
@@ -1244,7 +1250,6 @@ details[open] summary:after {
         margin-bottom: 43px;
     }
     &__title {
-        display: block;
         margin-bottom: 27px;
         font-family: var(--font-secondary);
         font-size: 24px;
@@ -1328,7 +1333,7 @@ details[open] summary:after {
 .form-checkbox__input:checked + .form-checkbox__inner .form-checkbox__box {
     background-color: var(--color-blue);
     border-color: var(--color-blue);
-    border: 2 px solid var(--color-light-blue-transparent);
+    border: 1px solid var(--color-light-blue-transparent);
 }
 
 .form-checkbox__input:checked
@@ -1340,7 +1345,7 @@ details[open] summary:after {
 .form-checkbox__input:disabled + .form-checkbox__inner .form-checkbox__box {
     background-color: #1D36532B;
     border-color: #1D36532B;
-    cursor: not-allowed
+    cursor: not-allowed;
 }
 
 .form-checkbox__box {
@@ -1447,59 +1452,52 @@ details[open] summary:after {
         opacity: 1;
         background-color: #9da2aa;
     }
+    &__input:checked + .form-radio__inner .form-radio__box {
+        background-color: var(--color-blue);
+    }
+    &__input:checked + .form-radio__inner .form-radio__box::after {
+        transform: translate(-50%, -50%) scale(0.4);
+        background-color: var(--color-white);
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        column-gap: 5px;
+    }
+    &__inner:hover .form-radio__box {
+        background-color: var(--color-blue);
+    }
+    &__inner:active .form-radio__box {
+        background-color: var(--color-blue);
+    }
+    &__inner:active .form-radio__box::after {
+        background-color: var(--color-white);
+    }
+    &__box {
+        width: 14px;
+        height: 14px;
+        border: 2px solid #1F324745;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        transition: background-color 0.2s ease;
+        position: relative;
+    }
+    &__box::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition-property: transform, background-color, opacity;
+        transition-duration: 0.2s;
+    }
 }
 
-.form-radio__input:checked + .form-radio__inner .form-radio__box {
-    background-color: var(--color-blue);
-}
-
-.form-radio__input:checked + .form-radio__inner .form-radio__box::after {
-    transform: translate(-50%, -50%) scale(0.4);
-    background-color: var(--color-white);
-}
-
-.form-radio__inner {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    column-gap: 5px;
-}
-
-.form-radio__inner:hover .form-radio__box {
-    background-color: var(--color-blue);
-}
-
-.form-radio__inner:active .form-radio__box {
-    background-color: var(--color-blue);
-}
-
-.form-radio__inner:active .form-radio__box::after {
-    background-color: var(--color-white);
-}
-
-.form-radio__box {
-    width: 14px;
-    height: 14px;
-    border: 2px solid #1F324745;
-    border-radius: 50%;
-    background-color: var(--color-white);
-    transition: background-color 0.2s ease;
-    position: relative;
-}
-
-.form-radio__box::after {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--color-white);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition-property: transform, background-color, opacity;
-    transition-duration: 0.2s;
-}
 
 /* form switcher */
 
@@ -1587,7 +1585,6 @@ details[open] summary:after {
         outline: none;
         border-radius: 8px;
         border: 2px solid rgba(208, 215, 251, 0.17);
-        box-sizing: border-box;
     }
     &__input:disabled {
         background-color: rgba(191, 197, 238, 0.12);
@@ -1659,7 +1656,7 @@ select {
         position: relative;
     }
     &::after {
-        content: url('/images/icons/chevron-down.svg');
+        content: url('../../images/icons/chevron-down.svg');
         position: absolute;
         width: 24px;
         height: 24px;
@@ -1749,12 +1746,12 @@ select {
     background-repeat: no-repeat;
 }
 
-.catalog-list__item.label--sold-out {
+.catalog-list__item.label--disabled {
     opacity: 0.5;
     pointer-events: none;
 }
 
-.catalog-list__item.label--sold-out::after {
+.catalog-list__item.label--disabled::after {
     position: absolute;
     content: 'Sold Out';
     top: 16px;
@@ -1804,12 +1801,24 @@ select {
     pointer-events: none;
 }
 
+
 .catalog-list__name,
 .catalog-list__price {
     font-family: var(--font-secondary);
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.catalog-list__name {
+    max-width: 325px;
+}
+
+.catalog-list__price {
+    max-width: 220px;
 }
 
 .catalog-list__image {
@@ -1872,7 +1881,6 @@ select {
         border-radius: 10px;
         background-color: var(--color-white);
         box-shadow: 0px 4px 40px 0px #1D395F14;
-        box-sizing: border-box;
     }
     &__location img {
         grid-row: span 2;
@@ -1923,7 +1931,7 @@ select {
     }
     &__map iframe {
         border-radius: 20px;
-        filter: grayscale(1)
+        filter: grayscale(1);
     }
 }
 

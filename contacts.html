@@ -6,13 +6,13 @@
     <meta name="description" content="Contacts page">
     <meta name="keywords" content="digital assets, UI/UX kits, illustrations, templates, fonts, creative projects">
     <title>PixMart — Contacts</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400,500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400,500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/normalize.min.css">
     <link rel="stylesheet" href="assets/styles/style.min.css">
-    <link rel="icon" href="favicon.ico" type="image/svg+xml">
 </head>
   <body>
     <header class="header container">
@@ -30,7 +30,7 @@
             <a href="catalog.html">Products</a>
           </li>
           <li class="header-nav__item">
-            <a href="creators.html">Creators</a>
+            <a href="#">Creators</a>
           </li>
           <li class="header-nav__item">
             <a href="blog.html">Blog</a>
@@ -56,7 +56,6 @@
         </a>
       </div>
     </header>
-
     <main class="contacts">
       <section class="contacts__wrapper container">
         <div class="contacts__content">
@@ -69,7 +68,6 @@
             </p>
           </div>
           <a href="#" class="btn btn--blue">Shop Now</a>
-
           <article class="contacts__info">
             <div class="contacts__info-item">
               <svg width="24" height="24" aria-label="to left" role="img">
@@ -91,18 +89,17 @@
               <p>Monday to Friday : 9 AM - 5 PM EST</p>
             </div>
           </article>
-  
           <article class="contacts__map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.3386815622966!2d27.704071376063634!3d42.69654897116363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a69e4d22cb958d%3A0xbd2a2a71601be29e!2sCasino%20Las%20Vegas!5e0!3m2!1sru!2s!4v1736270699981!5m2!1sru!2s" width="618" height="318" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="contacts__location">
-              <img src="/images/icons/location.svg" width="24" height="24" alt="location">
+              <svg width="24" height="24" aria-label="to left" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-location"></use>
+              </svg>
               <p class="contacts__location-title">PixMart HQ</p>
               <p class="contacts__location-text">123 Creative Ave, Design City, 45678</p>
             </div>
           </article>
         </div>
-
-
         <form class="contacts__form" action="/" method="post" name="contacts-form">
           <div class="form-control">
             <label class="form-control__label" for="name">Full Name</label>
@@ -115,7 +112,6 @@
               minlength="3"
               required>
           </div>
-  
           <div class="form-control">
             <label class="form-control__label" for="email">Email</label>
             <input
@@ -127,7 +123,6 @@
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required>
           </div>
-  
           <div class="form-control">
             <label class="form-control__label" for="subject"
               >Subject
@@ -140,7 +135,6 @@
               </select>
             </label>
           </div>
-  
           <div class="form-control">
             <label class="form-control__label" for="message">Message</label>
             <textarea
@@ -183,7 +177,6 @@
         </form>
       </section>
     </main>
-
     <footer class="footer">
       <div class="footer__main container">
         <div class="footer__logo">
@@ -194,7 +187,7 @@
             Your premium digital assets solution with high quality and comprehensive range of products and services.
           </p>
         </div>
-        <nav class="footer-nav">
+        <div class="footer-nav">
           <div class="footer-nav__block">
             <p class="footer-nav__title">Company</p>
             <ul class="footer-nav__list">
@@ -228,7 +221,7 @@
               <li><a href="#">Customer Support</a></li>
             </ul>
           </div>
-        </nav>
+        </div>
       </div>
       <div class="footer__secondary container">
         <ul class="social">
