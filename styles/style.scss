@@ -104,7 +104,7 @@ button {
 }
 
 .subtitle {
-margin-top: 15px;
+    margin-top: 15px;
     font-family: var(--font-secondary);
     font-size: 36px;
     font-weight: 700;
@@ -392,7 +392,7 @@ margin-top: 15px;
     padding: 26px 80px;
     &-nav {
         margin-left: 32px;
-        &__item a:focus {
+        &__item:focus {
             outline: 4px solid var(--color-light-blue);
             color: var(--color-blue);
             border-radius: 5px;
@@ -407,21 +407,22 @@ margin-top: 15px;
             font-weight: 600;
             line-height: 20px;
         }
-        &__item a.active {
+        &__item.active {
             color: var(--color-blue);
+            pointer-events: none;
         }
-        &__item a {
+        &__item {
             color: var(--color-dark);
             padding: 4px;
         }
-        &__item a:visited {
+        &__item:visited {
             color: #0054b6;
         }
-        &__item a:disabled {
+        &__item:disabled {
             color: var(--color-dark-grey-transparent);
             pointer-events: none;
         }
-        &__item a:hover {
+        &__item:hover {
             color: var(--color-light-blue);
         }
     }
@@ -1295,6 +1296,7 @@ details[open] summary:after {
 
 .form-checkbox .form-checkbox__box {
     margin: 0 12px 0 0;
+    border: 1px solid #1F324745;
 }
 
 .form-checkbox:hover .form-checkbox__box {
@@ -1309,6 +1311,7 @@ details[open] summary:after {
 .form-checkbox:focus .form-checkbox__box {
     background-color: #f8fafc;
     border-color: var(--color-light-blue);
+    outline: 1px solid var(--color-light-blue);
 }
 
 .form-checkbox:invalid .form-checkbox__box {
@@ -1316,8 +1319,9 @@ details[open] summary:after {
     border-color: #ea3829;
 }
 
-.form-checkbox:invalid:hover .form-checkbox__box {
-    background-color: var(--color-light-blue-transparent);
+.form-checkbox:disabled .form-checkbox__box {
+    background-color: #1D36532B;
+    border-color: #1D36532B;
 }
 
 .form-checkbox__inner {
@@ -1474,6 +1478,7 @@ details[open] summary:after {
     &__box {
         width: 14px;
         height: 14px;
+        margin-right: 10px;
         border: 2px solid #1F324745;
         border-radius: 50%;
         background-color: var(--color-white);
@@ -1691,12 +1696,13 @@ select {
     }
     &__category {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         -moz-column-gap: 21px;
         column-gap: 18px;
         font-size: 16px;
         line-height: 24px;
-        color: rgba(42, 53, 65, 0.6980392157);
+        color: rgba(42, 53, 65, 0.7);
+        max-width: 325px;
         overflow-x: hidden;
     }
     &__category span {
@@ -1880,7 +1886,7 @@ select {
         background-color: var(--color-white);
         box-shadow: 0px 4px 40px 0px #1D395F14;
     }
-    &__location img {
+    &__location svg {
         grid-row: span 2;
     }
     &__location-title {

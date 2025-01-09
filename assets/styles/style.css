@@ -384,7 +384,7 @@ button {
 .header-nav {
   margin-left: 32px;
 }
-.header-nav__item a:focus {
+.header-nav__item:focus {
   outline: 4px solid var(--color-light-blue);
   color: var(--color-blue);
   border-radius: 5px;
@@ -399,21 +399,22 @@ button {
   font-weight: 600;
   line-height: 20px;
 }
-.header-nav__item a.active {
+.header-nav__item.active {
   color: var(--color-blue);
+  pointer-events: none;
 }
-.header-nav__item a {
+.header-nav__item {
   color: var(--color-dark);
   padding: 4px;
 }
-.header-nav__item a:visited {
+.header-nav__item:visited {
   color: #0054b6;
 }
-.header-nav__item a:disabled {
+.header-nav__item:disabled {
   color: var(--color-dark-grey-transparent);
   pointer-events: none;
 }
-.header-nav__item a:hover {
+.header-nav__item:hover {
   color: var(--color-light-blue);
 }
 .header-actions {
@@ -1290,6 +1291,7 @@ details[open] summary:after {
 
 .form-checkbox .form-checkbox__box {
   margin: 0 12px 0 0;
+  border: 1px solid rgba(31, 50, 71, 0.2705882353);
 }
 
 .form-checkbox:hover .form-checkbox__box {
@@ -1304,6 +1306,7 @@ details[open] summary:after {
 .form-checkbox:focus .form-checkbox__box {
   background-color: #f8fafc;
   border-color: var(--color-light-blue);
+  outline: 1px solid var(--color-light-blue);
 }
 
 .form-checkbox:invalid .form-checkbox__box {
@@ -1311,8 +1314,9 @@ details[open] summary:after {
   border-color: #ea3829;
 }
 
-.form-checkbox:invalid:hover .form-checkbox__box {
-  background-color: var(--color-light-blue-transparent);
+.form-checkbox:disabled .form-checkbox__box {
+  background-color: rgba(29, 54, 83, 0.168627451);
+  border-color: rgba(29, 54, 83, 0.168627451);
 }
 
 .form-checkbox__inner {
@@ -1466,6 +1470,7 @@ details[open] summary:after {
 .form-radio__box {
   width: 14px;
   height: 14px;
+  margin-right: 10px;
   border: 2px solid rgba(31, 50, 71, 0.2705882353);
   border-radius: 50%;
   background-color: var(--color-white);
@@ -1686,12 +1691,13 @@ select:focus {
 }
 .catalog-list__category {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   -moz-column-gap: 21px;
   column-gap: 18px;
   font-size: 16px;
   line-height: 24px;
-  color: rgba(42, 53, 65, 0.6980392157);
+  color: rgba(42, 53, 65, 0.7);
+  max-width: 325px;
   overflow-x: hidden;
 }
 .catalog-list__category span {
@@ -1859,7 +1865,7 @@ select:focus {
   background-color: var(--color-white);
   box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.0784313725);
 }
-.contacts__location img {
+.contacts__location svg {
   grid-row: span 2;
 }
 .contacts__location-title {
