@@ -66,19 +66,19 @@
           </div>
           <a href="#" class="btn btn--blue">Shop Now</a>
           <div class="contacts__info">
-            <div class="contacts__info-item">
+
+            <a href="tel:+1234567890" class="contacts__info-item">
               <svg width="24" height="24" aria-label="to left" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-phone"></use>
               </svg>
-              <a href="tel:+1234567890">+123 456 7890</a>
-            </div>
-            <div class="contacts__info-item">
+              +123 456 7890
+            </a>
+            <a href="mailto:support@pixmart.com&body=Hello?subject=Question" class="contacts__info-item">
               <svg width="24" height="24" aria-label="to left" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-mail"></use>
               </svg>
-              <a href="mailto:support@pixmart.com&body=Hello?subject=Question"
-                >support@pixmart.com</a>
-            </div>
+              support@pixmart.com
+            </a>
             <div class="contacts__info-item">
               <svg width="24" height="24" aria-label="to left" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-clock"></use>
@@ -120,17 +120,15 @@
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required>
           </div>
-          <div class="form-control">
-            <label class="form-control__label" for="subject"
-              >Subject
-              <select class="select select--large form-control__select" name="subject" id="subject">
-                <option class="select__option" value>General Inquiry</option>
-                <option class="select__option" value="newest">Newest</option>
-                <option class="select__option" value="popular">Most popular</option>
-                <option class="select__option" value="increasing">Increasing in price</option>
-                <option class="select__option" value="lowering">Lowering the price</option>
-              </select>
-            </label>
+          <div class="form-control form-select">
+            <select class="select select--large" name="sort" id="sort">
+              <option class="select__option" value="inquiry">General Inquiry</option>
+              <option class="select__option" value="option-one">Option One</option>
+              <option class="select__option" value="option-two">Option Two</option>
+              <option class="select__option" value="option-three">Option Three</option>
+              <option class="select__option" value="option-four">Option Four</option>
+            </select>
+            <label for="sort" class="hidden">Sort by</label>
           </div>
           <div class="form-control">
             <label class="form-control__label" for="message">Message</label>

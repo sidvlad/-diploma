@@ -190,14 +190,14 @@ button {
         }
     }
     &--border {
-        outline: 2px solid var(--color-grey-disabled-transparent);
+        outline: 1px solid var(--color-grey-disabled-transparent);
         &:hover,
         &:active {
             background-color: var(--color-light-blue-transparent);
         }
         &:focus {
             background-color: var(--color-light-blue-transparent);
-            outline: 4px solid var(--color-light-blue);
+            outline: 3px solid var(--color-light-blue);
         }
         &:disabled {
             background-color: var(--color-grey-disabled-transparent);
@@ -342,14 +342,20 @@ button {
     &__card--gradient {
         background: linear-gradient(
             360deg,
-            #f0f6fd 0%,
-            rgba(255, 255, 255, 0) 189%
+            #ffffff 0%,
+            #f0f6fd 110%
         );
         pointer-events: none;
         border-radius: 20px 20px 0 0;
     }
     &__card--gradient:first-child {
         border-radius: 0 0 20px 20px;
+        background: linear-gradient(
+            360deg,
+            #f0f6fd 0%,
+            #ffffff 110%
+        );
+        
     }
     &__card:hover,
     &__card--active {
@@ -378,13 +384,10 @@ button {
 }
 
 .hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 0.1rem;
-    overflow: hidden;
     position: absolute;
-    white-space: nowrap;
-    width: 0.1rem;
+    visibility: hidden;
+    top: -9999px;
+    left: -9999px;
 }
 
 
@@ -764,8 +767,6 @@ button {
     }
 }
 
-
-
 .faq {
     display: flex;
     flex-direction: column;
@@ -1014,7 +1015,6 @@ details[open] summary:after {
         #f0f6fd 99.8%
     );
     &__intro {
-        display: block;
         margin: 0 auto;
         padding: 64px 80px 0;
     }
@@ -1105,8 +1105,7 @@ details[open] summary:after {
     }
 }
 
-
-.blog-author {
+.blog-upstairs {
     display: grid;
     grid-template-columns: 2fr 5fr;
     align-items: center;
@@ -1268,17 +1267,12 @@ details[open] summary:after {
     }
 }
 
-.catalog-sidebar__title:last-child {
-    margin-bottom: 0;
-}
-
 .filter {
     margin-bottom: 48px;
     &__controls {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
+        align-items: flex-start;
     }
     &__results {
         display: flex;
@@ -1608,7 +1602,7 @@ details[open] summary:after {
 /* form control */
 
 .form-control {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     &__input {
         width: 100%;
         padding: 20px;
@@ -1649,6 +1643,7 @@ details[open] summary:after {
         flex-direction: column;
         font-size: 14px;
         line-height: 20px;
+        margin-bottom: 5px;
         color: var(--color-dark);
     }
 }
@@ -1656,6 +1651,7 @@ details[open] summary:after {
 textarea.form-control__input {
     height: 180px;
     resize: none;
+    color: var(--color-grey);
 }
 
 .select {
@@ -1679,8 +1675,11 @@ textarea.form-control__input {
         outline: none;
         border-color: var(--color-blue);
     }
-    & .select--large {
+    &--large {
+        width: 100%;
         padding: 20px;
+        font-weight: 400;
+        color: var(--color-grey);
     }
 }
 
@@ -1688,18 +1687,22 @@ textarea.form-control__input {
     position: relative;
     cursor: pointer;
     & label {
-        display: block;
         position: relative;
     }
     &::after {
-        content: url('../../images/icons/chevron-down.svg');
+        content: url('../../images/icons/chevron-input.svg');
         position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 20px;
+        right: 20px;
+        pointer-events : none;
+    }
+    &--middle::after {
         width: 24px;
         height: 24px;
-        top: 9px;
-        right: 23px;
-        transform: scale(1.5);
-        pointer-events : none;
+        top: 10px;
+        right: 24px;
     }
 }
 
@@ -1724,7 +1727,7 @@ textarea.form-control__input {
     margin-bottom: 48px;
     &__item {
         display: flex;
-        flex-basis: 30%;
+        flex-basis: 31%;
         flex-direction: column;
         position: relative;
     }
@@ -1772,7 +1775,7 @@ textarea.form-control__input {
     width: 100%;
     height: 52px;
     left: 0;
-    bottom: 0;
+    bottom: -3px;
     background-color: transparent;
     background: linear-gradient(
         0deg,

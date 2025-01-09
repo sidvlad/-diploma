@@ -15,8 +15,8 @@ function updateSlider() {
   rangeMin.value = minVal;
   rangeMax.value = maxVal;
 
-  minValueLabel.textContent = minVal;
-  maxValueLabel.textContent = maxVal;
+  minValueLabel.textContent = `€${minVal}`;
+  maxValueLabel.textContent = `€${maxVal}`;
 
   const range  = rangeMin.max - rangeMin.min;
   const leftPos = ((minVal - rangeMin.min) / range) * 100;
