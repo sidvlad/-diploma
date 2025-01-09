@@ -11,6 +11,8 @@ body {
   --color-dark-grey-transparent: #22344966;
   --color-dark-transparent: #2a3541b2;
   --color-light-transparent: #eff5fad1;
+  --color-grey-blue-transparent: #1f324745;
+  --color-grey-disabled-transparent: #1D36532B;
   --font-secondary: Plus Jakarta Sans, Arial, Helvetica, sans-serif;
   margin: 0;
   font-family: "Libre Franklin", Arial, Helvetica, sans-serif;
@@ -188,11 +190,11 @@ button {
   background-color: #0054b6;
 }
 .btn--blue:disabled {
-  background-color: rgba(29, 54, 83, 0.168627451);
+  background-color: var(--color-grey-disabled-transparent);
   color: var(--color-dark-grey-transparent);
 }
 .btn--border {
-  outline: 2px solid rgba(29, 54, 83, 0.168627451);
+  outline: 2px solid var(--color-grey-disabled-transparent);
 }
 .btn--border:hover, .btn--border:active {
   background-color: var(--color-light-blue-transparent);
@@ -202,7 +204,7 @@ button {
   outline: 4px solid var(--color-light-blue);
 }
 .btn--border:disabled {
-  background-color: rgba(29, 54, 83, 0.168627451);
+  background-color: var(--color-grey-disabled-transparent);
   outline: 2px solid var(--color-dark-grey-transparent);
   color: var(--color-dark-grey-transparent);
 }
@@ -398,14 +400,12 @@ button {
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
+  color: var(--color-dark);
+  padding: 4px;
 }
 .header-nav__item.active {
   color: var(--color-blue);
   pointer-events: none;
-}
-.header-nav__item {
-  color: var(--color-dark);
-  padding: 4px;
 }
 .header-nav__item:visited {
   color: #0054b6;
@@ -564,7 +564,7 @@ button {
   flex-direction: column;
   row-gap: 10px;
   padding: 40px 0 40px 32px;
-  border-top: 1px solid rgba(31, 50, 71, 0.2705882353);
+  border-top: 1px solid var(--color-grey-blue-transparent);
 }
 .plan__list li {
   position: relative;
@@ -832,7 +832,7 @@ summary::after {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../../images/icons/chevron-down.svg");
-  border: 2px solid rgba(29, 54, 83, 0.168627451);
+  border: 2px solid var(--color-grey-disabled-transparent);
   border-radius: 8px;
 }
 
@@ -1236,6 +1236,7 @@ details[open] summary:after {
        column-gap: 24px;
 }
 .catalog-intro {
+  background-color: var(--color-white);
   background: linear-gradient(205.81deg, #ffffff 14.24%, #d5dee5 110.59%);
   background-image: url("../images/content/catalog-intro.webp");
   background-repeat: no-repeat;
@@ -1297,7 +1298,7 @@ details[open] summary:after {
 
 .form-checkbox .form-checkbox__box {
   margin: 0 12px 0 0;
-  border: 1px solid rgba(31, 50, 71, 0.2705882353);
+  border: 1px solid var(--color-grey-blue-transparent);
 }
 
 .form-checkbox:hover .form-checkbox__box {
@@ -1325,8 +1326,8 @@ details[open] summary:after {
 }
 
 .form-checkbox:disabled .form-checkbox__box {
-  background-color: rgba(29, 54, 83, 0.168627451);
-  border-color: rgba(29, 54, 83, 0.168627451);
+  background-color: var(--color-grey-disabled-transparent);
+  border-color: var(--color-grey-disabled-transparent);
 }
 
 .form-checkbox__inner {
@@ -1350,8 +1351,8 @@ details[open] summary:after {
 }
 
 .form-checkbox__input:disabled + .form-checkbox__inner .form-checkbox__box {
-  background-color: rgba(29, 54, 83, 0.168627451);
-  border-color: rgba(29, 54, 83, 0.168627451);
+  background-color: var(--color-grey-disabled-transparent);
+  border-color: var(--color-grey-disabled-transparent);
 }
 
 .form-checkbox__box {
@@ -1364,7 +1365,7 @@ details[open] summary:after {
   height: 14px;
   border-radius: 4px;
   background-color: transparent;
-  border: 1px solid rgba(31, 50, 71, 0.2705882353);
+  border: 1px solid var(--color-grey-blue-transparent);
   transition-property: border-color, background-color;
   transition-duration: 0.2s;
 }
@@ -1421,13 +1422,13 @@ details[open] summary:after {
   cursor: default;
 }
 .form-radio:hover .form-radio__box {
-  background-color: rgba(31, 50, 71, 0.2705882353);
+  background-color: var(--color-grey-blue-transparent);
 }
 .form-radio:hover .form-radio__box::after {
   opacity: 0;
 }
 .form-radio:has(.form-radio__input:checked):hover .form-radio__box {
-  background-color: rgba(31, 50, 71, 0.2705882353);
+  background-color: var(--color-grey-blue-transparent);
 }
 .form-radio:active .form-radio__box {
   background-color: #B5DEFF;
@@ -1484,10 +1485,10 @@ details[open] summary:after {
        column-gap: 5px;
 }
 .form-radio__inner:hover .form-radio__box {
-  background-color: rgba(31, 50, 71, 0.2705882353);
+  background-color: var(--color-grey-blue-transparent);
 }
 .form-radio__inner:active .form-radio__box {
-  background-color: rgba(31, 50, 71, 0.2705882353);
+  background-color: var(--color-grey-blue-transparent);
 }
 .form-radio__inner:active .form-radio__box::after {
   background-color: var(--color-white);
@@ -1496,7 +1497,7 @@ details[open] summary:after {
   width: 14px;
   height: 14px;
   margin-right: 10px;
-  border: 2px solid rgba(31, 50, 71, 0.2705882353);
+  border: 2px solid var(--color-grey-blue-transparent);
   border-radius: 50%;
   background-color: var(--color-white);
   transition: background-color 0.2s ease;
@@ -1587,7 +1588,7 @@ details[open] summary:after {
 }
 
 .form-switcher__box:hover {
-  background-color: rgba(31, 50, 71, 0.2705882353);
+  background-color: var(--color-grey-blue-transparent);
 }
 
 .form-switcher__input:checked + .form-switcher__box:hover {
@@ -1652,7 +1653,7 @@ textarea.form-control__input {
 
 select {
   background-color: var(--color-white);
-  border: 1px solid rgba(29, 54, 83, 0.168627451);
+  border: 1px solid var(--color-grey-disabled-transparent);
   border-radius: 8px;
   padding: 9px 0 9px 20px;
   font-size: 16px;
@@ -1952,7 +1953,7 @@ select:focus {
 .input {
   border-radius: 8px;
   color: var(--color-dark);
-  border: 1px solid rgba(29, 54, 83, 0.168627451);
+  border: 1px solid var(--color-grey-disabled-transparent);
   outline: 1px solid transparent;
   transition: all 0.3s ease-in-out;
 }
@@ -2009,7 +2010,7 @@ select:focus {
   right: 0;
   height: 4px;
   transform: translateY(-45%);
-  background: rgba(29, 54, 83, 0.168627451);
+  background: var(--color-grey-disabled-transparent);
   border-radius: 2px;
   z-index: 1;
 }
