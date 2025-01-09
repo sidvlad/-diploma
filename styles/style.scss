@@ -1198,6 +1198,7 @@ details[open] summary:after {
     }
     &__item {
         display: flex;
+        flex-basis: 32%;
         flex-direction: column;
         row-gap: 16px;
         padding: 20px;
@@ -1216,7 +1217,6 @@ details[open] summary:after {
         border-radius: 20px;
         -o-object-fit: cover;
         object-fit: cover;
-        max-width: 370px;
         height: 272px;
     }
     &__item p {
