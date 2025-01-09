@@ -1304,6 +1304,10 @@ details[open] summary:after {
   background-color: #F4F7FA;
 }
 
+.form-checkbox:hover .form-checkbox__text {
+  color: var(--color-blue);
+}
+
 .form-checkbox:active .form-checkbox__box {
   background-color: #B5DEFF;
   border-color: #B5DEFF;
@@ -1511,6 +1515,9 @@ details[open] summary:after {
   transition-property: transform, background-color, opacity;
   transition-duration: 0.2s;
 }
+.form-radio:hover .form-radio__text {
+  color: var(--color-blue);
+}
 
 /* form switcher */
 .form-switcher {
@@ -1518,6 +1525,9 @@ details[open] summary:after {
   align-items: center;
   -moz-column-gap: 8px;
        column-gap: 8px;
+}
+.form-switcher:hover .form-switcher__text {
+  color: var(--color-blue);
 }
 
 .form-switcher__box {
