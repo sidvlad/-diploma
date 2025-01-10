@@ -270,8 +270,8 @@ button {
 
 .btn-group {
   display: flex;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .btn-group--center {
   display: flex;
@@ -612,6 +612,7 @@ button {
   display: flex;
   -moz-column-gap: 32px;
        column-gap: 32px;
+  flex-wrap: wrap;
 }
 .products__item {
   display: flex;
@@ -673,11 +674,13 @@ button {
   display: flex;
   -moz-column-gap: 16px;
        column-gap: 16px;
+  overflow-x: scroll;
 }
 .trending__item {
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
-  max-width: 305px;
+  flex-basis: 305px;
   row-gap: 12px;
 }
 .trending__image {
