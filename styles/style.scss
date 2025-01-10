@@ -84,6 +84,12 @@ details {
     transition: all 0.3s ease-in-out;
 }
 
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 button {
     background: none;
     border: 0;
@@ -147,6 +153,7 @@ button {
     width: fit-content;
     padding: 18px 32px;
     border-radius: 8px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
@@ -245,6 +252,12 @@ button {
         font-size: 16px;
         font-weight: 600;
         line-height: 24px;
+    }
+    &--short {
+        padding: 18px 20px;
+    }
+    &--long {
+        padding: 18px 40px;
     }
     /* these monstrous styles are needed for the link under the <figure>, since
      it is absolutely impossible to hang it on the <figure> without a .class */
@@ -1602,7 +1615,7 @@ details[open] summary:after {
 /* form control */
 
 .form-control {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     &__input {
         width: 100%;
         padding: 20px;
@@ -1643,7 +1656,7 @@ details[open] summary:after {
         flex-direction: column;
         font-size: 14px;
         line-height: 20px;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
         color: var(--color-dark);
     }
 }
@@ -1974,8 +1987,12 @@ textarea.form-control__input {
         position: relative;
     }
     &__map iframe {
+        margin-bottom: -8px;
+        width: 618px;
+        height: 314px;
         border-radius: 20px;
         filter: grayscale(1);
+        border: none;
     }
 }
 
