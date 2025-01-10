@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=0.25, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25, user-scalable=no"/>
     <meta name="description" content="Contacts page">
     <meta name="keywords" content="digital assets, UI/UX kits, illustrations, templates, fonts, creative projects">
     <title>PixMart — Contacts</title>
@@ -92,7 +93,7 @@
               title="Our location on the map"
               width="618" 
               height="314" 
-              allowfullscreen="true"
+              allowfullscreen
               loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.2936808256663!2d33.0457438!3d34.6977719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e733f291b01fad%3A0x5ff57bb6ed3f9838!2sBrainRocket!5e0!3m2!1sru!2s!4v1736491491818!5m2!1sru!2s">
@@ -106,9 +107,8 @@
             </div>
           </div>
         </div>
-
         <form class="contacts__form" action="/" method="post" name="contacts-form">
-          <fieldset class="form-control">
+          <div class="form-control">
             <label class="form-control__label" for="name">Full Name</label>
             <input
               type="text"
@@ -118,8 +118,8 @@
               placeholder="Amelia Robert Johnson"
               minlength="3"
               required>
-          </fieldset>
-          <fieldset class="form-control">
+          </div>
+          <div class="form-control">
             <label class="form-control__label" for="email">Email</label>
             <input
               type="email"
@@ -129,8 +129,8 @@
               placeholder="amelia.robertjohnson@pixmart.com"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required>
-          </fieldset>
-          <fieldset class="form-control form-select">
+          </div>
+          <div class="form-control form-select">
             <select class="select select--large" name="sort" id="sort">
               <option class="select__option" value="inquiry">General Inquiry</option>
               <option class="select__option" value="option-one">Option One</option>
@@ -139,8 +139,8 @@
               <option class="select__option" value="option-four">Option Four</option>
             </select>
             <label for="sort" class="hidden">Sort by</label>
-          </fieldset>
-          <fieldset class="form-control">
+          </div>
+          <div class="form-control">
             <label class="form-control__label" for="message">Message</label>
             <textarea
               id="message"
@@ -149,10 +149,9 @@
               name="message"
               minlength="10"
               required></textarea>
-          </fieldset>
-
+          </div>
           <div class="contacts__submit">
-            <fieldset class="contacts__subscribe">
+            <div class="contacts__subscribe">
               <label class="form-checkbox">
                 <input
                   type="checkbox"
@@ -177,7 +176,7 @@
                   <span class="form-checkbox__text">I have read the User & Privacy Policy</span>
                 </span>
               </label>
-            </fieldset>
+            </div>
             <button class="btn btn--blue btn--long" type="submit">Send Message</button>
           </div>
         </form>
