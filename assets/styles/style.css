@@ -154,7 +154,7 @@ button {
   width: fit-content;
   padding: 18px 36px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
@@ -940,6 +940,9 @@ details[open] summary:after {
 .footer-nav__list a:hover {
   color: var(--color-light-blue);
 }
+.footer-nav__block {
+  max-width: 200px;
+}
 .footer__description {
   padding-top: 20px;
   max-width: 320px;
@@ -949,6 +952,8 @@ details[open] summary:after {
 .footer__secondary {
   display: flex;
   justify-content: space-between;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
   margin-bottom: 70px;
 }
 
@@ -1279,7 +1284,7 @@ details[open] summary:after {
 }
 
 .filter {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 .filter__controls {
   display: flex;
@@ -1312,8 +1317,12 @@ details[open] summary:after {
   width: 16px;
   height: 16px;
   top: 10px;
-  right: 20px;
+  right: 30px;
   pointer-events: none;
+}
+
+.form-catalog {
+  overflow: hidden;
 }
 
 /* form checkbox */
@@ -1522,6 +1531,8 @@ details[open] summary:after {
   background-color: var(--color-white);
 }
 .form-radio__box {
+  display: flex;
+  flex-shrink: 0;
   width: 14px;
   height: 14px;
   margin-right: 10px;
@@ -1560,7 +1571,8 @@ details[open] summary:after {
 }
 
 .form-switcher__box {
-  display: block;
+  display: flex;
+  flex-shrink: 0;
   width: 40px;
   height: 20px;
   border-radius: 19px;
@@ -1640,9 +1652,6 @@ details[open] summary:after {
 .form-control__input:disabled {
   background-color: var(--color-grey-blue-transparent);
   pointer-events: none;
-}
-.form-control__input:hover {
-  border-color: var(--color-blue);
 }
 .form-control__input:user-invalid {
   border-color: #ea3829;
@@ -1740,10 +1749,10 @@ textarea.form-control__input {
 
 .catalog-list {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  margin-bottom: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 51px;
 }
 .catalog-list__item {
   display: flex;
@@ -2011,6 +2020,7 @@ textarea.form-control__input {
 }
 .input--large {
   width: 245px;
+  height: 64px;
   padding: 20px;
   font-size: 16px;
   line-height: 24px;
