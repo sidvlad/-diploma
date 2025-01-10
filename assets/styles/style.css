@@ -11,6 +11,7 @@ body {
   --color-dark-grey-transparent: #22344966;
   --color-dark-transparent: #2a3541b2;
   --color-light-transparent: #eff5fad1;
+  --color-light-grey-transparent: #E7EEF7A8;
   --color-grey-blue-transparent: #1f324745;
   --color-grey-disabled-transparent: #1D36532B;
   --font-secondary: Plus Jakarta Sans, Arial, Helvetica, sans-serif;
@@ -746,7 +747,7 @@ button {
   justify-content: center;
   align-items: center;
   padding: 0 16px;
-  background-color: rgba(231, 238, 247, 0.6588235294);
+  background-color: var(--color-light-grey-transparent);
   border-radius: 20px;
 }
 .trending__image:before {
@@ -956,11 +957,13 @@ details[open] summary:after {
 }
 .form-subscribe__label {
   max-width: 216px;
+  max-height: 65px;
   margin-right: 24px;
   font-family: var(--font-secondary);
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
+  overflow: hidden;
 }
 .form-subscribe__input {
   width: 214px;
@@ -969,15 +972,14 @@ details[open] summary:after {
 
 .social {
   display: flex;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  gap: 8px;
 }
 
 .copyright {
   background-color: var(--color-dark);
   font-size: 16px;
   line-height: 24px;
-  color: var(--color-primary-white);
+  color: var(--color-light-grey-transparent);
 }
 .copyright__wrapper {
   display: flex;
@@ -1003,7 +1005,7 @@ details[open] summary:after {
   left: -10px;
   width: 1px;
   height: 14px;
-  background-color: rgba(231, 238, 247, 0.6588235294);
+  background-color: var(--color-light-grey-transparent);
 }
 .privacy__item:first-child::before {
   display: none;
@@ -1152,6 +1154,10 @@ details[open] summary:after {
   border-bottom: none;
 }
 .blog-sidebar__article p {
+  font-family: var(--font-secondary);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
   padding-bottom: 10px;
 }
 .blog-sidebar__title {
@@ -1291,6 +1297,23 @@ details[open] summary:after {
   line-height: 24px;
   text-align: right;
   color: var(--color-dark);
+}
+.filter__form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.filter__select {
+  position: relative;
+}
+.filter__select::after {
+  content: url("../../images/icons/chevron-input.svg");
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 10px;
+  right: 20px;
+  pointer-events: none;
 }
 
 /* form checkbox */
@@ -1708,12 +1731,6 @@ textarea.form-control__input {
   top: 20px;
   right: 20px;
   pointer-events: none;
-}
-.form-select--middle::after {
-  width: 24px;
-  height: 24px;
-  top: 10px;
-  right: 24px;
 }
 
 .select__option {

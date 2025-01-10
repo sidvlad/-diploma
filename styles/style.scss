@@ -11,6 +11,7 @@ body {
     --color-dark-grey-transparent: #22344966;
     --color-dark-transparent: #2a3541b2;
     --color-light-transparent: #eff5fad1;
+    --color-light-grey-transparent: #E7EEF7A8;
     --color-grey-blue-transparent: #1f324745;
     --color-grey-disabled-transparent: #1D36532B;
     --font-secondary: Plus Jakarta Sans, Arial, Helvetica, sans-serif;
@@ -755,7 +756,7 @@ button {
         justify-content: center;
         align-items: center;
         padding: 0 16px;
-        background-color: #e7eef7a8;
+        background-color: var(--color-light-grey-transparent);
         border-radius: 20px;
     }
     &__image:before {
@@ -966,11 +967,13 @@ details[open] summary:after {
     display: flex;
     &__label {
         max-width: 216px;
+        max-height: 65px;
         margin-right: 24px;
         font-family: var(--font-secondary);
         font-size: 24px;
         font-weight: 700;
         line-height: 32px;
+        overflow: hidden;
     }
     &__input {
         width: 214px;
@@ -980,14 +983,15 @@ details[open] summary:after {
 
 .social {
     display: flex;
-    column-gap: 8px;
+    gap: 8px;
 }
 
 .copyright {
     background-color: var(--color-dark);
     font-size: 16px;
     line-height: 24px;
-    color: var(--color-primary-white);
+    color: var(--color-light-grey-transparent);
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -1010,7 +1014,7 @@ details[open] summary:after {
             left: -10px;
             width: 1px;
             height: 14px;
-            background-color: #e7eef7a8;
+            background-color: var(--color-light-grey-transparent);
         }
         &:first-child::before {
             display: none;
@@ -1161,6 +1165,10 @@ details[open] summary:after {
             border-bottom: none;
         }
         & p {
+            font-family: var(--font-secondary);
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 26px;
             padding-bottom: 10px;
         }
     }
@@ -1299,6 +1307,23 @@ details[open] summary:after {
         line-height: 24px;
         text-align: right;
         color: var(--color-dark);
+    }
+    &__form {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+    &__select {
+        position: relative;
+        &::after {
+            content: url('../../images/icons/chevron-input.svg');
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 10px;
+            right: 20px;
+            pointer-events : none;
+        }
     }
 }
 

@@ -255,15 +255,17 @@
         <div class="catalog-content">
           <section class="filter">
             <div class="filter__controls">
-              <form class="form-select form-select--middle" action="#" method="get">
-                <select class="select" name="sort" id="sort">
-                  <option class="select__option" value="bestseller">Best Seller</option>
-                  <option class="select__option" value="newest">Newest</option>
-                  <option class="select__option" value="popular">Most popular</option>
-                  <option class="select__option" value="increasing">Increasing in price</option>
-                  <option class="select__option" value="lowering">Lowering the price</option>
-                </select>
-                <label for="sort" class="hidden">Sort by</label>
+              <form class="filter__form" action="#" method="get">
+                <div class="filter__select">
+                  <select class="input select" name="sort" id="sort">
+                    <option class="select__option" value="bestseller">Best Seller</option>
+                    <option class="select__option" value="newest">Newest</option>
+                    <option class="select__option" value="popular">Most popular</option>
+                    <option class="select__option" value="increasing">Increasing in price</option>
+                    <option class="select__option" value="lowering">Lowering the price</option>
+                  </select>
+                  <label for="sort" class="hidden">Sort by</label>
+                </div>
               </form>
               <div class="filter__results">
                 <p class="filter__text">Showing 12 out of 120 results.</p>
