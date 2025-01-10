@@ -1636,17 +1636,10 @@ details[open] summary:after {
   padding: 20px;
   font-size: 16px;
   line-height: 24px;
-  color: var(--color-dark-transparent);
-  outline: none;
-  border-radius: 8px;
-  border: 2px solid var(--color-light-transparent);
 }
 .form-control__input:disabled {
   background-color: var(--color-grey-blue-transparent);
   pointer-events: none;
-}
-.form-control__input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
 }
 .form-control__input:hover {
   border-color: var(--color-blue);
@@ -1658,7 +1651,6 @@ details[open] summary:after {
   width: 100%;
   height: 48px;
   font-size: 18px;
-  line-height: 1.55em;
   font-weight: 600;
   color: var(--color-primary-white);
   background-color: var(--color-blue);
