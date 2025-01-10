@@ -37,12 +37,13 @@
           </li>
         </ul>
       </nav>
-
       <div class="header-actions">
         <form class="form-search" action="/search" method="post">
+          <label class="hidden" for="search">Search</label>
           <input
             class="input input--small"
             type="search"
+            id="search"
             placeholder="Search for Digital Assets"
             aria-label="Search"
             name="search">
@@ -57,7 +58,7 @@
     <main>
       <section class="catalog-intro">
         <div class="catalog-intro__wrapper container">
-          <h1 class="hidden">Digital Assets for Creative Projects</h1>
+          <h1 class="hidden">Explore Top Digital Assets and Design Resources at Pixmart</h1>
           <h2 class="intro-title">
             Explore Top
             <span>UI Kits</span> Design Assets
@@ -67,8 +68,8 @@
       <section class="catalog container">
         <aside class="catalog-sidebar">
           <form class="form-catalog" action="#" method="get">
-            <div class="catalog-sidebar__wrapper">
-              <p class="catalog-sidebar__title">Categories</p>
+            <fieldset class="catalog-sidebar__wrapper">
+              <legend class="catalog-sidebar__title">Categories</legend>
               <label class="form-checkbox">
                 <input type="checkbox" class="input-hidden form-checkbox__input" id="all-categories" name="all-categories" required>
                 <span class="form-checkbox__inner">
@@ -146,9 +147,9 @@
                   <span class="form-checkbox__text">Others</span>
                 </span>
               </label>
-            </div>
-            <div class="catalog-sidebar__wrapper">
-              <p class="catalog-sidebar__title">Format Type</p>
+            </fieldset>
+            <fieldset class="catalog-sidebar__wrapper">
+              <legend class="catalog-sidebar__title">Format Type</legend>
               <label class="form-radio form-radio--col">
                 <input class="input-hidden form-radio__input" type="radio" name="radio" value="figma">
                 <span class="form-radio__inner">
@@ -184,67 +185,67 @@
                   <span class="form-radio__text">Adobe Illustration</span>
                 </span>
               </label>
-            </div>
-              <div class="catalog-sidebar__wrapper">
-                <p class="catalog-sidebar__title">Style</p>
-                <div class="form-switcher">
-                  <input type="checkbox" class="input-hidden form-switcher__input" id="minimalist" name="minimalist">
-                  <label for="minimalist" class="form-switcher__box"></label>
-                  <label for="minimalist" class="form-switcher__text">Minimalist</label>
-                </div>
-                <div class="form-switcher">
-                  <input type="checkbox" class="input-hidden form-switcher__input" id="modern" name="modern">
-                  <label for="modern" class="form-switcher__box"></label>
-                  <label for="modern" class="form-switcher__text">Modern</label>
-                </div>
-                <div class="form-switcher">
-                  <input type="checkbox" class="input-hidden form-switcher__input" id="playful" name="playful">
-                  <label for="playful" class="form-switcher__box"></label>
-                  <label for="playful" class="form-switcher__text">Playful</label>
-                </div>
-                <div class="form-switcher">
-                  <input type="checkbox" class="input-hidden form-switcher__input" id="dark-mode" name="dark-mode">
-                  <label for="dark-mode" class="form-switcher__box"></label>
-                  <label for="dark-mode" class="form-switcher__text">Dark Mode</label>
-                </div>
-                <div class="form-switcher">
-                  <input type="checkbox" class="input-hidden form-switcher__input" id="photocentric" name="photocentric">
-                  <label for="photocentric" class="form-switcher__box"></label>
-                  <label for="photocentric" class="form-switcher__text">Photocentric</label>
-                </div>
+            </fieldset>
+            <fieldset class="catalog-sidebar__wrapper">
+              <legend class="catalog-sidebar__title">Style</legend>
+              <div class="form-switcher">
+                <input type="checkbox" class="input-hidden form-switcher__input" id="minimalist" name="minimalist">
+                <label for="minimalist" class="form-switcher__box"></label>
+                <label for="minimalist" class="form-switcher__text">Minimalist</label>
               </div>
-              <div class="catalog-sidebar__wrapper">
-                <p class="catalog-sidebar__title">Price</p>
-                <div class="range-container">
-                  <div class="range-values">
-                    <span id="minValueLabel">€5</span>
-                    <span id="maxValueLabel">€50</span>
-                  </div>
-                  <div class="slider-track"></div>
-                  <input
-                    id="rangeMin"
-                    type="range"
-                    min="0"
-                    max="70"
-                    value="5"
-                    oninput="updateSlider()"
-                  />
-                  <input
-                    id="rangeMax"
-                    type="range"
-                    min="0"
-                    max="70"
-                    value="50"
-                    oninput="updateSlider()"
-                  />
-                </div>
+              <div class="form-switcher">
+                <input type="checkbox" class="input-hidden form-switcher__input" id="modern" name="modern">
+                <label for="modern" class="form-switcher__box"></label>
+                <label for="modern" class="form-switcher__text">Modern</label>
               </div>
-              <button type="reset" class="btn btn--border btn--middle btn--full-width">
-                <svg width="24" height="24" aria-label="close" role="img">
-                  <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
-                </svg>
-                Clear all filters
-              </button>
+              <div class="form-switcher">
+                <input type="checkbox" class="input-hidden form-switcher__input" id="playful" name="playful">
+                <label for="playful" class="form-switcher__box"></label>
+                <label for="playful" class="form-switcher__text">Playful</label>
+              </div>
+              <div class="form-switcher">
+                <input type="checkbox" class="input-hidden form-switcher__input" id="dark-mode" name="dark-mode">
+                <label for="dark-mode" class="form-switcher__box"></label>
+                <label for="dark-mode" class="form-switcher__text">Dark Mode</label>
+              </div>
+              <div class="form-switcher">
+                <input type="checkbox" class="input-hidden form-switcher__input" id="photocentric" name="photocentric">
+                <label for="photocentric" class="form-switcher__box"></label>
+                <label for="photocentric" class="form-switcher__text">Photocentric</label>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-sidebar__wrapper">
+              <legend class="catalog-sidebar__title">Price</legend>
+              <div class="range-container">
+                <div class="range-values">
+                  <span id="minValueLabel">€5</span>
+                  <span id="maxValueLabel">€50</span>
+                </div>
+                <div class="slider-track"></div>
+                <input
+                  id="rangeMin"
+                  type="range"
+                  min="0"
+                  max="70"
+                  value="5"
+                  oninput="updateSlider()"
+                />
+                <input
+                  id="rangeMax"
+                  type="range"
+                  min="0"
+                  max="70"
+                  value="50"
+                  oninput="updateSlider()"
+                />
+              </div>
+            </fieldset>
+            <button type="reset" class="btn btn--border btn--middle btn--icon btn--full-width">
+              <svg width="24" height="24" aria-label="close" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
+              </svg>
+              Clear all filters
+            </button>
           </form>
         </aside>
         <div class="catalog-content">
@@ -277,13 +278,13 @@
               </div>
             </div>
             <div class="btn-group">
-              <button type="button" class="btn btn--border btn--small">
+              <button type="button" class="btn btn--border btn--small btn--icon">
                 UI Kit
                 <svg width="16" height="16" aria-label="close" role="img">
                   <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
                 </svg>
               </button>
-              <button type="button" class="btn btn--border btn--small">
+              <button type="button" class="btn btn--border btn--small btn--icon">
                 UI Kit
                 <svg width="16" height="16" aria-label="close" role="img">
                   <use href="assets/images/icons/sprite.svg#icon-x-close"></use>
@@ -601,7 +602,7 @@
               </div>
             </article>
           </section>
-          <div class="btn-group--center">
+          <div class="btn-group btn-group--center">
             <button class="btn btn--border" type="button">Load more</button>
           </div>
         </div>
@@ -695,6 +696,5 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
   </body>
 </html>
