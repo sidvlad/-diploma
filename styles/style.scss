@@ -270,7 +270,8 @@ button {
 
 .btn-group {
     display: flex;
-    column-gap: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
     &--center {
         display: flex;
         justify-content: center;
@@ -619,6 +620,7 @@ button {
 .products {
     display: flex;
     column-gap: 32px;
+    flex-wrap: wrap;
     &__item {
         display: flex;
         flex-direction: column;
@@ -682,11 +684,13 @@ button {
     &__wrapper {
         display: flex;
         column-gap: 16px;
+        overflow-x: scroll;
     }
     &__item {
         display: flex;
+        flex-shrink: 0;
         flex-direction: column;
-        max-width: 305px;
+        flex-basis: 305px;
         row-gap: 12px;
     }
     &__image {
