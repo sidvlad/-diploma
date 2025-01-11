@@ -288,20 +288,17 @@ button {
     &__block {
         flex-basis: 50%;
     }
+    &__block:first-child {
+        padding: 0 74px;
+    }
     &__block:last-child {
         padding: 78px 0;
     }
-    &__line-wrapper {
+    &__cards {
+        position: relative;
         display: flex;
-        column-gap: 20px;
-        height: 460px;
-        overflow-y: hidden;
-        padding: 0 74px;
-    }
-    &__line {
-        display: flex;
-        flex-direction: column;
-        row-gap: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
     }
     &__card {
         display: flex;
@@ -312,12 +309,21 @@ button {
         background-color: #f4f7fa;
         border-radius: 20px;
     }
+    &__card:nth-child(2) {
+        margin-top: 80px;
+    }
+    &__card:nth-child(3) {
+        margin-top: -80px;
+    }
     &__card-title {
         padding: 16px 0 8px 0;
         font-family: var(--font-secondary);
         font-size: 27px;
         font-weight: 700;
         line-height: 36px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     &__card-text {
         display: flex;
@@ -351,7 +357,13 @@ button {
         line-height: 24px;
         color: var(--color-black);
     }
-    &__card--gradient {
+    &__cards:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 220px;
+        height: 60px;
         background: linear-gradient(
             360deg,
             #ffffff 0%,
@@ -360,14 +372,20 @@ button {
         pointer-events: none;
         border-radius: 20px 20px 0 0;
     }
-    &__card--gradient:first-child {
-        border-radius: 0 0 20px 20px;
+    &__cards:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 220px;
+        height: 60px;
         background: linear-gradient(
             360deg,
             #f0f6fd 0%,
             #ffffff 110%
         );
-        
+        pointer-events: none;
+        border-radius: 0 0 20px 20px;
     }
     &__card:hover,
     &__card--active {
@@ -426,7 +444,7 @@ button {
             color: var(--color-dark);
             padding: 4px;
         }
-        &__item.active {
+        &__item.header-nav__item--active {
             color: var(--color-blue);
             pointer-events: none;
         }
@@ -951,7 +969,12 @@ details[open] summary:after {
         color: var(--color-light-blue);
     }
     &-nav__block {
-        max-width: 200px
+        max-width: 200px;
+        & > ul > li > a {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
     &__description {
         padding-top: 20px;
@@ -995,10 +1018,10 @@ details[open] summary:after {
     font-size: 16px;
     line-height: 24px;
     color: var(--color-light-grey-transparent);
-
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        column-gap: 60px;
         padding: 24px 80px;
     }
     &__text {
@@ -1008,6 +1031,7 @@ details[open] summary:after {
 
 .privacy {
     display: flex;
+    flex-shrink: 0;
     column-gap: 21px;
     &__item {
         position: relative;
@@ -1039,6 +1063,7 @@ details[open] summary:after {
         padding: 64px 80px 0;
     }
     &__label {
+        display: block;
         width: fit-content;
         margin-bottom: 24px;
         padding: 8px 16px;
@@ -1046,8 +1071,8 @@ details[open] summary:after {
         font-weight: 500;
         line-height: 24px;
         color: var(--color-primary-white);
-        border-radius: 20px;
         background-color: var(--color-blue);
+        border-radius: 20px;
         text-transform: uppercase;
     }
     &__image {
@@ -1767,7 +1792,7 @@ textarea.form-control__input {
 .catalog-list {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);;
     gap: 30px;
     margin-bottom: 51px;
     &__item {
