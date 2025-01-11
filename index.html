@@ -9,45 +9,29 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400,500;700&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400,500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/styles/normalize.min.css">
     <link rel="stylesheet" href="assets/styles/style.min.css">
 </head>
   <body>
     <header class="header container">
-      <a href="index.html" class="active">
+      <a href="index.html">
         <img src="images/icons/logo.svg" alt="PixMart logo" class="header__logo" width="108" height="24">
       </a>
       <nav class="header-nav">
         <ul class="header-nav__list">
-          <li class="header-nav__item header-nav__item--active">
-            <a href="index.html">About</a>
-          </li>
-          <li class="header-nav__item">
-            <a href="catalog.html">Products</a>
-          </li>
-          <li class="header-nav__item">
-            <a href="#">Creators</a>
-          </li>
-          <li class="header-nav__item">
-            <a href="blog.html">Blog</a>
-          </li>
-          <li class="header-nav__item">
-            <a href="contacts.html">Contact</a>
-          </li>
+          <li class="header-nav__item header-nav__item--active"><a href="index.html">About</a></li>
+          <li class="header-nav__item"><a href="catalog.html">Products</a></li>
+          <li class="header-nav__item"><a href="#">Creators</a></li>
+          <li class="header-nav__item"><a href="blog.html">Blog</a></li>
+          <li class="header-nav__item"><a href="contacts.html">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
         <form class="form-search" action="/search" method="post">
           <label class="hidden" for="search">Search</label>
-          <input
-            class="input input--small"
-            type="search"
-            id="search"
-            placeholder="Search for Digital Assets"
-            aria-label="Search"
-            name="search">
+          <input class="input input--small" type="search" id="search" placeholder="Search for Digital Assets" aria-label="Search" name="search">
         </form>
         <a href="#" class="btn btn--blue btn--square">
           <svg width="24" height="24" aria-label="Product Bag" role="img">
@@ -80,12 +64,7 @@
             <div class="intro__bg">
               <img src="assets/images/content/intro-left.webp" alt="The ultimate platform for planning image" class="intro__bg-left" width="281" height="422">
               <img src="assets/images/content/intro-right.webp" alt="Jenna Smith image" class="intro__bg-right" width="291" height="164">
-              <img
-                src="assets/images/content/intro-bottom.webp"
-                alt="12 complete screens for events image"
-                class="intro__bg-bottom"
-                width="514"
-                height="299">
+              <img src="assets/images/content/intro-bottom.webp" alt="12 complete screens for events image" class="intro__bg-bottom" width="514" height="299">
               <svg class="intro__bg-icon-pen" width="56" height="56" aria-label="pen icon" role="img">
                 <use href="assets/images/icons/sprite.svg#icon-pen"></use>
               </svg>
@@ -170,8 +149,7 @@
               <p class="categories__card-title">Design Tools</p>
               <p class="categories__card-text"><span>Pitch-ready </span><span>Creative</span></p>
             </a>
-          </div>
-          
+          </div> 
         </div>
         <div class="categories__block">
           <h2 class="title">Categories</h2>
@@ -201,80 +179,64 @@
           </div>
         </div>
         <div class="trending__wrapper">
-          <article class="trending__item trophy-label">
+          <article class="trending__item trending__label">
             <div class="trending__image">
-              <img
-                src="assets/images/content/trending-1.webp"
-                width="305"
-                height="272"
-                alt="Travel Hero popular product card">
+              <img src="assets/images/content/trending-1.webp" width="305" height="272" alt="Travel Hero popular product card">
               <div class="trending__item-overlay">
                 <a href="#" class="btn btn--blue btn--full-width">Go to product</a>
               </div>
             </div>
             <div class="trending__content">
               <p class="trending__name">Travel Hero</p>
-              <p class="trending__price">€ <span>29.99</span></p>
+              <p class="trending__price">€29.99</p>
             </div>
             <div class="trending__category">
               <span>Adventure</span>
               <span>Journey</span>
             </div>
           </article>
-          <article class="trending__item trophy-label">
+          <article class="trending__item trending__label">
             <div class="trending__image">
-              <img
-                src="assets/images/content/trending-2.webp"
-                width="305"
-                height="272"
-                alt="Healthcare Pro popular product card">
+              <img src="assets/images/content/trending-2.webp" width="305" height="272" alt="Healthcare Pro popular product card">
               <div class="trending__item-overlay">
                 <a href="#" class="btn btn--blue btn--full-width">Go to product</a>
               </div>
             </div>
             <div class="trending__content">
               <p class="trending__name">Healthcare Pro</p>
-              <p class="trending__price">€ <span>15.99</span></p>
+              <p class="trending__price">€15.99</p>
             </div>
             <div class="trending__category">
               <span>Medical</span>
               <span>Wellness</span>
             </div>
           </article>
-          <article class="trending__item trophy-label">
+          <article class="trending__item trending__label">
             <div class="trending__image">
-              <img
-                src="assets/images/content/trending-3.webp"
-                width="305"
-                height="272"
-                alt="Foodish Delight popular product card">
+              <img src="assets/images/content/trending-3.webp" width="305" height="272" alt="Foodish Delight popular product card">
               <div class="trending__item-overlay">
                 <a href="#" class="btn btn--blue btn--full-width">Go to product</a>
               </div>
             </div>
             <div class="trending__content">
               <p class="trending__name">Foodish Delight</p>
-              <p class="trending__price">€ <span>31.99</span></p>
+              <p class="trending__price">€31.99</p>
             </div>
             <div class="trending__category">
               <span>Catering</span>
               <span>Food</span>
             </div>
           </article>
-          <article class="trending__item trophy-label">
+          <article class="trending__item trending__label">
             <div class="trending__image">
-              <img
-                src="assets/images/content/trending-4.webp"
-                width="305"
-                height="272"
-                alt="Real Estate popular product card">
+              <img src="assets/images/content/trending-4.webp" width="305" height="272" alt="Real Estate popular product card">
               <div class="trending__item-overlay">
                 <a href="#" class="btn btn--blue btn--full-width">Go to product</a>
               </div>
             </div>
             <div class="trending__content">
               <p class="trending__name">Real Estate</p>
-              <p class="trending__price">€ <span>40.99</span></p>
+              <p class="trending__price">€40.99</p>
             </div>
             <div class="trending__category">
               <span>Modern</span>
@@ -381,7 +343,7 @@
           <h3 class="subtitle">Latest Expert</h3>
           <a href="#" class="btn btn--link btn--icon">
             Explore All Articles
-            <svg width="16" height="16" aria-label="to left" role="img">
+            <svg width="16" height="16" aria-label="Explore All Articles" role="img">
               <use href="assets/images/icons/sprite.svg#icon-chevron-right-blue"></use>
             </svg>
           </a>
@@ -391,19 +353,19 @@
             <span class="tag">Tag</span>
             <img src="assets/images/content/creative-blog.webp" width="624" height="702" alt="Creative Blog example site">
             <p class="latest-expert__name">Creative Blog</p>
-            <time datetime="2022-06-20" class="latest-expert__date">15 April 2024</time>
+            <time datetime="2024-04-15" class="latest-expert__date">15 April 2024</time>
           </a>
           <a href="#" class="latest-expert__item">
             <span class="tag">Tag</span>
             <img src="assets/images/content/best-dishes.webp" width="624" height="289" alt="Best Dishes example site">
             <p class="latest-expert__name">Best Dishes</p>
-            <time datetime="2022-06-20" class="latest-expert__date">5 May 2024</time>
+            <time datetime="2024-05-05" class="latest-expert__date">5 May 2024</time>
           </a>
           <a href="#" class="latest-expert__item">
             <span class="tag">Tag</span>
             <img src="assets/images/content/contact-us.webp" width="624" height="289" alt="Contact Us example site">
             <p class="latest-expert__name">Contact Us</p>
-            <time datetime="2022-06-20" class="latest-expert__date">10 June 2024</time>
+            <time datetime="2024-06-10" class="latest-expert__date">10 June 2024</time>
           </a>
         </div>
       </section>
@@ -457,31 +419,28 @@
           <li>
             <a href="https://x.com/" target="_blank" class="btn btn--border btn--square-big">
               <svg width="24" height="24" aria-label="Twitter" role="img">
-                <use href="assets/images/icons/sprite.svg#icon-twitter"></use></svg
-            ></a>
+                <use href="assets/images/icons/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/" target="_blank" class="btn btn--border btn--square-big"
-              ><svg width="24" height="24" aria-label="Facebook" role="img">
-                <use href="assets/images/icons/sprite.svg#icon-facebook"></use></svg
-            ></a>
+            <a href="https://www.facebook.com/" target="_blank" class="btn btn--border btn--square-big">
+              <svg width="24" height="24" aria-label="Facebook" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
           </li>
           <li>
-            <a href="https://telegram.org/" target="_blank" class="btn btn--border btn--square-big"
-              ><svg width="24" height="24" aria-label="Telegram" role="img">
-                <use href="assets/images/icons/sprite.svg#icon-telegram"></use></svg
-            ></a>
+            <a href="https://telegram.org/" target="_blank" class="btn btn--border btn--square-big">
+              <svg width="24" height="24" aria-label="Telegram" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
         <form class="form-subscribe" action="/subscribe" method="post">
           <label class="form-subscribe__label" for="subscribe">Subscribe to Design Newsletter</label>
-          <input
-            class="form-subscribe__input input input--large"
-            type="email"
-            id="subscribe"
-            name="email"
-            placeholder="Enter your email address ..."
-            required>
+          <input class="form-subscribe__input input input--large" type="email" id="subscribe" name="email" placeholder="Enter your email address ..." required>
           <button class="btn btn--blue" type="submit">Subscribe</button>
         </form>
       </div>
