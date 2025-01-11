@@ -16,7 +16,8 @@ body {
     --color-grey-disabled-transparent: #1D36532B;
     --font-secondary: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
     --transition-hover: color .3s, background-color .3s, outline .3s;
-
+    --sceen-width: 1440px;
+    --min-sceen-height: 1280px;
     margin: 0;
     font-family: "Libre Franklin", Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -129,8 +130,9 @@ button {
 .container {
     width: 100%;
     padding: 0 80px;
-    max-width: 1440px;
+    max-width: var(--sceen-width);
     margin: 0 auto;
+    min-width: var(--min-sceen-width);
 }
 
 .block-center {
@@ -469,6 +471,7 @@ button {
 
 .intro {
     background: linear-gradient(90deg, #f0f6fd 44%, #ffffff 100%);
+    min-width: var(--min-sceen-width);
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -1013,6 +1016,7 @@ button {
     font-size: 16px;
     line-height: 24px;
     color: var(--color-light-grey-transparent);
+    min-width: var(--min-sceen-width);
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -1054,6 +1058,7 @@ button {
         rgba(255, 255, 255, 0) 0.2%,
         #f0f6fd 99.8%
     );
+    min-width: var(--min-sceen-width);
     &__intro {
         padding: 64px 80px 0;
     }
@@ -1288,6 +1293,7 @@ button {
         background-repeat: no-repeat;
         background-position: bottom;
         background-size: cover;
+        min-width: var(--min-sceen-width);
     }
     &-intro__wrapper {
         padding: 64px 80px 100px;
@@ -2024,6 +2030,7 @@ textarea.form-control__input {
         #f0f6fd 0.2%,
         rgba(255, 255, 255, 0) 99.8%
     );
+    min-width: var(--min-sceen-width);
     &__content {
         flex-basis: 50%;
     }
