@@ -1363,6 +1363,34 @@ button {
     display: flex;
     width: fit-content;
     cursor: pointer;
+    &__box {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        background-color: transparent;
+        border: 1px solid var(--color-grey-blue-transparent);
+        transition: var(--transition-hover);
+    }
+    &__box::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url('../../images/icons/checkbox-arrow.svg');
+        background-position: center;
+        background-size: 8px 6px;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
 }
 
 .form-checkbox .form-checkbox__box {
@@ -1370,34 +1398,61 @@ button {
     border: 1px solid var(--color-grey-blue-transparent);
 }
 
-.form-checkbox:hover .form-checkbox__box {
+.form-checkbox:hover .form-checkbox__box,
+.form-checkbox__input:hover + .form-checkbox__inner .form-checkbox__box {
     background-color: #F4F7FA;
 }
 
-.form-checkbox:hover .form-checkbox__text {
-    color: var(--color-blue);
+.form-checkbox__input:checked:hover + .form-checkbox__inner .form-checkbox__box {
+    background-color: #3892F3;
 }
 
-.form-checkbox:active .form-checkbox__box {
+.form-checkbox__input:checked:focus + .form-checkbox__inner .form-checkbox__box {
+    background-color: #0265DC;
+    border: px solid #3892F3;
+}
+
+.form-checkbox__input:active + .form-checkbox__inner .form-checkbox__box {
     background-color: #B5DEFF;
     border-color: #B5DEFF;
 }
 
-.form-checkbox:focus .form-checkbox__box {
-    background-color: #f8fafc;
-    border-color: var(--color-light-blue);
-    outline: 1px solid var(--color-light-blue);
+.form-checkbox__input:focus + .form-checkbox__inner .form-checkbox__box  {
+    background-color: #F8FAFC;
+    border: 2px solid #3892F3;
 }
 
-.form-checkbox:invalid .form-checkbox__box {
-    background-color: var(--color-white);
-    border-color: #ea3829;
+.form-checkbox__input:checked:focus + .form-checkbox__inner .form-checkbox__box  {
+    background-color: #B5DEFF;
+    border: 2px solid #B5DEFF;
 }
 
-.form-checkbox:disabled .form-checkbox__box {
+
+.form-checkbox__input:checked:focus + .form-checkbox__inner .form-checkbox__box::before {
+    opacity: 1;
+    background-image: url('../../images/icons/checkbox-arrow-blue.svg');
+}
+
+.form-checkbox__input:disabled + .form-checkbox__inner .form-checkbox__box {
     background-color: var(--color-grey-disabled-transparent);
     border-color: var(--color-grey-disabled-transparent);
 }
+
+.form-checkbox__input:checked + .form-checkbox__inner .form-checkbox__box {
+    background-color: var(--color-blue);
+    border-color: var(--color-blue);
+    border: 1px solid var(--color-light-blue-transparent);
+}
+
+.form-checkbox__input:checked + .form-checkbox__inner .form-checkbox__box::before {
+    opacity: 1;
+}
+
+.form-checkbox__input:checked:disabled + .form-checkbox__inner .form-checkbox__box::before {
+    opacity: 1;
+    background-image: url('../../images/icons/checkbox-arrow-grey.svg');
+}
+
 
 .form-checkbox__inner {
     display: flex;
@@ -1409,52 +1464,7 @@ button {
     color: #78bbfa;
 }
 
-.form-checkbox__input:checked + .form-checkbox__inner .form-checkbox__box {
-    background-color: var(--color-blue);
-    border-color: var(--color-blue);
-    border: 1px solid var(--color-light-blue-transparent);
-}
 
-.form-checkbox__input:checked
-    + .form-checkbox__inner
-    .form-checkbox__box::before {
-    opacity: 1;
-}
-
-.form-checkbox__input:disabled + .form-checkbox__inner .form-checkbox__box {
-    background-color: var(--color-grey-disabled-transparent);
-    border-color: var(--color-grey-disabled-transparent);
-}
-
-.form-checkbox__box {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-shrink: 0;
-    width: 14px;
-    height: 14px;
-    border-radius: 4px;
-    background-color: transparent;
-    border: 1px solid var(--color-grey-blue-transparent);
-    transition: var(--transition-hover);
-}
-
-.form-checkbox__box::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url('../../images/icons/checkbox-arrow.svg');
-    background-position: center;
-    background-size: 8px 6px;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity .3s ease;
-}
 
 .form-checkbox__text,
 .form-radio__text,
@@ -1543,7 +1553,6 @@ button {
         border-color: #1F324745;
     }
     &__input:checked + .form-radio__inner .form-radio__box::after {
-        transform: translate(-50%, -50%) scale(0.4);
         background-color: var(--color-white);
     }
     &__input:checked:hover + .form-radio__inner .form-radio__box::after {
@@ -1553,17 +1562,20 @@ button {
     &__input:checked:active + .form-radio__inner .form-radio__box {
         background-color: #0265DC;
     }
-    &__input:focus + .form-radio__inner .form-radio__box {
-        outline: 2px solid #2A3541B2;
-        border-color: #3892F3;
+    &__input:disabled + .form-radio__inner .form-radio__box {
+        background-color: #1D36532B;
     }
     &__input:focus + .form-radio__inner .form-radio__box:after {
-        opacity: 1;
-        width: 9px;
-        height: 9px;
+        opacity: 0;
     }
-
-
+    &__input:checked:disabled + .form-radio__inner .form-radio__box {
+        background-color: #1F324745;
+    }
+    &__input:checked:focus + .form-radio__inner .form-radio__box:after {
+        background-color: #2A3541B2;
+        width: 4px;
+        height: 4px;
+    }
     &__inner {
         display: flex;
         align-items: center;
@@ -1593,8 +1605,8 @@ button {
     }
     &__box::after {
         content: '';
-        width: 6px;
-        height: 6px;
+        width: 4px;
+        height: 4px;
         border-radius: 50%;
         background-color: var(--color-white);
         position: absolute;
