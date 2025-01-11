@@ -1577,6 +1577,17 @@ button {
         opacity: 1;
         background-color: #2A3541B2;
     }
+    .form-radio__input:checked:focus+.form-radio__inner .form-radio__box {
+        background-color: #3892F3;
+        border: 2px solid #3892F3;
+    }
+    
+    .form-radio__input:checked:focus+.form-radio__inner .form-radio__box:after {
+        opacity: 1;
+        background-color: #fff;
+        width: 4px;
+        height: 4px;
+    }
 }
 
 
@@ -1597,6 +1608,7 @@ button {
     display: flex;
     align-items: center;
     column-gap: 8px;
+    width: fit-content;
 }
 
 .form-switcher__box {

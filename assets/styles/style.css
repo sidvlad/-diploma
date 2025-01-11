@@ -1566,6 +1566,16 @@ button {
   opacity: 1;
   background-color: rgba(42, 53, 65, 0.6980392157);
 }
+.form-radio .form-radio__input:checked:focus + .form-radio__inner .form-radio__box {
+  background-color: #3892F3;
+  border: 2px solid #3892F3;
+}
+.form-radio .form-radio__input:checked:focus + .form-radio__inner .form-radio__box:after {
+  opacity: 1;
+  background-color: #fff;
+  width: 4px;
+  height: 4px;
+}
 
 /* form switcher */
 .form-switcher {
@@ -1573,6 +1583,8 @@ button {
   align-items: center;
   -moz-column-gap: 8px;
        column-gap: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .form-switcher__box {
