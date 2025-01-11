@@ -291,9 +291,10 @@ button {
     &__cards {
         position: relative;
         display: flex;
-        flex-basis: 460px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
         gap: 20px;
+        max-height: 460px
     }
     &__card {
         display: flex;
@@ -303,12 +304,6 @@ button {
         padding: 24px;
         background-color: #f4f7fa;
         border-radius: 20px;
-    }
-    &__card:nth-child(2) {
-        margin-top: 80px;
-    }
-    &__card:nth-child(3) {
-        margin-top: -80px;
     }
     &__card-title {
         padding: 16px 0 8px 0;
@@ -352,34 +347,26 @@ button {
         line-height: 24px;
         color: var(--color-black);
     }
-    &__cards:before {
+    &__cards:before, &__cards:after {
         content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
         width: 220px;
         height: 60px;
+        pointer-events: none;
+    }
+    &__cards:after {
         background: linear-gradient(
             360deg,
             #ffffff 0%,
             #f0f6fd 110%
         );
-        pointer-events: none;
         border-radius: 20px 20px 0 0;
     }
-    &__cards:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 220px;
-        height: 60px;
+    &__cards:before {
         background: linear-gradient(
             360deg,
             #f0f6fd 0%,
             #ffffff 110%
         );
-        pointer-events: none;
         border-radius: 0 0 20px 20px;
     }
     &__card:hover,
