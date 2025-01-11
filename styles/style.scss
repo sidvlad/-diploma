@@ -292,6 +292,7 @@ button {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-auto-flow: dense;
         gap: 20px;
     }
     &__card {
@@ -350,6 +351,7 @@ button {
         pointer-events: none;
     }
     &__cards:after {
+        grid-column: 1;
         background: linear-gradient(
             360deg,
             #ffffff 0%,
@@ -358,6 +360,7 @@ button {
         border-radius: 20px 20px 0 0;
     }
     &__cards:before {
+        grid-column: 2;
         background: linear-gradient(
             360deg,
             #f0f6fd 0%,

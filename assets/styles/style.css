@@ -296,6 +296,7 @@ button {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
   gap: 20px;
 }
 .categories__card {
@@ -354,10 +355,12 @@ button {
   pointer-events: none;
 }
 .categories__cards:after {
+  grid-column: 1;
   background: linear-gradient(360deg, #ffffff 0%, #f0f6fd 110%);
   border-radius: 20px 20px 0 0;
 }
 .categories__cards:before {
+  grid-column: 2;
   background: linear-gradient(360deg, #f0f6fd 0%, #ffffff 110%);
   border-radius: 0 0 20px 20px;
 }
