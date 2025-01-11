@@ -112,6 +112,7 @@ button {
     letter-spacing: -1px;
     color: var(--color-black);
     white-space: pre-line;
+    overflow: hidden;
 }
 
 .intro-title {
@@ -558,6 +559,7 @@ button {
         width: 416px;
         padding: 32px;
         border-radius: 20px;
+        overflow: hidden;
         box-shadow: 0px 4px 40px 0px #1d395f14;
     }
     &__name {
@@ -657,6 +659,7 @@ button {
         font-weight: 500;
         line-height: 28px;
         text-align: center;
+        overflow: hidden;
     }
 }
 
