@@ -965,6 +965,7 @@ button {
 
 .form-subscribe {
   display: flex;
+  align-items: flex-start;
 }
 .form-subscribe__label {
   max-width: 216px;
@@ -974,7 +975,6 @@ button {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-  overflow: hidden;
 }
 .form-subscribe__input {
   width: 214px;
@@ -983,6 +983,7 @@ button {
 
 .social {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
