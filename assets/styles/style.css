@@ -1398,7 +1398,7 @@ button {
 
 .form-checkbox__input:checked:focus + .form-checkbox__inner .form-checkbox__box {
   background-color: #0265DC;
-  border: px solid #3892F3;
+  border: 1px solid #3892F3;
 }
 
 .form-checkbox__input:active + .form-checkbox__inner .form-checkbox__box {
@@ -1412,11 +1412,16 @@ button {
 }
 
 .form-checkbox__input:checked:focus + .form-checkbox__inner .form-checkbox__box {
+  background-color: #0265DC;
+  border: 2px solid #3892F3;
+}
+
+.form-checkbox__input:checked:active + .form-checkbox__inner .form-checkbox__box {
   background-color: #B5DEFF;
   border: 2px solid #B5DEFF;
 }
 
-.form-checkbox__input:checked:focus + .form-checkbox__inner .form-checkbox__box::before {
+.form-checkbox__input:checked:active + .form-checkbox__inner .form-checkbox__box::before {
   opacity: 1;
   background-image: url("../../images/icons/checkbox-arrow-blue.svg");
 }
