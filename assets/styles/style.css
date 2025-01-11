@@ -294,17 +294,13 @@ button {
 }
 .categories__cards {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap-reverse;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  max-height: 460px;
 }
 .categories__card {
-  display: flex;
-  flex-direction: column;
+  grid-row: span 2;
   width: 220px;
-  height: 180px;
   padding: 24px;
   background-color: #f4f7fa;
   border-radius: 20px;
