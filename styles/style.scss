@@ -17,7 +17,7 @@ body {
     --font-secondary: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
     --transition-hover: color .3s, background-color .3s, outline .3s;
     --screen-width: 1440px;
-    --min-screen-height: 1280px;
+    --min-screen-width: 1280px;
     margin: 0;
     font-family: "Libre Franklin", Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -276,7 +276,7 @@ button {
 
 .categories {
     display: flex;
-    column-gap: 30px;
+    column-gap: 50px;
     &__block {
         flex-basis: 50%;
     }
@@ -298,7 +298,7 @@ button {
     &__card {
         grid-row: span 2;
         width: 220px;
-        padding: 24px;
+        padding: 16px;
         background-color: #f4f7fa;
         border-radius: 20px;
     }
@@ -880,7 +880,7 @@ button {
         justify-content: space-between;
         align-items: baseline;
         margin-bottom: 45px;
-        margin-top: -10px;
+        margin-top: -15px;
     }
     &__wrapper {
         display: grid;
@@ -1451,6 +1451,10 @@ button {
     opacity: 1;
 }
 
+.form-checkbox__input:checked:disabled + .form-checkbox__inner .form-checkbox__box {
+    background-color: #1D36532B;
+}
+
 .form-checkbox__input:checked:disabled + .form-checkbox__inner .form-checkbox__box::before {
     opacity: 1;
     background-image: url('../../images/icons/checkbox-arrow-grey.svg');
@@ -2019,6 +2023,7 @@ textarea.form-control__input {
         flex-direction: column;
         row-gap: 8px;
         margin: 32px 0 48px;
+        width: fit-content;
         &-item {
             display: flex;
             align-items: center;
