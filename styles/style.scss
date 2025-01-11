@@ -1351,7 +1351,7 @@ button {
             width: 16px;
             height: 16px;
             top: 10px;
-            right: 30px;
+            right: 15px;
             pointer-events : none;
         }
     }
@@ -1491,15 +1491,39 @@ button {
 
 /* form radio */
 
-
 .form-radio {
     cursor: pointer;
-    &--col {
-        display: block;
-        width: fit-content;
+    &__box {
+        display: flex;
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        border: 2px solid #1F324745;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        transition: background-color .3s ease;
+        position: relative;
     }
+    &__box::after {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: background-color .3s ease;
+    }    
+    
+
+
+
+
     &:hover .form-radio__box {
-        background-color: var(--color-grey-blue-transparent);
+        background-color: #F4F7FA;
         border-color: var(--color-grey-blue-transparent);
     }
     &:hover .form-radio__box::after {
@@ -1522,7 +1546,6 @@ button {
     &:focus .form-radio__box {
         background-color: var(--color-grey);
         border: 1px solid var(--color-white);
-        outline: 2px solid var(--color-blue);
         box-shadow: 0 0 0 1px var(--color-light-blue);
         &::after {
             width: 9px;
@@ -1548,13 +1571,7 @@ button {
         opacity: 1;
         background-color: #9da2aa;
     }
-    &__input:checked + .form-radio__inner .form-radio__box {
-        background-color: #1F324745;
-        border-color: #1F324745;
-    }
-    &__input:checked + .form-radio__inner .form-radio__box::after {
-        background-color: var(--color-white);
-    }
+    
     &__input:checked:hover + .form-radio__inner .form-radio__box::after {
         opacity: 1;
     }
@@ -1591,31 +1608,63 @@ button {
     &__inner:active .form-radio__box::after {
         background-color: var(--color-white);
     }
-    &__box {
-        display: flex;
-        flex-shrink: 0;
-        width: 14px;
-        height: 14px;
-        margin-right: 10px;
-        border: 2px solid var(--color-grey-blue-transparent);
-        border-radius: 50%;
-        background-color: var(--color-white);
-        transition: background-color .3s ease;
-        position: relative;
+
+
+
+
+
+
+
+
+    &__input:checked + .form-radio__inner .form-radio__box {
+        background-color: #1F324745;
+        border: 2px solid transparent;
     }
-    &__box::after {
-        content: '';
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
+    &__input:checked + .form-radio__inner .form-radio__box:after {
+        opacity: 1;
         background-color: var(--color-white);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        transition: var(--transition-hover);
+    }
+    &__input:active + .form-radio__inner .form-radio__box {
+        background-color: #0265DC;
+        border-color: #0265DC;
+    }
+    &__input:checked:active + .form-radio__inner .form-radio__box:after {
+        opacity: 1;
+        background-color: var(--color-white);
+    }
+    &__input:focus + .form-radio__inner .form-radio__box {
+        box-shadow: 0 0 0 1px #3892F3;
+    }
+    &__input:focus + .form-radio__inner .form-radio__box:after {
+        opacity: 1;
+        background-color: var(--color-white);
+        width: 9px;
+        height: 9px;
+    }
+    &__input:checked:focus + .form-radio__inner .form-radio__box {
+        outline: 2px solid #ffffff;
+        border: 2px solid #3892F3;
+        background-color: #3892F3;
+        box-shadow: 0 0 0 3px #3892F3;
+    }
+    &__input:checked:focus + .form-radio__inner .form-radio__box {
+        opacity: 1;
+        background-color: var(--color-white);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* form switcher */
 
 .form-switcher {
@@ -1745,7 +1794,7 @@ textarea.form-control__input {
     background-color: var(--color-white);
     border: 1px solid var(--color-grey-disabled-transparent);
     border-radius: 8px;
-    padding: 9px 0 9px 20px;
+    padding: 9px 20px 9px 20px;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
