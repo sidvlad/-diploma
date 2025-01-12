@@ -1832,8 +1832,6 @@ textarea.form-control__input {
 .form-select {
   position: relative;
   cursor: pointer;
-  padding-top: 19px;
-  margin-bottom: 0;
 }
 .form-select label {
   position: relative;
@@ -2023,7 +2021,7 @@ textarea.form-control__input {
 .contacts {
   background: linear-gradient(180.23deg, #f0f6fd 0.2%, rgba(255, 255, 255, 0) 99.8%);
   min-width: var(--min-screen-width);
-  padding-bottom: 180px;
+  padding-bottom: 183px;
 }
 .contacts__content {
   flex-basis: 50%;
