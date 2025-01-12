@@ -279,6 +279,7 @@ button {
 }
 .categories__block {
   flex-basis: 50%;
+  max-width: 50%;
 }
 .categories__block:first-child {
   display: flex;
@@ -308,6 +309,7 @@ button {
   font-size: 27px;
   font-weight: 700;
   line-height: 36px;
+  overflow: hidden;
 }
 .categories__card-text {
   display: flex;
@@ -537,8 +539,8 @@ button {
 
 .plan__wrapper {
   display: flex;
-  -moz-column-gap: 16px;
-       column-gap: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
   padding-top: 75px;
   color: var(--color-dark);
 }
@@ -800,6 +802,7 @@ button {
 .faq__block {
   display: flex;
   flex-basis: 50%;
+  max-width: 50%;
   flex-direction: column;
   justify-content: center;
 }
@@ -977,6 +980,7 @@ button {
 .form-subscribe {
   display: flex;
   align-items: flex-start;
+  max-width: 60%;
 }
 .form-subscribe__wrapper {
   position: relative;
@@ -995,7 +999,6 @@ button {
 }
 .form-subscribe__label {
   max-width: 216px;
-  max-height: 65px;
   margin-right: 20px;
   font-family: var(--font-secondary);
   font-size: 24px;
@@ -1044,6 +1047,8 @@ button {
   flex-shrink: 0;
   -moz-column-gap: 21px;
        column-gap: 21px;
+  flex-wrap: wrap;
+  flex-basis: 50%;
 }
 .privacy__item {
   position: relative;
@@ -2017,6 +2022,7 @@ textarea.form-control__input {
 }
 .contacts__content {
   flex-basis: 50%;
+  max-width: 50%;
 }
 .contacts__header {
   display: flex;
@@ -2037,6 +2043,7 @@ textarea.form-control__input {
   background-color: var(--color-white);
   box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.0784313725);
   border-radius: 20px;
+  overflow: hidden;
 }
 .contacts__location {
   display: grid;

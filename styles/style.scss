@@ -275,6 +275,7 @@ button {
     column-gap: 50px;
     &__block {
         flex-basis: 50%;
+        max-width: 50%;
     }
     &__block:first-child {
         display: flex;
@@ -304,6 +305,7 @@ button {
         font-size: 27px;
         font-weight: 700;
         line-height: 36px;
+        overflow: hidden;
     }
     &__card-text {
         display: flex;
@@ -546,7 +548,8 @@ button {
 .plan {
     &__wrapper {
         display: flex;
-        column-gap: 16px;
+        flex-wrap: wrap;
+        gap: 16px;
         padding-top: 75px;
         color: var(--color-dark);
     }
@@ -811,6 +814,7 @@ button {
     &__block {
         display: flex;
         flex-basis: 50%;
+        max-width: 50%;
         flex-direction: column;
         justify-content: center;
     }
@@ -990,6 +994,7 @@ button {
 .form-subscribe {
     display: flex;
     align-items: flex-start;
+    max-width: 60%;
     &__wrapper {
         position: relative;
         display: flex;
@@ -1007,7 +1012,6 @@ button {
     }
     &__label {
         max-width: 216px;
-        max-height: 65px;
         margin-right: 20px;
         font-family: var(--font-secondary);
         font-size: 24px;
@@ -1055,6 +1059,8 @@ button {
     display: flex;
     flex-shrink: 0;
     column-gap: 21px;
+    flex-wrap: wrap;
+    flex-basis: 50%;
     &__item {
         position: relative;
         &:before {
@@ -2040,6 +2046,7 @@ textarea.form-control__input {
     padding-bottom: 180px;
     &__content {
         flex-basis: 50%;
+        max-width: 50%;
     }
     &__header {
         display: flex;
@@ -2059,6 +2066,7 @@ textarea.form-control__input {
         background-color: var(--color-white);
         box-shadow: 0px 4px 40px 0px #1d395f14;
         border-radius: 20px;
+        overflow: hidden;
     }
     &__location {
         display: grid;
