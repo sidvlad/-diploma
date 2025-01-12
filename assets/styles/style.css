@@ -678,7 +678,7 @@ button {
 .trending__wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 16px;
 }
 .trending__item {
   display: flex;
@@ -924,7 +924,7 @@ button {
 .footer {
   display: flex;
   flex-direction: column;
-  row-gap: 62px;
+  row-gap: 60px;
   color: var(--color-dark);
 }
 .footer__main {
@@ -1336,13 +1336,13 @@ button {
 .catalog-sidebar__wrapper {
   padding: 0;
   border: none;
-  margin: 0 0 25px;
+  margin: 0 0 27px;
 }
 .catalog-sidebar__title {
   display: block;
   max-width: 217px;
   overflow: hidden;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   font-family: var(--font-secondary);
   font-size: 24px;
   font-weight: 700;
@@ -1863,6 +1863,11 @@ textarea.form-control__input {
 .select__option:checked {
   background-color: #0056ff;
   color: var(--color-white);
+}
+
+/* this is the sum of the width of the three item card blocks plus gap between them */
+.catalog-content {
+  max-width: 1035px;
 }
 
 .catalog-list {
