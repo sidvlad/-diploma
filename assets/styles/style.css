@@ -47,7 +47,7 @@ a {
   text-decoration: none;
   transition: var(--transition-hover);
 }
-ahover {
+a:hover {
   text-decoration: none;
 }
 
@@ -78,12 +78,6 @@ label {
   display: block;
 }
 
-fieldset {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
 button {
   background: none;
   border: 0;
@@ -91,11 +85,6 @@ button {
   margin: 0;
   padding: 0;
   cursor: pointer;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px;
-  color: var(--color-dark);
-  transition: var(--transition-hover);
 }
 
 .title {
@@ -111,7 +100,7 @@ button {
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--color-black);
   white-space: pre-line;
   overflow: hidden;
@@ -122,7 +111,7 @@ button {
   font-size: 52px;
   font-weight: 700;
   line-height: 62px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   white-space: pre-line;
   color: var(--color-dark);
 }
@@ -146,6 +135,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
   width: -moz-fit-content;
   width: fit-content;
   padding: 18px 36px;
@@ -154,6 +144,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
+  transition: var(--transition-hover);
   /* these monstrous styles are needed for the link under the <figure>, since
    it is absolutely impossible to hang it on the <figure> without a .class */
 }
@@ -254,7 +245,8 @@ button {
   padding: 20px;
 }
 .btn--long {
-  padding: 20px 40px;
+  padding: 23px 40px;
+  font-size: 16px;
 }
 .btn--blog {
   display: block;
@@ -303,14 +295,14 @@ button {
   gap: 20px;
 }
 .categories__card {
-  grid-row: span 2;
+  grid-row: span 3;
   width: 220px;
-  padding: 16px;
+  padding: 20px;
   background-color: #f4f7fa;
   border-radius: 20px;
 }
 .categories__card-title {
-  padding: 16px 0 8px 0;
+  padding: 10px 0 8px 0;
   font-family: var(--font-secondary);
   font-size: 27px;
   font-weight: 700;
@@ -441,6 +433,7 @@ button {
   flex-direction: column;
   justify-content: center;
   row-gap: 120px;
+  padding-bottom: 185px;
 }
 
 .intro {
@@ -542,7 +535,7 @@ button {
   display: flex;
   -moz-column-gap: 16px;
        column-gap: 16px;
-  padding-top: 80px;
+  padding-top: 75px;
   color: var(--color-dark);
 }
 .plan__item {
@@ -566,7 +559,7 @@ button {
   font-size: 38px;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 .plan__price span {
   font-size: 18px;
@@ -919,18 +912,18 @@ button {
   display: flex;
   flex-direction: column;
   row-gap: 62px;
-  padding-top: 185px;
   color: var(--color-dark);
 }
 .footer__main {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 .footer-nav {
   display: flex;
   -moz-column-gap: 64px;
        column-gap: 64px;
+  color: var(--color-grey);
 }
 .footer-nav__title {
   margin-bottom: 16px;
@@ -957,7 +950,7 @@ button {
   text-overflow: ellipsis;
 }
 .footer__description {
-  padding-top: 20px;
+  padding-top: 17px;
   max-width: 320px;
   font-size: 16px;
   line-height: 24px;
@@ -967,7 +960,7 @@ button {
   justify-content: space-between;
   -moz-column-gap: 30px;
        column-gap: 30px;
-  margin-bottom: 70px;
+  margin-bottom: 74px;
 }
 
 .form-subscribe {
@@ -992,11 +985,11 @@ button {
 .form-subscribe__label {
   max-width: 216px;
   max-height: 65px;
-  margin-right: 24px;
+  margin-right: 20px;
   font-family: var(--font-secondary);
   font-size: 24px;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 34px;
 }
 .form-subscribe__input {
   width: 214px;
@@ -1063,6 +1056,7 @@ button {
 .blog {
   background: linear-gradient(0.23deg, rgba(255, 255, 255, 0) 0.2%, #f0f6fd 99.8%);
   min-width: var(--min-screen-width);
+  padding-bottom: 181px;
 }
 .blog__intro {
   padding: 64px 80px 0;
@@ -1102,12 +1096,12 @@ button {
   flex-direction: column;
 }
 .blog__content h3 {
-  margin-bottom: 14px;
+  margin-bottom: 13px;
   font-family: var(--font-secondary);
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-  color: #0D0D15;
+  color: var(--color-dark);
 }
 .blog__content p {
   margin-bottom: 34px;
@@ -1244,7 +1238,7 @@ button {
 .related-articles__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 25px;
 }
 .related-articles__list {
@@ -1257,7 +1251,7 @@ button {
   display: flex;
   flex-basis: 32%;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 17px;
   padding: 20px;
   background-color: var(--color-white);
   box-shadow: 0px 4px 30px 0px rgba(29, 57, 95, 0.0509803922);
@@ -1291,6 +1285,10 @@ button {
   text-transform: uppercase;
 }
 
+.catalog-main {
+  padding-bottom: 187px;
+}
+
 .catalog {
   display: flex;
   -moz-column-gap: 24px;
@@ -1312,7 +1310,9 @@ button {
   min-width: 217px;
 }
 .catalog-sidebar__wrapper {
-  margin-bottom: 25px;
+  padding: 0;
+  border: none;
+  margin: 0 0 25px;
 }
 .catalog-sidebar__title {
   display: block;
@@ -1576,7 +1576,7 @@ button {
   height: 9px;
 }
 .form-radio__input:checked:focus + .form-radio__inner .form-radio__box {
-  border: 2px solid rgba(42, 53, 65, 0.6980392157);
+  border: 2px solid var(--color-dark-transparent);
   background-color: #3892F3;
   box-shadow: 0 0 0 3px #3892F3;
   outline: 1px solid #ffffff;
@@ -1600,7 +1600,7 @@ button {
 }
 .form-radio__input:checked:disabled + .form-radio__inner .form-radio__box::after {
   opacity: 1;
-  background-color: rgba(42, 53, 65, 0.6980392157);
+  background-color: var(--color-dark-transparent);
 }
 .form-radio .form-radio__input:checked:focus + .form-radio__inner .form-radio__box {
   background-color: #3892F3;
@@ -1699,7 +1699,7 @@ button {
 }
 
 .form-switcher__input:checked:active + .form-switcher__box {
-  background-color: rgba(42, 53, 65, 0.8509803922);
+  background-color: var(--color-grey);
 }
 
 .form-switcher__input:checked:active + .form-switcher__box::after {
@@ -1712,7 +1712,7 @@ button {
 }
 
 .form-control {
-  margin-bottom: 22px;
+  margin-bottom: 23px;
   position: relative;
 }
 .form-control::before {
@@ -1733,7 +1733,9 @@ button {
   line-height: 24px;
 }
 .form-control__input:disabled {
-  background-color: var(--color-grey-blue-transparent);
+  background-color: var(--color-light-blue-transparent);
+  border-color: rgba(29, 54, 83, 0.168627451);
+  color: var(--color-dark-transparent);
   pointer-events: none;
 }
 .form-control__input:user-invalid {
@@ -1783,9 +1785,11 @@ button {
   outline: 1px solid var(--color-blue);
 }
 .select:disabled {
-  background-color: var(--color-grey-disabled-transparent);
-  color: var(--color-grey);
+  background-color: var(--color-light-blue-transparent);
+  border-color: rgba(29, 54, 83, 0.168627451);
+  color: rgba(42, 53, 65, 0.6980392157);
   pointer-events: none;
+  cursor: default;
 }
 .select--large {
   width: 100%;
@@ -1797,12 +1801,14 @@ button {
 textarea.form-control__input {
   height: 180px;
   resize: none;
-  color: var(--color-grey);
+  color: var(--color-dark);
 }
 
 .form-select {
   position: relative;
   cursor: pointer;
+  padding-top: 19px;
+  margin-bottom: 0;
 }
 .form-select label {
   position: relative;
@@ -1812,9 +1818,13 @@ textarea.form-control__input {
   position: absolute;
   width: 16px;
   height: 16px;
-  top: 20px;
+  top: 40px;
   right: 20px;
   pointer-events: none;
+}
+
+.form-select:has(.select:disabled)::after {
+  opacity: 0.3;
 }
 
 .select__option {
@@ -1835,7 +1845,7 @@ textarea.form-control__input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-bottom: 51px;
+  margin-bottom: 55px;
 }
 .catalog-list__item {
   display: flex;
@@ -1980,6 +1990,7 @@ textarea.form-control__input {
 .contacts {
   background: linear-gradient(180.23deg, #f0f6fd 0.2%, rgba(255, 255, 255, 0) 99.8%);
   min-width: var(--min-screen-width);
+  padding-bottom: 180px;
 }
 .contacts__content {
   flex-basis: 50%;
@@ -1988,7 +1999,7 @@ textarea.form-control__input {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 }
 .contacts__wrapper {
   display: flex;

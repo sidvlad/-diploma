@@ -46,7 +46,7 @@ a {
     color: inherit;
     text-decoration: none;
     transition: var(--transition-hover);
-    &hover {
+    &:hover {
         text-decoration: none;
     }
 }
@@ -78,12 +78,6 @@ label {
     display: block;
 }
 
-fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
 button {
     background: none;
     border: 0;
@@ -91,11 +85,6 @@ button {
     margin: 0;
     padding: 0;
     cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 28px;
-    color: var(--color-dark);
-    transition: var(--transition-hover);
 }
 
 .title {
@@ -111,7 +100,7 @@ button {
     font-size: 36px;
     font-weight: 700;
     line-height: 48px;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     color: var(--color-black);
     white-space: pre-line;
     overflow: hidden;
@@ -122,7 +111,7 @@ button {
     font-size: 52px;
     font-weight: 700;
     line-height: 62px;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     white-space: pre-line;
     color: var(--color-dark);
     & span {
@@ -146,6 +135,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
     width: fit-content;
     padding: 18px 36px;
     border-radius: 8px;
@@ -153,6 +143,7 @@ button {
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
+    transition: var(--transition-hover);
     &--icon {
         column-gap: 8px;
     }
@@ -250,7 +241,8 @@ button {
         padding: 20px;
     }
     &--long {
-        padding: 20px 40px;
+        padding: 23px 40px;
+        font-size: 16px;
     }
     /* these monstrous styles are needed for the link under the <figure>, since
      it is absolutely impossible to hang it on the <figure> without a .class */
@@ -299,14 +291,14 @@ button {
         gap: 20px;
     }
     &__card {
-        grid-row: span 2;
+        grid-row: span 3;
         width: 220px;
-        padding: 16px;
+        padding: 20px;
         background-color: #f4f7fa;
         border-radius: 20px;
     }
     &__card-title {
-        padding: 16px 0 8px 0;
+        padding: 10px 0 8px 0;
         font-family: var(--font-secondary);
         font-size: 27px;
         font-weight: 700;
@@ -456,6 +448,7 @@ button {
     flex-direction: column;
     justify-content: center;
     row-gap: 120px;
+    padding-bottom: 185px;
 }
 
 .intro {
@@ -550,7 +543,7 @@ button {
     &__wrapper {
         display: flex;
         column-gap: 16px;
-        padding-top: 80px;
+        padding-top: 75px;
         color: var(--color-dark);
     }
     &__item {
@@ -574,7 +567,7 @@ button {
         font-size: 38px;
         font-weight: 700;
         line-height: 48px;
-        letter-spacing: -1px;
+        letter-spacing: -0.5px;
     }
     &__price span {
         font-size: 18px;
@@ -931,7 +924,6 @@ button {
     display: flex;
     flex-direction: column;
     row-gap: 62px;
-    padding-top: 185px;
     color: var(--color-dark);
     &__wrapper {
         width: 100%;
@@ -939,11 +931,12 @@ button {
     &__main {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 5px;
+        margin-bottom: 6px;
     }
     &-nav {
         display: flex;
         column-gap: 64px;
+        color: var(--color-grey);
     }
     &-nav__title {
         margin-bottom: 16px;
@@ -970,7 +963,7 @@ button {
         }
     }
     &__description {
-        padding-top: 20px;
+        padding-top: 17px;
         max-width: 320px;
         font-size: 16px;
         line-height: 24px;
@@ -979,7 +972,7 @@ button {
         display: flex;
         justify-content: space-between;
         column-gap: 30px;
-        margin-bottom: 70px;
+        margin-bottom: 74px;
     }
 }
 
@@ -1004,11 +997,11 @@ button {
     &__label {
         max-width: 216px;
         max-height: 65px;
-        margin-right: 24px;
+        margin-right: 20px;
         font-family: var(--font-secondary);
         font-size: 24px;
         font-weight: 700;
-        line-height: 32px;
+        line-height: 34px;
     }
     &__input {
         width: 214px;
@@ -1078,6 +1071,7 @@ button {
         #f0f6fd 99.8%
     );
     min-width: var(--min-screen-width);
+    padding-bottom: 181px;
     &__intro {
         padding: 64px 80px 0;
     }
@@ -1113,12 +1107,12 @@ button {
         display: flex;
         flex-direction: column;
         h3 {
-            margin-bottom: 14px;
+            margin-bottom: 13px;
             font-family: var(--font-secondary);
             font-size: 24px;
             font-weight: 700;
             line-height: 32px;
-            color: #0D0D15
+            color: var(--color-dark);
         }
         p {
             margin-bottom: 34px;
@@ -1256,7 +1250,7 @@ button {
     &__header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
         margin-bottom: 25px;
     }
     &__list {
@@ -1268,7 +1262,7 @@ button {
         display: flex;
         flex-basis: 32%;
         flex-direction: column;
-        row-gap: 16px;
+        row-gap: 17px;
         padding: 20px;
         background-color: var(--color-white);
         box-shadow: 0px 4px 30px 0px #1d395f0d;
@@ -1303,6 +1297,10 @@ button {
     }
 }
 
+.catalog-main {
+    padding-bottom: 187px;
+}
+
 .catalog {
     display: flex;
     column-gap: 24px;
@@ -1322,7 +1320,9 @@ button {
 .catalog-sidebar {
     min-width: 217px;
     &__wrapper {
-        margin-bottom: 25px;
+        padding: 0;
+        border: none;
+        margin: 0 0 25px;
     }
     &__title {
         display: block;
@@ -1587,7 +1587,7 @@ button {
         height: 9px;
     }
     &__input:checked:focus + .form-radio__inner .form-radio__box {
-        border: 2px solid #2A3541B2;
+        border: 2px solid var(--color-dark-transparent);
         background-color: #3892F3;
         box-shadow: 0 0 0 3px #3892F3;
         outline: 1px solid #ffffff
@@ -1611,7 +1611,7 @@ button {
     }
     &__input:checked:disabled + .form-radio__inner .form-radio__box::after {
         opacity: 1;
-        background-color: #2A3541B2;
+        background-color: var(--color-dark-transparent);
     }
     .form-radio__input:checked:focus+.form-radio__inner .form-radio__box {
         background-color: #3892F3;
@@ -1702,7 +1702,7 @@ button {
     background-color: #1D36532B;
 }
 .form-switcher__input:checked:active + .form-switcher__box {
-    background-color: #2A3541D9;
+    background-color: var(--color-grey);
 }
 .form-switcher__input:checked:active + .form-switcher__box::after {
     background-color: #1D1C28;
@@ -1715,7 +1715,7 @@ button {
 }
 
 .form-control {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
     position: relative;
     &::before {
         position: absolute;
@@ -1735,7 +1735,9 @@ button {
         line-height: 24px;
     }
     &__input:disabled {
-        background-color: var(--color-grey-blue-transparent);
+        background-color: var(--color-light-blue-transparent);
+        border-color: #1D36532B;
+        color: var(--color-dark-transparent);
         pointer-events: none;
     }
     &__input:user-invalid {
@@ -1785,9 +1787,11 @@ button {
         outline: 1px solid var(--color-blue);
     }
     &:disabled {
-        background-color: var(--color-grey-disabled-transparent);
-        color: var(--color-grey);
+        background-color: var(--color-light-blue-transparent);
+        border-color: #1D36532B;
+        color: #2A3541B2;
         pointer-events: none;
+        cursor: default;
     }
     &--large {
         width: 100%;
@@ -1801,12 +1805,14 @@ button {
 textarea.form-control__input {
     height: 180px;
     resize: none;
-    color: var(--color-grey);
+    color: var(--color-dark);
   }  
 
 .form-select {
     position: relative;
     cursor: pointer;
+    padding-top: 19px;
+    margin-bottom: 0;
     & label {
         position: relative;
     }
@@ -1815,7 +1821,7 @@ textarea.form-control__input {
         position: absolute;
         width: 16px;
         height: 16px;
-        top: 20px;
+        top: 40px;
         right: 20px;
         pointer-events : none;
     }
@@ -1825,6 +1831,10 @@ textarea.form-control__input {
         top: 10px;
         right: 24px;
     }
+}
+
+.form-select:has(.select:disabled)::after {
+    opacity: .3;
 }
 
 .select__option {
@@ -1845,7 +1855,7 @@ textarea.form-control__input {
     display: grid;
     grid-template-columns: repeat(3, 1fr);;
     gap: 30px;
-    margin-bottom: 51px;
+    margin-bottom: 55px;
     &__item {
         display: flex;
         flex-basis: 31%;
@@ -2004,6 +2014,7 @@ textarea.form-control__input {
         rgba(255, 255, 255, 0) 99.8%
     );
     min-width: var(--min-screen-width);
+    padding-bottom: 180px;
     &__content {
         flex-basis: 50%;
     }
@@ -2011,7 +2022,7 @@ textarea.form-control__input {
         display: flex;
         flex-direction: column;
         row-gap: 16px;
-        margin-bottom: 32px;
+        margin-bottom: 29px;
     }
     &__wrapper {
         display: flex;
