@@ -1827,7 +1827,6 @@ button {
     }
 }
 
-
 textarea.form-control__input {
     height: 180px;
     resize: none;
@@ -1837,8 +1836,6 @@ textarea.form-control__input {
 .form-select {
     position: relative;
     cursor: pointer;
-    padding-top: 19px;
-    margin-bottom: 0;
     & label {
         position: relative;
     }
@@ -2048,7 +2045,7 @@ textarea.form-control__input {
         rgba(255, 255, 255, 0) 99.8%
     );
     min-width: var(--min-screen-width);
-    padding-bottom: 180px;
+    padding-bottom: 183px;
     &__content {
         flex-basis: 50%;
         max-width: 50%;
