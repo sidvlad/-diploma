@@ -309,9 +309,6 @@ button {
         font-size: 27px;
         font-weight: 700;
         line-height: 36px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     }
     &__card-text {
         display: flex;
@@ -821,7 +818,7 @@ button {
         box-shadow: 0px 4px 40px 0px #1d395f14;
     }
     &__question {
-        padding: 27px 24px;
+        padding: 27px 70px 27px 24px;
         font-family: var(--font-secondary);
         font-size: 20px;
         font-weight: 700;
@@ -984,9 +981,28 @@ button {
     }
 }
 
+.input:user-invalid + .form-subscribe__wrapper::after {
+    visibility: visible;
+}
+
 .form-subscribe {
     display: flex;
     align-items: flex-start;
+    &__wrapper {
+        position: relative;
+        display: flex;
+        &::after {
+            position: absolute;
+            content: 'This field is required.';
+            font-size: 12px;
+            color: #EA3829;
+            line-height: 16px;
+            bottom: -20px;
+            right: 135px;
+            text-align: right;
+            visibility: hidden;
+        }
+    }
     &__label {
         max-width: 216px;
         max-height: 65px;
@@ -1343,6 +1359,7 @@ button {
     }
     &__form {
         display: flex;
+        flex-wrap: wrap;
         gap: 8px;
         margin-bottom: 20px;
     }
@@ -1530,7 +1547,13 @@ button {
         justify-content: start;
         column-gap: 5px;
     }
-    
+
+    &__input:hover + .form-radio__inner .form-radio__box {
+        background-color: #F4F7FA;
+    }
+    &__input:hover + .form-radio__inner .form-radio__box:after {
+        background-color: #F4F7FA;
+    }
 
     &__input:checked + .form-radio__inner .form-radio__box {
         background-color: #1F324745;
@@ -1596,18 +1619,6 @@ button {
         height: 4px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* form switcher */
 
@@ -1690,11 +1701,26 @@ button {
     background-color: #1D1C28;
 }
 
-
 /* form control */
+
+.form-control:after:has(+ .form-control__input:user-invalid) {
+    visibility: visible;
+}
 
 .form-control {
     margin-bottom: 22px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: 'This field is required.';
+        font-size: 12px;
+        color: #EA3829;
+        line-height: 16px;
+        bottom: 18px;
+        left: 0px;
+        text-align: right;
+        visibility: hidden;
+    }
     &__input {
         width: 100%;
         padding: 20px;
@@ -1727,12 +1753,6 @@ button {
         margin-bottom: 3px;
         color: var(--color-dark);
     }
-}
-
-textarea.form-control__input {
-    height: 180px;
-    resize: none;
-    color: var(--color-grey);
 }
 
 .select {
@@ -2116,9 +2136,6 @@ textarea.form-control__input {
     margin-bottom: 10px;
     font-size: 16px;
     line-height: 24px;
-    & span {
-        margin-top: 35px;
-    }
   }
   
   .slider-track {

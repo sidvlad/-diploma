@@ -88,7 +88,7 @@
                 </span>
               </label>
               <label class="form-checkbox">
-                <input type="checkbox" class="input-hidden form-checkbox__input" id="education" name="education" required disabled checked>
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="education" name="education" required>
                 <span class="form-checkbox__inner">
                   <span class="form-checkbox__box"></span>
                   <span class="form-checkbox__text">Education</span>
@@ -140,7 +140,7 @@
                 </span>
               </label>
               <label class="form-radio form-radio--col">
-                <input class="input-hidden form-radio__input" type="radio" name="radio" value="adobe-ps" disabled checked>
+                <input class="input-hidden form-radio__input" type="radio" name="radio" value="adobe-ps">
                 <span class="form-radio__inner">
                   <span class="form-radio__box"></span>
                   <span class="form-radio__text">Adobe Photoshop</span>
@@ -172,7 +172,7 @@
                 <label for="playful" class="form-switcher__text">Playful</label>
               </div>
               <div class="form-switcher">
-                <input type="checkbox" class="input-hidden form-switcher__input" id="dark-mode" name="dark-mode" disabled checked>
+                <input type="checkbox" class="input-hidden form-switcher__input" id="dark-mode" name="dark-mode">
                 <label for="dark-mode" class="form-switcher__box"></label>
                 <label for="dark-mode" class="form-switcher__text">Dark Mode</label>
               </div>
@@ -591,8 +591,10 @@
           </li>
         </ul>
         <form class="form-subscribe" action="/subscribe" method="post">
-          <label class="form-subscribe__label" for="subscribe">Subscribe to Design Newsletter</label>
-          <input class="form-subscribe__input input input--large" type="email" id="subscribe" name="email" placeholder="Enter your email address ..." required>
+          <div class="form-subscribe__wrapper">
+            <label class="form-subscribe__label" for="subscribe">Subscribe to Design Newsletter</label>
+            <input class="form-subscribe__input input input--large" type="email" id="subscribe" name="email" placeholder="Enter your email address ..." required>
+          </div>
           <button class="btn btn--blue" type="submit">Subscribe</button>
         </form>
       </div>

@@ -313,9 +313,6 @@ button {
   font-size: 27px;
   font-weight: 700;
   line-height: 36px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .categories__card-text {
   display: flex;
@@ -810,7 +807,7 @@ button {
   box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.0784313725);
 }
 .faq__question {
-  padding: 27px 24px;
+  padding: 27px 70px 27px 24px;
   font-family: var(--font-secondary);
   font-size: 20px;
   font-weight: 700;
@@ -971,9 +968,28 @@ button {
   margin-bottom: 70px;
 }
 
+.input:user-invalid + .form-subscribe__wrapper::after {
+  visibility: visible;
+}
+
 .form-subscribe {
   display: flex;
   align-items: flex-start;
+}
+.form-subscribe__wrapper {
+  position: relative;
+  display: flex;
+}
+.form-subscribe__wrapper::after {
+  position: absolute;
+  content: "This field is required.";
+  font-size: 12px;
+  color: #EA3829;
+  line-height: 16px;
+  bottom: -20px;
+  right: 135px;
+  text-align: right;
+  visibility: hidden;
 }
 .form-subscribe__label {
   max-width: 216px;
@@ -1333,6 +1349,7 @@ button {
 }
 .filter__form {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 20px;
 }
@@ -1521,6 +1538,12 @@ button {
   -moz-column-gap: 5px;
        column-gap: 5px;
 }
+.form-radio__input:hover + .form-radio__inner .form-radio__box {
+  background-color: #F4F7FA;
+}
+.form-radio__input:hover + .form-radio__inner .form-radio__box:after {
+  background-color: #F4F7FA;
+}
 .form-radio__input:checked + .form-radio__inner .form-radio__box {
   background-color: rgba(31, 50, 71, 0.2705882353);
   border: 2px solid transparent;
@@ -1677,8 +1700,24 @@ button {
 }
 
 /* form control */
+.form-control:after:has(+ .form-control__input:user-invalid) {
+  visibility: visible;
+}
+
 .form-control {
   margin-bottom: 22px;
+  position: relative;
+}
+.form-control::before {
+  position: absolute;
+  content: "This field is required.";
+  font-size: 12px;
+  color: #EA3829;
+  line-height: 16px;
+  bottom: 18px;
+  left: 0px;
+  text-align: right;
+  visibility: hidden;
 }
 .form-control__input {
   width: 100%;
@@ -1711,12 +1750,6 @@ button {
   line-height: 20px;
   margin-bottom: 3px;
   color: var(--color-dark);
-}
-
-textarea.form-control__input {
-  height: 180px;
-  resize: none;
-  color: var(--color-grey);
 }
 
 .select {
@@ -2083,9 +2116,6 @@ textarea.form-control__input {
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 24px;
-}
-.range-values span {
-  margin-top: 35px;
 }
 
 .slider-track {
