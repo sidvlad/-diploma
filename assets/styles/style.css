@@ -5,8 +5,10 @@ body {
   --color-grey: #2a3541d9;
   --color-dark: #0d0d15;
   --color-black: #222222;
+  --color-red: #EA3829;
   --color-primary-white: #f5f8fb;
   --color-light-blue: #3892f3;
+  --color-blue-form: #0054b6;
   --color-light-blue-transparent: #294d7517;
   --color-dark-grey-transparent: #22344966;
   --color-dark-transparent: #2a3541b2;
@@ -189,7 +191,7 @@ button {
   outline: 4px solid var(--color-light-blue);
 }
 .btn--blue:active {
-  background-color: #0054b6;
+  background-color: var(--color-blue-form);
 }
 .btn--blue:disabled {
   background-color: var(--color-grey-disabled-transparent);
@@ -417,7 +419,7 @@ button {
   pointer-events: none;
 }
 .header-nav__item:visited {
-  color: #0054b6;
+  color: var(--color-blue-form);
 }
 .header-nav__item:disabled {
   color: var(--color-dark-grey-transparent);
@@ -593,7 +595,7 @@ button {
 .plan__item--bestseller {
   margin-top: -32px;
   margin-bottom: 32px;
-  outline: 2px solid #0265dc;
+  outline: 2px solid var(--color-blue);
 }
 .plan__item--bestseller::before {
   content: "Best Seller";
@@ -968,10 +970,6 @@ button {
   margin-bottom: 70px;
 }
 
-.input:user-invalid + .form-subscribe__wrapper::after {
-  visibility: visible;
-}
-
 .form-subscribe {
   display: flex;
   align-items: flex-start;
@@ -984,7 +982,7 @@ button {
   position: absolute;
   content: "This field is required.";
   font-size: 12px;
-  color: #EA3829;
+  color: var(--color-red);
   line-height: 16px;
   bottom: -20px;
   right: 135px;
@@ -1003,6 +1001,14 @@ button {
 .form-subscribe__input {
   width: 214px;
   margin-right: 8px;
+}
+
+.form-subscribe__wrapper:has(.input:user-invalid)::after {
+  visibility: visible;
+}
+
+.form-subscribe__input:user-invalid {
+  border: 1px solid var(--color-red);
 }
 
 .social {
@@ -1417,7 +1423,7 @@ button {
 }
 
 .form-checkbox__input:checked:focus + .form-checkbox__inner .form-checkbox__box {
-  background-color: #0265DC;
+  background-color: var(--color-blue);
   border: 1px solid #3892F3;
 }
 
@@ -1432,7 +1438,7 @@ button {
 }
 
 .form-checkbox__input:checked:focus + .form-checkbox__inner .form-checkbox__box {
-  background-color: #0265DC;
+  background-color: var(--color-blue);
   border: 2px solid #3892F3;
 }
 
@@ -1553,8 +1559,8 @@ button {
   background-color: var(--color-white);
 }
 .form-radio__input:active + .form-radio__inner .form-radio__box {
-  background-color: #0265DC;
-  border-color: #0265DC;
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
 }
 .form-radio__input:checked:active + .form-radio__inner .form-radio__box:after {
   opacity: 1;
@@ -1656,7 +1662,7 @@ button {
 }
 
 .form-switcher__input:checked + .form-switcher__box {
-  background-color: #0265DC;
+  background-color: var(--color-blue);
 }
 
 .form-switcher__input:hover + .form-switcher__box {
@@ -1684,10 +1690,11 @@ button {
 }
 
 .form-switcher__input:checked:focus + .form-switcher__box {
-  background-color: #0265DC;
+  background-color: var(--color-blue);
 }
 
-.form-switcher__input:disabled + .form-switcher__box {
+.form-switcher__input:disabled + .form-switcher__box,
+.form-switcher__input::disabled:checked + .form-switcher__box::after {
   background-color: rgba(29, 54, 83, 0.168627451);
 }
 
@@ -1700,7 +1707,7 @@ button {
 }
 
 /* form control */
-.form-control:after:has(+ .form-control__input:user-invalid) {
+.form-control:has(.form-control__input:user-invalid)::before {
   visibility: visible;
 }
 
@@ -1712,9 +1719,9 @@ button {
   position: absolute;
   content: "This field is required.";
   font-size: 12px;
-  color: #EA3829;
+  color: var(--color-red);
   line-height: 16px;
-  bottom: 18px;
+  bottom: -18px;
   left: 0px;
   text-align: right;
   visibility: hidden;
@@ -1730,7 +1737,7 @@ button {
   pointer-events: none;
 }
 .form-control__input:user-invalid {
-  border-color: #ea3829;
+  border-color: var(--color-red);
 }
 .form-control__submit {
   width: 100%;
@@ -1784,6 +1791,12 @@ button {
   width: 100%;
   padding: 20px;
   font-weight: 400;
+  color: var(--color-grey);
+}
+
+textarea.form-control__input {
+  height: 180px;
+  resize: none;
   color: var(--color-grey);
 }
 
@@ -2116,6 +2129,9 @@ button {
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 24px;
+}
+.range-values span {
+  margin-top: 35px;
 }
 
 .slider-track {
