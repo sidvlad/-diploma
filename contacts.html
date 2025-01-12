@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.25, user-scalable=no"/>
-    <meta name="description" content="Contacts page">
+    <meta name="description" content="Pixmart offers premium digital assets for creative projects. Explore UI/UX kits, illustrations, templates, fonts, and more to elevate your designs effortlessly.">
     <meta name="keywords" content="digital assets, UI/UX kits, illustrations, templates, fonts, creative projects">
     <title>PixMart — Contacts</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400,500;700&family=Libre+Franklin:wght@400,500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/styles/normalize.min.css">
     <link rel="stylesheet" href="assets/styles/style.min.css">
 </head>
@@ -20,33 +21,17 @@
       </a>
       <nav class="header-nav">
         <ul class="header-nav__list">
-          <li class="header-nav__item">
-            <a href="index.html">About</a>
-          </li>
-          <li class="header-nav__item">
-            <a href="catalog.html">Products</a>
-          </li>
-          <li class="header-nav__item">
-            <a href="#">Creators</a>
-          </li>
-          <li class="header-nav__item">
-            <a href="blog.html">Blog</a>
-          </li>
-          <li class="header-nav__item active">
-            <a href="contacts.html">Contact</a>
-          </li>
+          <li class="header-nav__item"><a href="index.html">About</a></li>
+          <li class="header-nav__item"><a href="catalog.html">Products</a></li>
+          <li class="header-nav__item"><a href="#">Creators</a></li>
+          <li class="header-nav__item"><a href="blog.html">Blog</a></li>
+          <li class="header-nav__item header-nav__item--active"><a href="contacts.html">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
         <form class="form-search" action="/search" method="post">
           <label class="hidden" for="search">Search</label>
-          <input
-            class="input input--small"
-            type="search"
-            id="search"
-            placeholder="Search for Digital Assets"
-            aria-label="Search"
-            name="search">
+          <input class="input input--small" type="search" id="search" placeholder="Search for Digital Assets" aria-label="Search" name="search">
         </form>
         <a href="#" class="btn btn--blue btn--square">
           <svg width="24" height="24" aria-label="Product Bag" role="img">
@@ -62,9 +47,7 @@
             <h1 class="hidden">Contact the Pixmart Team for Support, Feedback, or Inquiries</h1>
             <h2 class="title">Contact</h2>
             <h3 class="intro-title">Get in Touch &#10;with Us</h3>
-            <p>
-              We are here to help you navigate your creative journey. Reach out for any questions, support, or feedback.
-            </p>
+            <p>We are here to help you navigate your creative journey. Reach out for any questions, support, or feedback.</p>
           </div>
           <a href="#" class="btn btn--blue btn--short">Shop Now</a>
           <div class="contacts__info">
@@ -88,14 +71,7 @@
             </div>
           </div>
           <div class="contacts__map">
-            <iframe 
-              id="inlineFrameExample"
-              title="Our location on the map"
-              width="618" 
-              height="314" 
-              allowfullscreen
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
+            <iframe  id="inlineFrameExample" title="Our location on the map" width="618" height="314" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.2936808256663!2d33.0457438!3d34.6977719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e733f291b01fad%3A0x5ff57bb6ed3f9838!2sBrainRocket!5e0!3m2!1sru!2s!4v1736491491818!5m2!1sru!2s">
             </iframe>
             <div class="contacts__location">
@@ -110,28 +86,14 @@
         <form class="contacts__form" action="/" method="post" name="contacts-form">
           <div class="form-control">
             <label class="form-control__label" for="name">Full Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="form-control__input"
-              placeholder="Amelia Robert Johnson"
-              minlength="3"
-              required>
+            <input type="text" id="name" name="name" class="input form-control__input" placeholder="Amelia Robert Johnson" minlength="3" required>
           </div>
           <div class="form-control">
-            <label class="form-control__label" for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              class="form-control__input"
-              name="email"
-              placeholder="amelia.robertjohnson@pixmart.com"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              required>
+            <label class="form-control__label" for="email">Email Address</label>
+            <input type="email" id="email" class="input form-control__input" name="email" placeholder="amelia.robertjohnson@pixmart.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
           </div>
           <div class="form-control form-select">
-            <select class="select select--large" name="sort" id="sort">
+            <select class="input select select--large" name="sort" id="sort">
               <option class="select__option" value="inquiry">General Inquiry</option>
               <option class="select__option" value="option-one">Option One</option>
               <option class="select__option" value="option-two">Option Two</option>
@@ -142,35 +104,19 @@
           </div>
           <div class="form-control">
             <label class="form-control__label" for="message">Message</label>
-            <textarea
-              id="message"
-              class="form-control__input"
-              placeholder="Enter your message ..."
-              name="message"
-              minlength="10"
-              required></textarea>
+            <textarea id="message" class="input form-control__input" placeholder="Enter your message ..." name="message" minlength="10" required></textarea>
           </div>
           <div class="contacts__submit">
             <div class="contacts__subscribe">
               <label class="form-checkbox">
-                <input
-                  type="checkbox"
-                  class="input-hidden form-checkbox__input"
-                  id="newsletter"
-                  name="newsletter"
-                  required>
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="newsletter" name="newsletter" required>
                 <span class="form-checkbox__inner">
                   <span class="form-checkbox__box"></span>
                   <span class="form-checkbox__text">Subscribe me to Newsletter</span>
                 </span>
               </label>
               <label class="form-checkbox">
-                <input
-                  type="checkbox"
-                  class="input-hidden form-checkbox__input"
-                  id="policy"
-                  name="policy"
-                  required>
+                <input type="checkbox" class="input-hidden form-checkbox__input" id="policy" /name="policy" required checked>
                 <span class="form-checkbox__inner">
                   <span class="form-checkbox__box"></span>
                   <span class="form-checkbox__text">I have read the User & Privacy Policy</span>
@@ -231,32 +177,31 @@
           <li>
             <a href="https://x.com/" target="_blank" class="btn btn--border btn--square-big">
               <svg width="24" height="24" aria-label="Twitter" role="img">
-                <use href="assets/images/icons/sprite.svg#icon-twitter"></use></svg
-            ></a>
+                <use href="assets/images/icons/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/" target="_blank" class="btn btn--border btn--square-big"
-              ><svg width="24" height="24" aria-label="Facebook" role="img">
-                <use href="assets/images/icons/sprite.svg#icon-facebook"></use></svg
-            ></a>
+            <a href="https://www.facebook.com/" target="_blank" class="btn btn--border btn--square-big">
+              <svg width="24" height="24" aria-label="Facebook" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
           </li>
           <li>
-            <a href="https://telegram.org/" target="_blank" class="btn btn--border btn--square-big"
-              ><svg width="24" height="24" aria-label="Telegram" role="img">
-                <use href="assets/images/icons/sprite.svg#icon-telegram"></use></svg
-            ></a>
+            <a href="https://telegram.org/" target="_blank" class="btn btn--border btn--square-big">
+              <svg width="24" height="24" aria-label="Telegram" role="img">
+                <use href="assets/images/icons/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
         <form class="form-subscribe" action="/subscribe" method="post">
-          <label class="form-subscribe__label" for="subscribe">Subscribe to Design Newsletter</label>
-          <input
-            class="form-subscribe__input input input--large"
-            type="email"
-            id="subscribe"
-            name="email"
-            placeholder="Enter your email address ..."
-            required>
-          <button class="btn btn--blue" type="submit">Subscribe</button>
+          <div class="form-subscribe__wrapper">
+            <label class="form-subscribe__label" for="subscribe">Subscribe to Design Newsletter</label>
+            <input class="form-subscribe__input input input--large" type="email" id="subscribe" name="email" placeholder="Enter your email address ..." required>
+          </div>
+          <button class="btn btn--blue btn--long" type="submit">Subscribe</button>
         </form>
       </div>
       <div class="copyright">
