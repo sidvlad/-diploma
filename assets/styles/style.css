@@ -835,12 +835,12 @@ button {
 }
 
 .faq__item > .faq__question,
-.faq__item > .faq__question:marker,
-.faq__item > .faq__question:-webkit-details-marker {
+.faq__item > .faq__question::marker,
+.faq__item > .faq__question::-webkit-details-marker {
   list-style: none;
 }
 
-.faq__item .faq__question:-webkit-details-marker {
+.faq__item .faq__question::-webkit-details-marker {
   display: none;
 }
 
