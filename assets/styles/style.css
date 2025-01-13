@@ -2173,7 +2173,7 @@ textarea.form-control__input {
   right: 0;
   height: 4px;
   transform: translateY(-45%);
-  background: var(--color-grey-disabled-transparent);
+  background: rgba(34, 52, 73, 0.4);
   border-radius: 2px;
   z-index: 1;
 }
@@ -2197,21 +2197,21 @@ textarea.form-control__input {
   outline: none;
 }
 
-.range-container input[type=range]:-webkit-slider-runnable-track {
+.range-container input[type=range]::-webkit-slider-runnable-track {
   height: 4px;
   background: transparent;
   border-radius: 2px;
   cursor: pointer;
 }
 
-.range-container input[type=range]:-moz-range-track {
+.range-container input[type=range]::-moz-range-track {
   height: 4px;
   background: transparent;
   border-radius: 2px;
   cursor: pointer;
 }
 
-.range-container input[type=range]:-webkit-slider-thumb {
+.range-container input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
           appearance: none;
   height: 16px;
@@ -2224,7 +2224,7 @@ textarea.form-control__input {
   margin-top: -6px;
 }
 
-.range-container input[type=range]:-moz-range-thumb {
+.range-container input[type=range]::-moz-range-thumb {
   height: 16px;
   width: 16px;
   background-color: var(--color-blue);
@@ -2234,14 +2234,14 @@ textarea.form-control__input {
   pointer-events: auto;
 }
 
-.range-container input[type=range]:-webkit-slider-thumb:focus {
+.range-container input[type=range]::-webkit-slider-thumb:focus {
   outline: none;
 }
 
-.range-container input[type=range]:-webkit-slider-thumb:hover {
+.range-container input[type=range]::-webkit-slider-thumb:hover {
   background-color: #0253b0;
 }
 
-.range-container input[type=range]:-moz-range-thumb:hover {
+.range-container input[type=range]::-moz-range-thumb:hover {
   background-color: #0253b0;
 }
