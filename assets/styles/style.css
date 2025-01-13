@@ -147,7 +147,7 @@ button {
   overflow: hidden;
   transition: var(--transition-hover);
   /* these monstrous styles are needed for the link under the <figure>, since
-   it is absolutely impossible to hang it on the <figure> without a .class */
+   it is absolutely impossible to hang it on the <figure> without a class */
 }
 .btn--icon {
   -moz-column-gap: 8px;
@@ -1695,7 +1695,7 @@ button {
 }
 
 .form-switcher__input:focus + .form-switcher__box {
-  background-color: rgba(34, 52, 73, 0.4);
+  background-color: var(--color-dark-grey-transparent);
 }
 
 .form-switcher__input:focus + .form-switcher__box:before {

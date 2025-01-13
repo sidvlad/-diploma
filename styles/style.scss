@@ -246,7 +246,7 @@ button {
         font-size: 16px;
     }
     /* these monstrous styles are needed for the link under the <figure>, since
-     it is absolutely impossible to hang it on the <figure> without a .class */
+     it is absolutely impossible to hang it on the <figure> without a class */
     &--blog {
         display: block;
         width: 100%;
@@ -1697,7 +1697,7 @@ button {
     transform: translateX(calc(100% + 4px));
 }
 .form-switcher__input:focus + .form-switcher__box {
-    background-color: #22344966;
+    background-color: var(--color-dark-grey-transparent);
 }
 .form-switcher__input:focus + .form-switcher__box:before {
     opacity: 1;
