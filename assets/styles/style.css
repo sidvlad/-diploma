@@ -30,6 +30,7 @@ body {
 
 * {
   box-sizing: border-box;
+  word-break: break-word;
 }
 
 h2 {
@@ -92,6 +93,7 @@ button {
   line-height: 24px;
   color: var(--color-title);
   text-transform: uppercase;
+  word-break: break-word;
 }
 
 .subtitle {
@@ -104,6 +106,7 @@ button {
   color: var(--color-black);
   white-space: pre-line;
   overflow: hidden;
+  word-break: break-word;
 }
 
 .intro-title {
@@ -135,10 +138,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   max-width: 100%;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 18px 32px;
+  padding: 18px 33px;
   border-radius: 8px;
   font-size: 18px;
   line-height: 28px;
@@ -235,7 +239,7 @@ button {
   filter: brightness(1.5) contrast(0.8);
 }
 .btn--small {
-  padding: 8px 12px;
+  padding: 7px 12px;
   font-size: 14px;
   line-height: 20px;
 }
@@ -271,7 +275,13 @@ button {
 .btn-group {
   display: flex;
   flex-wrap: wrap;
+  gap: 12px;
+}
+.btn-group--middle {
   gap: 8px;
+}
+.btn-group--small {
+  gap: 4px;
 }
 .btn-group--center {
   justify-content: center;
@@ -283,8 +293,8 @@ button {
 
 .categories {
   display: flex;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
+  -moz-column-gap: 65px;
+       column-gap: 65px;
 }
 .categories__block {
   flex-basis: 50%;
@@ -308,12 +318,12 @@ button {
 .categories__card {
   grid-row: span 3;
   width: 220px;
-  padding: 20px;
+  padding: 19px 24px;
   background-color: #f4f7fa;
   border-radius: 20px;
 }
 .categories__card-title {
-  padding: 10px 0 8px 0;
+  padding: 9px 0 9px 0;
   font-family: var(--font-secondary);
   font-size: 28px;
   font-weight: 700;
@@ -348,7 +358,7 @@ button {
   display: none;
 }
 .categories__text {
-  padding: 20px 0 35px;
+  padding: 18px 0 32px;
   font-size: 18px;
   line-height: 28px;
   color: var(--color-black);
@@ -447,7 +457,7 @@ button {
   flex-direction: column;
   justify-content: center;
   row-gap: 120px;
-  padding-bottom: 185px;
+  padding-bottom: 180px;
 }
 
 .intro {
@@ -553,13 +563,13 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  padding-top: 75px;
+  padding-top: 80px;
   color: var(--color-dark);
 }
 .plan__item {
   position: relative;
   width: 416px;
-  padding: 32px;
+  padding: 32px 32px 30px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.0784313725);
@@ -588,7 +598,7 @@ button {
 .plan__list {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 16px;
   padding: 40px 0 40px 32px;
   border-top: 1px solid var(--color-grey-blue-transparent);
 }
@@ -723,7 +733,7 @@ button {
   font-family: var(--font-secondary);
   font-size: 28px;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 32px;
   color: var(--color-dark);
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -835,7 +845,7 @@ button {
   box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.0784313725);
 }
 .faq__question {
-  padding: 27px 70px 27px 24px;
+  padding: 28px 70px 25px 29px;
   font-family: var(--font-secondary);
   font-size: 20px;
   font-weight: 700;
@@ -843,17 +853,19 @@ button {
   text-underline-position: from-font;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+  word-break: break-word;
   cursor: pointer;
 }
 .faq__answer {
-  padding: 0 24px 24px;
+  padding: 0 30px 24px;
   font-size: 16px;
   line-height: 24px;
+  word-break: break-word;
 }
 .faq__list {
   display: flex;
   flex-direction: column;
-  row-gap: 14px;
+  row-gap: 15px;
 }
 
 .faq__item > .faq__question,
@@ -929,7 +941,7 @@ button {
   outline: 2px solid var(--color-blue);
 }
 .latest-expert__name {
-  margin-top: 26px;
+  margin: 26px 0 5px;
   font-family: var(--font-secondary);
   font-size: 28px;
   font-weight: 700;
@@ -946,13 +958,12 @@ button {
 .footer {
   display: flex;
   flex-direction: column;
-  row-gap: 60px;
   color: var(--color-dark);
 }
 .footer__main {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 6px;
+  margin-bottom: 73px;
 }
 .footer-nav {
   display: flex;
@@ -971,7 +982,7 @@ button {
 .footer-nav__list {
   display: flex;
   flex-direction: column;
-  row-gap: 4px;
+  row-gap: 8px;
   font-size: 16px;
   line-height: 24px;
   color: var(--color-grey);
@@ -999,7 +1010,7 @@ button {
   justify-content: space-between;
   -moz-column-gap: 30px;
        column-gap: 30px;
-  margin-bottom: 74px;
+  margin-bottom: 134px;
 }
 
 .form-subscribe {
@@ -1396,12 +1407,8 @@ button {
   white-space: nowrap;
 }
 
-.catalog-sidebar__wrapper:last-child > fieldset {
-  margin-bottom: 0;
-}
-
 .filter {
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 .filter__controls {
   display: flex;
@@ -1424,7 +1431,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .filter__select {
   position: relative;
@@ -1434,8 +1441,8 @@ button {
   position: absolute;
   width: 16px;
   height: 16px;
-  top: 10px;
-  right: 15px;
+  top: 6px;
+  right: 23px;
   pointer-events: none;
 }
 
@@ -1476,7 +1483,7 @@ button {
 }
 
 .form-checkbox .form-checkbox__box {
-  margin: 0 12px 0 0;
+  margin: 0 10px 0 4px;
   border: 1px solid var(--color-grey-blue-transparent);
 }
 
@@ -1581,7 +1588,7 @@ button {
   flex-shrink: 0;
   width: 14px;
   height: 14px;
-  margin-right: 10px;
+  margin: 0 6px 0 4px;
   border: 2px solid rgba(31, 50, 71, 0.2705882353);
   border-radius: 50%;
   background-color: var(--color-white);
@@ -1661,6 +1668,15 @@ button {
 .form-radio__input:checked:disabled + .form-radio__inner .form-radio__box:after {
   opacity: 1;
   background-color: var(--color-dark-transparent);
+}
+.form-radio__input:checked + .form-radio__inner .form-radio__box {
+  background-color: var(--color-light-blue);
+}
+.form-radio__input:checked + .form-radio__inner .form-radio__box:after {
+  opacity: 1;
+  background-color: #fff;
+  width: 4px;
+  height: 4px;
 }
 .form-radio .form-radio__input:checked:focus + .form-radio__inner .form-radio__box {
   background-color: var(--color-light-blue);
@@ -1821,7 +1837,7 @@ button {
   background-color: var(--color-white);
   border: 1px solid var(--color-grey-disabled-transparent);
   border-radius: 8px;
-  padding: 9px 40px 9px 20px;
+  padding: 7px 34px 7px 20px;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -1903,8 +1919,8 @@ textarea.form-control__input {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 55px;
+  gap: 31px 36px;
+  margin-bottom: 46px;
 }
 .catalog-list__item {
   display: flex;
@@ -2063,7 +2079,7 @@ textarea.form-control__input {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  margin-bottom: 29px;
+  margin-bottom: 32px;
 }
 .contacts__header p {
   color: var(--color-grey);
@@ -2141,6 +2157,7 @@ textarea.form-control__input {
 .contacts__subscribe {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   row-gap: 8px;
 }
 .contacts__subscribe .form-checkbox {
@@ -2200,7 +2217,7 @@ textarea.form-control__input {
 .range-container {
   position: relative;
   width: 217px;
-  margin: 0 auto;
+  margin: -16px auto 0;
 }
 
 .range-values {
