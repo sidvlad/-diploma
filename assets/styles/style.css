@@ -361,8 +361,7 @@ button {
   padding: 18px 0 32px;
   font-size: 18px;
   line-height: 28px;
-  color: var(--color-black);
-  opacity: 0.7;
+  color: rgba(34, 34, 34, 0.7019607843);
 }
 .categories__cards:before, .categories__cards:after {
   content: "";
@@ -593,7 +592,7 @@ button {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  opacity: 0.5;
+  color: rgba(13, 13, 21, 0.5019607843);
 }
 .plan__list {
   display: flex;
@@ -1209,8 +1208,7 @@ button {
 .blog__content figcaption {
   font-size: 16px;
   line-height: 24px;
-  color: var(--color-black);
-  opacity: 0.7;
+  color: rgba(34, 34, 34, 0.7019607843);
 }
 
 .blog-upstairs {
@@ -1235,8 +1233,7 @@ button {
 .blog-upstairs__date {
   font-size: 16px;
   line-height: 24px;
-  color: var(--color-black);
-  opacity: 0.5;
+  color: rgba(34, 34, 34, 0.5019607843);
 }
 
 .blog-sidebar {

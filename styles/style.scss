@@ -357,8 +357,7 @@ button {
         padding: 18px 0 32px;
         font-size: 18px;
         line-height: 28px;
-        color: var(--color-black);
-        opacity: .7;
+        color: #222222B3;
     }
     &__cards:before,
     &__cards:after {
@@ -603,7 +602,7 @@ button {
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-        opacity: .5;
+        color: #0d0d1580;
     }
     &__list {
         display: flex;
@@ -1221,8 +1220,7 @@ button {
         figcaption {
             font-size: 16px;
             line-height: 24px;
-            color: var(--color-black);
-            opacity: .7;
+            color: #222222B3;
         }
     }
 }
@@ -1248,8 +1246,7 @@ button {
     &__date {
         font-size: 16px;
         line-height: 24px;
-        color: var(--color-black);
-        opacity: 0.5;
+        color: #22222280;
     }
 }
 
