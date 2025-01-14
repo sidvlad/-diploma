@@ -30,6 +30,7 @@ body {
 
 * {
   box-sizing: border-box;
+  word-break: break-word;
 }
 
 h2 {
@@ -92,6 +93,7 @@ button {
   line-height: 24px;
   color: var(--color-title);
   text-transform: uppercase;
+  word-break: break-word;
 }
 
 .subtitle {
@@ -104,6 +106,7 @@ button {
   color: var(--color-black);
   white-space: pre-line;
   overflow: hidden;
+  word-break: break-word;
 }
 
 .intro-title {
@@ -135,16 +138,17 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   max-width: 100%;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 18px 36px;
+  padding: 18px 33px;
   border-radius: 8px;
   font-size: 18px;
+  line-height: 28px;
   font-weight: 600;
   cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
+  word-break: break-word;
   transition: var(--transition-hover);
   /* these monstrous styles are needed for the link under the <figure>, since
    it is absolutely impossible to hang it on the <figure> without a class */
@@ -152,6 +156,9 @@ button {
 .btn--icon {
   -moz-column-gap: 8px;
        column-gap: 8px;
+}
+.btn--icon svg {
+  flex-shrink: 0;
 }
 .btn--white {
   background-color: var(--color-white);
@@ -163,9 +170,9 @@ button {
 }
 .btn--white:focus {
   background-color: var(--color-light-blue-transparent);
+  outline: 4px solid var(--color-light-blue);
 }
 .btn--white:active {
-  outline: 4px solid var(--color-light-blue);
   background-color: var(--color-light-blue-transparent);
 }
 .btn--white:disabled {
@@ -190,14 +197,14 @@ button {
   color: var(--color-dark-grey-transparent);
 }
 .btn--border {
-  outline: 1px solid var(--color-grey-disabled-transparent);
+  outline: 2px solid var(--color-grey-disabled-transparent);
 }
 .btn--border:hover, .btn--border:active {
   background-color: var(--color-light-blue-transparent);
 }
 .btn--border:focus {
   background-color: var(--color-light-blue-transparent);
-  outline: 3px solid var(--color-light-blue);
+  outline: 4px solid var(--color-light-blue);
 }
 .btn--border:disabled {
   background-color: var(--color-grey-disabled-transparent);
@@ -232,7 +239,7 @@ button {
   filter: brightness(1.5) contrast(0.8);
 }
 .btn--small {
-  padding: 6px 12px;
+  padding: 7px 12px;
   font-size: 14px;
   line-height: 20px;
 }
@@ -244,9 +251,11 @@ button {
 }
 .btn--short {
   padding: 20px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .btn--long {
-  padding: 23px 40px;
+  padding: 18px 40px;
   font-size: 16px;
 }
 .btn--blog {
@@ -257,11 +266,22 @@ button {
   padding-bottom: 35px;
   cursor: pointer;
 }
+.btn__text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 .btn-group {
   display: flex;
   flex-wrap: wrap;
+  gap: 12px;
+}
+.btn-group--middle {
   gap: 8px;
+}
+.btn-group--small {
+  gap: 4px;
 }
 .btn-group--center {
   justify-content: center;
@@ -273,8 +293,8 @@ button {
 
 .categories {
   display: flex;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
+  -moz-column-gap: 65px;
+       column-gap: 65px;
 }
 .categories__block {
   flex-basis: 50%;
@@ -298,17 +318,18 @@ button {
 .categories__card {
   grid-row: span 3;
   width: 220px;
-  padding: 20px;
+  padding: 19px 24px;
   background-color: #f4f7fa;
   border-radius: 20px;
 }
 .categories__card-title {
-  padding: 10px 0 8px 0;
+  padding: 9px 0 9px 0;
   font-family: var(--font-secondary);
-  font-size: 27px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 36px;
   overflow: hidden;
+  color: var(--color-dark);
 }
 .categories__card-text {
   display: flex;
@@ -337,10 +358,11 @@ button {
   display: none;
 }
 .categories__text {
-  padding: 20px 0 35px;
+  padding: 18px 0 32px;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 28px;
   color: var(--color-black);
+  opacity: 0.7;
 }
 .categories__cards:before, .categories__cards:after {
   content: "";
@@ -435,7 +457,7 @@ button {
   flex-direction: column;
   justify-content: center;
   row-gap: 120px;
-  padding-bottom: 185px;
+  padding-bottom: 180px;
 }
 
 .intro {
@@ -466,6 +488,7 @@ button {
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
+  color: var(--color-grey);
 }
 
 .intro__bg {
@@ -540,13 +563,13 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  padding-top: 75px;
+  padding-top: 80px;
   color: var(--color-dark);
 }
 .plan__item {
   position: relative;
   width: 416px;
-  padding: 32px;
+  padding: 32px 32px 30px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.0784313725);
@@ -561,24 +584,29 @@ button {
 .plan__price {
   margin-bottom: 32px;
   font-family: var(--font-secondary);
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 48px;
   letter-spacing: -0.5px;
 }
 .plan__price span {
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 24px;
+  opacity: 0.5;
 }
 .plan__list {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 16px;
   padding: 40px 0 40px 32px;
   border-top: 1px solid var(--color-grey-blue-transparent);
 }
 .plan__list li {
   position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
 .plan__list li:before {
   position: absolute;
@@ -646,6 +674,7 @@ button {
   line-height: 28px;
   text-align: center;
   overflow: hidden;
+  color: var(--color-dark);
 }
 
 .tag {
@@ -704,7 +733,7 @@ button {
   font-family: var(--font-secondary);
   font-size: 28px;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 32px;
   color: var(--color-dark);
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -717,6 +746,9 @@ button {
   font-weight: 500;
   line-height: 24px;
   color: var(--color-blue);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .trending__category {
   display: flex;
@@ -813,7 +845,7 @@ button {
   box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.0784313725);
 }
 .faq__question {
-  padding: 27px 70px 27px 24px;
+  padding: 28px 70px 25px 29px;
   font-family: var(--font-secondary);
   font-size: 20px;
   font-weight: 700;
@@ -821,17 +853,19 @@ button {
   text-underline-position: from-font;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+  word-break: break-word;
   cursor: pointer;
 }
 .faq__answer {
-  padding: 0 24px 24px;
+  padding: 0 30px 24px;
   font-size: 16px;
   line-height: 24px;
+  word-break: break-word;
 }
 .faq__list {
   display: flex;
   flex-direction: column;
-  row-gap: 14px;
+  row-gap: 15px;
 }
 
 .faq__item > .faq__question,
@@ -907,7 +941,7 @@ button {
   outline: 2px solid var(--color-blue);
 }
 .latest-expert__name {
-  margin-top: 26px;
+  margin: 26px 0 5px;
   font-family: var(--font-secondary);
   font-size: 28px;
   font-weight: 700;
@@ -924,13 +958,12 @@ button {
 .footer {
   display: flex;
   flex-direction: column;
-  row-gap: 60px;
   color: var(--color-dark);
 }
 .footer__main {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 6px;
+  margin-bottom: 73px;
 }
 .footer-nav {
   display: flex;
@@ -944,12 +977,15 @@ button {
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
+  color: var(--color-dark);
 }
 .footer-nav__list {
   display: flex;
   flex-direction: column;
-  row-gap: 4px;
+  row-gap: 8px;
   font-size: 16px;
+  line-height: 24px;
+  color: var(--color-grey);
 }
 .footer-nav__list a:hover {
   color: var(--color-light-blue);
@@ -967,13 +1003,14 @@ button {
   max-width: 320px;
   font-size: 16px;
   line-height: 24px;
+  color: var(--color-dark);
 }
 .footer__secondary {
   display: flex;
   justify-content: space-between;
   -moz-column-gap: 30px;
        column-gap: 30px;
-  margin-bottom: 74px;
+  margin-bottom: 134px;
 }
 
 .form-subscribe {
@@ -1002,7 +1039,8 @@ button {
   font-family: var(--font-secondary);
   font-size: 24px;
   font-weight: 700;
-  line-height: 34px;
+  line-height: 32px;
+  color: var(--color-dark);
 }
 .form-subscribe__input {
   width: 214px;
@@ -1114,6 +1152,7 @@ button {
 .blog__content {
   display: flex;
   flex-direction: column;
+  color: var(--color-grey);
 }
 .blog__content h3 {
   margin-bottom: 13px;
@@ -1171,13 +1210,13 @@ button {
   font-size: 16px;
   line-height: 24px;
   color: var(--color-black);
+  opacity: 0.7;
 }
 
 .blog-upstairs {
   display: grid;
   grid-template-columns: 2fr 5fr;
   align-items: center;
-  color: var(--color-black);
   margin-bottom: 40px;
 }
 .blog-upstairs__image {
@@ -1191,10 +1230,13 @@ button {
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
+  color: var(--color-black);
 }
 .blog-upstairs__date {
   font-size: 16px;
   line-height: 24px;
+  color: var(--color-black);
+  opacity: 0.5;
 }
 
 .blog-sidebar {
@@ -1223,6 +1265,12 @@ button {
   font-weight: 700;
   line-height: 26px;
   padding-bottom: 10px;
+  color: var(--color-dark);
+}
+.blog-sidebar__article time {
+  font-style: 16px;
+  line-height: 24px;
+  color: var(--color-grey);
 }
 .blog-sidebar__title {
   margin-bottom: 22px;
@@ -1232,14 +1280,20 @@ button {
   line-height: 32px;
   color: var(--color-dark);
 }
-.blog-sidebar li {
+.blog-sidebar__list {
+  color: var(--color-grey);
+}
+.blog-sidebar__item {
+  font-size: 16px;
   line-height: 24px;
   margin-bottom: 9px;
+  color: var(--color-grey);
 }
-.blog-sidebar ul > li > ul > li {
+.blog-sidebar__subitem {
   margin-top: 7px;
   padding-left: 13px;
   font-weight: 600;
+  color: var(--color-dark);
 }
 .blog-sidebar ul > li:before {
   content: "";
@@ -1300,6 +1354,7 @@ button {
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
+  color: var(--color-dark);
 }
 .related-articles__item time {
   padding-left: 15px;
@@ -1341,7 +1396,6 @@ button {
 .catalog-sidebar__title {
   display: block;
   max-width: 217px;
-  overflow: hidden;
   margin-bottom: 25px;
   font-family: var(--font-secondary);
   font-size: 24px;
@@ -1353,12 +1407,8 @@ button {
   white-space: nowrap;
 }
 
-.catalog-sidebar__wrapper:last-child > fieldset {
-  margin-bottom: 0;
-}
-
 .filter {
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 .filter__controls {
   display: flex;
@@ -1381,7 +1431,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .filter__select {
   position: relative;
@@ -1391,8 +1441,8 @@ button {
   position: absolute;
   width: 16px;
   height: 16px;
-  top: 10px;
-  right: 15px;
+  top: 6px;
+  right: 23px;
   pointer-events: none;
 }
 
@@ -1421,7 +1471,7 @@ button {
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 50%;
+  left: 54%;
   top: 50%;
   transform: translate(-50%, -50%);
   background-image: url("../../images/icons/checkbox-arrow.svg");
@@ -1433,7 +1483,7 @@ button {
 }
 
 .form-checkbox .form-checkbox__box {
-  margin: 0 12px 0 0;
+  margin: 0 10px 0 4px;
   border: 1px solid var(--color-grey-blue-transparent);
 }
 
@@ -1538,7 +1588,7 @@ button {
   flex-shrink: 0;
   width: 14px;
   height: 14px;
-  margin-right: 10px;
+  margin: 0 6px 0 4px;
   border: 2px solid rgba(31, 50, 71, 0.2705882353);
   border-radius: 50%;
   background-color: var(--color-white);
@@ -1618,6 +1668,15 @@ button {
 .form-radio__input:checked:disabled + .form-radio__inner .form-radio__box:after {
   opacity: 1;
   background-color: var(--color-dark-transparent);
+}
+.form-radio__input:checked + .form-radio__inner .form-radio__box {
+  background-color: var(--color-light-blue);
+}
+.form-radio__input:checked + .form-radio__inner .form-radio__box:after {
+  opacity: 1;
+  background-color: #fff;
+  width: 4px;
+  height: 4px;
 }
 .form-radio .form-radio__input:checked:focus + .form-radio__inner .form-radio__box {
   background-color: var(--color-light-blue);
@@ -1778,7 +1837,7 @@ button {
   background-color: var(--color-white);
   border: 1px solid var(--color-grey-disabled-transparent);
   border-radius: 8px;
-  padding: 9px 40px 9px 20px;
+  padding: 7px 34px 7px 20px;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -1860,8 +1919,8 @@ textarea.form-control__input {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 55px;
+  gap: 31px 36px;
+  margin-bottom: 46px;
 }
 .catalog-list__item {
   display: flex;
@@ -1916,7 +1975,7 @@ textarea.form-control__input {
   border-radius: 20px;
   color: var(--color-primary-white);
 }
-.catalog-list__item--sold-out .btn-group {
+.catalog-list__item--disabled .btn-group {
   opacity: 0;
   pointer-events: none;
 }
@@ -1971,6 +2030,7 @@ textarea.form-control__input {
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
+  color: var(--color-dark);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2019,7 +2079,10 @@ textarea.form-control__input {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  margin-bottom: 29px;
+  margin-bottom: 32px;
+}
+.contacts__header p {
+  color: var(--color-grey);
 }
 .contacts__wrapper {
   display: flex;
@@ -2081,6 +2144,7 @@ textarea.form-control__input {
   font-size: 18px;
   font-weight: 600;
   line-height: 28px;
+  color: var(--color-dark);
 }
 .contacts__info-item svg {
   margin-right: 8px;
@@ -2093,6 +2157,7 @@ textarea.form-control__input {
 .contacts__subscribe {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   row-gap: 8px;
 }
 .contacts__subscribe .form-checkbox {
@@ -2152,7 +2217,7 @@ textarea.form-control__input {
 .range-container {
   position: relative;
   width: 217px;
-  margin: 0 auto;
+  margin: -16px auto 0;
 }
 
 .range-values {

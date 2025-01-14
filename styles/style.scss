@@ -30,6 +30,7 @@ body {
 
 * {
     box-sizing: border-box;
+    word-break: break-word;
 }
 
 h2 {
@@ -92,6 +93,7 @@ button {
     line-height: 24px;
     color: var(--color-title);
     text-transform: uppercase;
+    word-break: break-word;
 }
 
 .subtitle {
@@ -104,6 +106,7 @@ button {
     color: var(--color-black);
     white-space: pre-line;
     overflow: hidden;
+    word-break: break-word;
 }
 
 .intro-title {
@@ -135,18 +138,22 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     max-width: 100%;
     width: fit-content;
-    padding: 18px 36px;
+    padding: 18px 33px;
     border-radius: 8px;
     font-size: 18px;
+    line-height: 28px;
     font-weight: 600;
     cursor: pointer;
-    white-space: nowrap;
-    overflow: hidden;
+    word-break: break-word;
     transition: var(--transition-hover);
     &--icon {
         column-gap: 8px;
+        & svg {
+            flex-shrink: 0;
+        }
     }
     &--white {
         background-color: var(--color-white);
@@ -157,9 +164,9 @@ button {
         }
         &:focus {
             background-color: var(--color-light-blue-transparent);
+            outline: 4px solid var(--color-light-blue);
         }
         &:active {
-            outline: 4px solid var(--color-light-blue);
             background-color: var(--color-light-blue-transparent);
         }
         &:disabled {
@@ -185,14 +192,14 @@ button {
         }
     }
     &--border {
-        outline: 1px solid var(--color-grey-disabled-transparent);
+        outline: 2px solid var(--color-grey-disabled-transparent);
         &:hover,
         &:active {
             background-color: var(--color-light-blue-transparent);
         }
         &:focus {
             background-color: var(--color-light-blue-transparent);
-            outline: 3px solid var(--color-light-blue);
+            outline: 4px solid var(--color-light-blue);
         }
         &:disabled {
             background-color: var(--color-grey-disabled-transparent);
@@ -228,7 +235,7 @@ button {
         }
     }
     &--small {
-        padding: 6px 12px;
+        padding: 7px 12px;
         font-size: 14px;
         line-height: 20px;
     }
@@ -240,9 +247,11 @@ button {
     }
     &--short {
         padding: 20px;
+        font-size: 16px;
+        line-height: 24px;
     }
     &--long {
-        padding: 23px 40px;
+        padding: 18px 40px;
         font-size: 16px;
     }
     /* these monstrous styles are needed for the link under the <figure>, since
@@ -255,12 +264,23 @@ button {
         padding-bottom: 35px;
         cursor: pointer;
     }
+    &__text {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 }
 
 .btn-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
+    &--middle {
+        gap: 8px;
+    }
+    &--small {
+        gap: 4px;
+    }
     &--center {
         justify-content: center;
     }
@@ -271,7 +291,7 @@ button {
 
 .categories {
     display: flex;
-    column-gap: 50px;
+    column-gap: 65px;
     &__block {
         flex-basis: 50%;
         max-width: 50%;
@@ -294,17 +314,18 @@ button {
     &__card {
         grid-row: span 3;
         width: 220px;
-        padding: 20px;
+        padding: 19px 24px;
         background-color: #f4f7fa;
         border-radius: 20px;
     }
     &__card-title {
-        padding: 10px 0 8px 0;
+        padding:9px 0 9px 0;
         font-family: var(--font-secondary);
-        font-size: 27px;
+        font-size: 28px;
         font-weight: 700;
         line-height: 36px;
         overflow: hidden;
+        color: var(--color-dark);
     }
     &__card-text {
         display: flex;
@@ -333,12 +354,14 @@ button {
         display: none;
     }
     &__text {
-        padding: 20px 0 35px;
+        padding: 18px 0 32px;
         font-size: 18px;
-        line-height: 24px;
+        line-height: 28px;
         color: var(--color-black);
+        opacity: .7;
     }
-    &__cards:before, &__cards:after {
+    &__cards:before,
+    &__cards:after {
         content: '';
         width: 220px;
         height: 60px;
@@ -450,7 +473,7 @@ button {
     flex-direction: column;
     justify-content: center;
     row-gap: 120px;
-    padding-bottom: 185px;
+    padding-bottom: 180px;
 }
 
 .intro {
@@ -479,6 +502,7 @@ button {
         font-size: 20px;
         font-weight: 500;
         line-height: 28px;
+        color: var(--color-grey);
     }
 }
 
@@ -549,13 +573,13 @@ button {
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
-        padding-top: 75px;
+        padding-top: 80px;
         color: var(--color-dark);
     }
     &__item {
         position: relative;
         width: 416px;
-        padding: 32px;
+        padding: 32px 32px 30px;
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0px 4px 40px 0px #1d395f14;
@@ -570,24 +594,29 @@ button {
     &__price {
         margin-bottom: 32px;
         font-family: var(--font-secondary);
-        font-size: 38px;
+        font-size: 36px;
         font-weight: 700;
         line-height: 48px;
         letter-spacing: -0.5px;
     }
     &__price span {
-        font-size: 18px;
+        font-weight: 400;
+        font-size: 16px;
         line-height: 24px;
+        opacity: .5;
     }
     &__list {
         display: flex;
         flex-direction: column;
-        row-gap: 10px;
+        row-gap: 16px;
         padding: 40px 0 40px 32px;
         border-top: 1px solid var(--color-grey-blue-transparent);
     }
     &__list li {
         position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
     }
     &__list li:before {
         position: absolute;
@@ -658,6 +687,7 @@ button {
         line-height: 28px;
         text-align: center;
         overflow: hidden;
+        color: var(--color-dark);
     }
 }
 
@@ -718,7 +748,7 @@ button {
         font-family: var(--font-secondary);
         font-size: 28px;
         font-weight: 700;
-        line-height: 36px;
+        line-height: 32px;
         color: var(--color-dark);
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -731,6 +761,9 @@ button {
         font-weight: 500;
         line-height: 24px;
         color: var(--color-blue);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     &__category {
         display: flex;
@@ -825,24 +858,26 @@ button {
         box-shadow: 0px 4px 40px 0px #1d395f14;
     }
     &__question {
-        padding: 27px 70px 27px 24px;
+        padding: 28px 70px 25px 29px;
         font-family: var(--font-secondary);
         font-size: 20px;
         font-weight: 700;
         line-height: 26px;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
+        word-break: break-word;
         cursor: pointer;
     }
     &__answer {
-        padding: 0 24px 24px;
+        padding: 0 30px 24px;
         font-size: 16px;
         line-height: 24px;
+        word-break: break-word;
     }
     &__list {
         display: flex;
         flex-direction: column;
-        row-gap: 14px;
+        row-gap: 15px;
     }
 }
 
@@ -919,7 +954,7 @@ button {
         }
     }
     &__name {
-        margin-top: 26px;
+        margin: 26px 0 5px;
         font-family: var(--font-secondary);
         font-size: 28px;
         font-weight: 700;
@@ -937,7 +972,6 @@ button {
 .footer {
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
     color: var(--color-dark);
     &__wrapper {
         width: 100%;
@@ -945,7 +979,7 @@ button {
     &__main {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 6px;
+        margin-bottom: 73px;
     }
     &-nav {
         display: flex;
@@ -958,12 +992,15 @@ button {
         font-size: 20px;
         font-weight: 700;
         line-height: 26px;
+        color: var(--color-dark);
     }
     &-nav__list {
         display: flex;
         flex-direction: column;
-        row-gap: 4px;
+        row-gap: 8px;
         font-size: 16px;
+        line-height: 24px;
+        color: var(--color-grey);
     }
     &-nav__list a:hover {
         color: var(--color-light-blue);
@@ -981,12 +1018,13 @@ button {
         max-width: 320px;
         font-size: 16px;
         line-height: 24px;
+        color: var(--color-dark);
     }
     &__secondary {
         display: flex;
         justify-content: space-between;
         column-gap: 30px;
-        margin-bottom: 74px;
+        margin-bottom: 134px;
     }
 }
 
@@ -1015,7 +1053,8 @@ button {
         font-family: var(--font-secondary);
         font-size: 24px;
         font-weight: 700;
-        line-height: 34px;
+        line-height: 32px;
+        color: var(--color-dark);
     }
     &__input {
         width: 214px;
@@ -1127,6 +1166,7 @@ button {
     &__content {
         display: flex;
         flex-direction: column;
+        color: var(--color-grey);
         h3 {
             margin-bottom: 13px;
             font-family: var(--font-secondary);
@@ -1182,6 +1222,7 @@ button {
             font-size: 16px;
             line-height: 24px;
             color: var(--color-black);
+            opacity: .7;
         }
     }
 }
@@ -1190,7 +1231,6 @@ button {
     display: grid;
     grid-template-columns: 2fr 5fr;
     align-items: center;
-    color: var(--color-black);
     margin-bottom: 40px;
     &__image {
         grid-row: span 2;
@@ -1203,10 +1243,13 @@ button {
         font-size: 20px;
         font-weight: 700;
         line-height: 26px;
+        color: var(--color-black);
     }
     &__date {
         font-size: 16px;
         line-height: 24px;
+        color: var(--color-black);
+        opacity: 0.5;
     }
 }
 
@@ -1235,6 +1278,12 @@ button {
             font-weight: 700;
             line-height: 26px;
             padding-bottom: 10px;
+            color: var(--color-dark);
+        }
+        & time {
+            font-style: 16px;
+            line-height: 24px;
+            color: var(--color-grey);
         }
     }
     &__title {
@@ -1245,14 +1294,20 @@ button {
         line-height: 32px;
         color: var(--color-dark);
     }
-    & li {
+    &__list {
+        color: var(--color-grey);
+    }
+    &__item {
+        font-size: 16px;
         line-height: 24px;
         margin-bottom: 9px;
+        color: var(--color-grey);
     }
-    & ul > li > ul > li {
+    &__subitem {
         margin-top: 7px;
         padding-left: 13px;
         font-weight: 600;
+        color: var(--color-dark);
     }
     & ul > li:before {
         content: '';
@@ -1312,6 +1367,7 @@ button {
         font-size: 20px;
         font-weight: 700;
         line-height: 26px;
+        color: var(--color-dark);
     }
     &__item time {
         padding-left: 15px;
@@ -1352,7 +1408,6 @@ button {
     &__title {
         display: block;
         max-width: 217px;
-        overflow: hidden;
         margin-bottom: 25px;
         font-family: var(--font-secondary);
         font-size: 24px;
@@ -1365,12 +1420,8 @@ button {
     }
 }
 
-.catalog-sidebar__wrapper:last-child > fieldset {
-    margin-bottom: 0;
-}
-
 .filter {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     &__controls {
         display: flex;
         justify-content: space-between;
@@ -1392,7 +1443,7 @@ button {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
     &__select {
         position: relative;
@@ -1401,8 +1452,8 @@ button {
             position: absolute;
             width: 16px;
             height: 16px;
-            top: 10px;
-            right: 15px;
+            top: 6px;
+            right: 23px;
             pointer-events : none;
         }
     }
@@ -1432,7 +1483,7 @@ button {
         width: 100%;
         height: 100%;
         position: absolute;
-        left: 50%;
+        left: 54%;
         top: 50%;
         transform: translate(-50%, -50%);
         background-image: url('../../images/icons/checkbox-arrow.svg');
@@ -1445,7 +1496,7 @@ button {
 }
 
 .form-checkbox .form-checkbox__box {
-    margin: 0 12px 0 0;
+    margin: 0 10px 0 4px;
     border: 1px solid var(--color-grey-blue-transparent);
 }
 .form-checkbox:hover .form-checkbox__box,
@@ -1542,7 +1593,7 @@ button {
         flex-shrink: 0;
         width: 14px;
         height: 14px;
-        margin-right: 10px;
+        margin: 0 6px 0 4px;
         border: 2px solid #1F324745;
         border-radius: 50%;
         background-color: var(--color-white);
@@ -1623,6 +1674,15 @@ button {
     &__input:checked:disabled + .form-radio__inner .form-radio__box:after {
         opacity: 1;
         background-color: var(--color-dark-transparent);
+    }
+    &__input:checked + .form-radio__inner .form-radio__box {
+        background-color: var(--color-light-blue);
+    }
+    &__input:checked + .form-radio__inner .form-radio__box:after {
+        opacity: 1;
+        background-color: #fff;
+        width: 4px;
+        height: 4px;
     }
     .form-radio__input:checked:focus+.form-radio__inner .form-radio__box {
         background-color: var(--color-light-blue);
@@ -1776,7 +1836,7 @@ button {
     background-color: var(--color-white);
     border: 1px solid var(--color-grey-disabled-transparent);
     border-radius: 8px;
-    padding: 9px 40px 9px 20px;
+    padding: 7px 34px 7px 20px;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -1864,8 +1924,8 @@ textarea.form-control__input {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 55px;
+    gap: 31px 36px;
+    margin-bottom: 46px;
     &__item {
         display: flex;
         flex-basis: 31%;
@@ -1918,11 +1978,10 @@ textarea.form-control__input {
             border-radius: 20px;
             color: var(--color-primary-white);
         }
-        &--sold-out .btn-group {
+        &--disabled .btn-group {
             opacity: 0;
             pointer-events: none;
         }
-
     }
     &__item:hover {
         cursor: pointer;
@@ -1986,6 +2045,7 @@ textarea.form-control__input {
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
+    color: var(--color-dark);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -2036,7 +2096,10 @@ textarea.form-control__input {
         display: flex;
         flex-direction: column;
         row-gap: 16px;
-        margin-bottom: 29px;
+        margin-bottom: 32px;
+        & p {
+            color: var(--color-grey);
+        }
     }
     &__wrapper {
         display: flex;
@@ -2095,6 +2158,7 @@ textarea.form-control__input {
             font-size: 18px;
             font-weight: 600;
             line-height: 28px;
+            color: var(--color-dark);
         }
         &-item svg {
             margin-right: 8px;
@@ -2108,6 +2172,7 @@ textarea.form-control__input {
     &__subscribe {
         display: flex;
         flex-direction: column;
+        flex-shrink: 0;
         row-gap: 8px;
     }
     &__subscribe .form-checkbox {
@@ -2170,7 +2235,7 @@ textarea.form-control__input {
 .range-container {
     position: relative;
     width: 217px;
-    margin: 0 auto;
+    margin: -16px auto 0;
   }
 
   .range-values {
