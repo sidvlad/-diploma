@@ -1406,6 +1406,9 @@ button {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.catalog-sidebar__title--no-margin {
+  margin: 0;
+}
 
 .filter {
   margin-bottom: 48px;
@@ -2217,7 +2220,7 @@ textarea.form-control__input {
 .range-container {
   position: relative;
   width: 217px;
-  margin: -16px auto 0;
+  margin: 7px auto 13px;
 }
 
 .range-values {
