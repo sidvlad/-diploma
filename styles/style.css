@@ -139,7 +139,6 @@ button {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 18px 32px;
   border-radius: 8px;
@@ -153,8 +152,7 @@ button {
    it is absolutely impossible to hang it on the <figure> without a class */
 }
 .btn--icon {
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
 }
 .btn--icon svg {
   flex-shrink: 0;
@@ -293,14 +291,12 @@ button {
   justify-content: center;
 }
 .btn-group--col-gap {
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 
 .categories {
   display: flex;
-  -moz-column-gap: 65px;
-       column-gap: 65px;
+  column-gap: 65px;
 }
 .categories__block {
   flex-basis: 50%;
@@ -401,6 +397,10 @@ button {
   background-color: var(--color-light-transparent);
 }
 
+.gradient {
+  background: linear-gradient(360deg, #f0f6fd 0%, rgba(255, 255, 255, 0) 189.17%);
+}
+
 .hidden {
   position: absolute;
   visibility: hidden;
@@ -452,8 +452,7 @@ button {
 .header-actions {
   display: flex;
   flex-grow: 1;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
   justify-content: flex-end;
 }
 
@@ -472,8 +471,7 @@ button {
 .intro__wrapper {
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
 }
 .intro__block {
   flex-basis: 50%;
@@ -507,10 +505,8 @@ button {
   z-index: 1;
   max-width: 281px;
   height: 422px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right;
-     object-position: right;
+  object-fit: cover;
+  object-position: right;
   border-radius: 10px;
   margin-left: -24px;
   background-color: var(--color-dark-grey-transparent);
@@ -522,10 +518,8 @@ button {
   height: 164px;
   margin-left: -19px;
   margin-top: 49px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right;
-     object-position: right;
+  object-fit: cover;
+  object-position: right;
   border-radius: 10px;
   background-color: var(--color-dark-grey-transparent);
 }
@@ -536,10 +530,8 @@ button {
   height: 299px;
   margin-top: -25px;
   margin-left: -19px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right;
-     object-position: right;
+  object-fit: cover;
+  object-position: right;
   border-radius: 10px;
   background-color: var(--color-dark-grey-transparent);
 }
@@ -684,7 +676,6 @@ button {
 
 .tag {
   position: absolute;
-  width: -moz-fit-content;
   width: fit-content;
   max-width: 100%;
   top: 16px;
@@ -758,8 +749,7 @@ button {
 .trending__category {
   display: flex;
   flex-wrap: wrap;
-  -moz-column-gap: 21px;
-       column-gap: 21px;
+  column-gap: 21px;
   font-size: 16px;
   line-height: 24px;
   color: var(--color-dark-transparent);
@@ -832,8 +822,7 @@ button {
 .faq__wrapper {
   display: flex;
   width: 100%;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
 }
 .faq__block {
   display: flex;
@@ -856,8 +845,7 @@ button {
   font-weight: 700;
   line-height: 26px;
   text-underline-position: from-font;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
   word-break: break-word;
   cursor: pointer;
 }
@@ -930,8 +918,7 @@ button {
   width: 100%;
   height: 289px;
   border-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: var(--transition-hover);
   background-color: var(--color-dark-grey-transparent);
 }
@@ -965,6 +952,9 @@ button {
   flex-direction: column;
   color: var(--color-dark);
 }
+.footer__wrapper {
+  width: 100%;
+}
 .footer__main {
   display: flex;
   justify-content: space-between;
@@ -972,8 +962,7 @@ button {
 }
 .footer-nav {
   display: flex;
-  -moz-column-gap: 64px;
-       column-gap: 64px;
+  column-gap: 64px;
   color: var(--color-grey);
 }
 .footer-nav__title {
@@ -1013,8 +1002,7 @@ button {
 .footer__secondary {
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
   margin-bottom: 134px;
 }
 
@@ -1076,8 +1064,7 @@ button {
 .copyright__wrapper {
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
   padding: 24px 80px;
 }
 .copyright__text {
@@ -1087,8 +1074,7 @@ button {
 .privacy {
   display: flex;
   flex-shrink: 0;
-  -moz-column-gap: 21px;
-       column-gap: 21px;
+  column-gap: 21px;
   flex-wrap: wrap;
   flex-basis: 50%;
 }
@@ -1122,7 +1108,6 @@ button {
 .blog__label {
   display: block;
   max-width: 100%;
-  width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 24px;
   padding: 8px 16px;
@@ -1150,8 +1135,7 @@ button {
 .blog__wrapper {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  column-gap: 40px;
   padding: 0 80px 85px;
 }
 .blog__content {
@@ -1204,8 +1188,7 @@ button {
 .blog__content figure img {
   display: block;
   margin-bottom: 15px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 980px;
   height: 462px;
   border-radius: 20px;
@@ -1373,8 +1356,7 @@ button {
 
 .catalog {
   display: flex;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
+  column-gap: 24px;
 }
 .catalog-intro {
   background: linear-gradient(205.81deg, #ffffff 14.24%, #d5dee5 110.59%);
@@ -1455,7 +1437,6 @@ button {
 /* form checkbox */
 .form-checkbox {
   display: flex;
-  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
 }
@@ -1617,8 +1598,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: start;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
 }
 .form-radio__input:hover + .form-radio__inner .form-radio__box {
   background-color: #F4F7FA;
@@ -1699,9 +1679,7 @@ button {
 .form-switcher {
   display: flex;
   align-items: center;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-  width: -moz-fit-content;
+  column-gap: 8px;
   width: fit-content;
 }
 
@@ -1898,6 +1876,12 @@ textarea.form-control__input {
   right: 20px;
   pointer-events: none;
 }
+.form-select--middle:after {
+  width: 24px;
+  height: 24px;
+  top: 10px;
+  right: 24px;
+}
 
 .form-select:has(.select:disabled):after {
   opacity: 0.3;
@@ -2015,6 +1999,12 @@ textarea.form-control__input {
 .catalog-list__category span:first-child:after {
   display: none;
 }
+.catalog-list__text {
+  padding: 20px 0 35px;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-black);
+}
 
 .catalog-list:after {
   position: absolute;
@@ -2056,8 +2046,7 @@ textarea.form-control__input {
   height: 260px;
   margin-bottom: 20px;
   border-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-color: var(--color-dark-grey-transparent);
 }
 
@@ -2093,8 +2082,7 @@ textarea.form-control__input {
 .contacts__wrapper {
   display: flex;
   align-items: flex-end;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  column-gap: 40px;
   padding: 64px 80px 0 80px;
 }
 .contacts__form {
@@ -2141,7 +2129,6 @@ textarea.form-control__input {
   flex-direction: column;
   row-gap: 8px;
   margin: 32px 0 48px;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .contacts__info-item {
@@ -2159,8 +2146,7 @@ textarea.form-control__input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 .contacts__subscribe {
   display: flex;
@@ -2258,9 +2244,7 @@ textarea.form-control__input {
   width: 100%;
   transform: translateY(-45%);
   pointer-events: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background: none;
   z-index: 2;
   margin: 0;
@@ -2286,8 +2270,7 @@ textarea.form-control__input {
 }
 
 .range-container input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   height: 16px;
   width: 16px;
   background-color: var(--color-blue);
@@ -2319,3 +2302,5 @@ textarea.form-control__input {
 .range-container input[type=range]::-moz-range-thumb:hover {
   background-color: var(--color-blue);
 }
+
+/*# sourceMappingURL=style.css.map */

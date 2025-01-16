@@ -138,10 +138,9 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
     max-width: 100%;
     width: fit-content;
-    padding: 18px 33px;
+    padding: 18px 32px;
     border-radius: 8px;
     font-size: 18px;
     line-height: 28px;
@@ -250,6 +249,10 @@ button {
         font-size: 16px;
         line-height: 24px;
     }
+    &--thin {
+        outline-width: 1px;
+        border-width: 1px;
+    }
     &--long {
         padding: 18px 40px;
         font-size: 16px;
@@ -263,6 +266,9 @@ button {
         margin-top: -67px;
         padding-bottom: 35px;
         cursor: pointer;
+    }
+    &--card-color {
+        outline-color: #2735448C;
     }
     &__text {
         text-overflow: ellipsis;
@@ -1330,8 +1336,9 @@ button {
     }
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        column-gap: 24px;
+        gap: 24px;
     }
     &__item {
         display: flex;
@@ -1396,7 +1403,7 @@ button {
 }
 
 .catalog-sidebar {
-    min-width: 217px;
+    width: 217px;
     &__wrapper {
         padding: 0;
         border: none;
@@ -1434,7 +1441,7 @@ button {
     }
     &__text {
         font-size: 16px;
-        margin-right: 24px;
+        margin-right: 20px;
         line-height: 24px;
         text-align: right;
         color: var(--color-dark);
@@ -1676,7 +1683,7 @@ button {
         background-color: var(--color-dark-transparent);
     }
     &__input:checked + .form-radio__inner .form-radio__box {
-        background-color: var(--color-light-blue);
+        background-color: var(--color-blue);
     }
     &__input:checked + .form-radio__inner .form-radio__box:after {
         opacity: 1;
@@ -2168,6 +2175,7 @@ textarea.form-control__input {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        column-gap: 20px;
     }
     &__subscribe {
         display: flex;
@@ -2246,6 +2254,7 @@ textarea.form-control__input {
     line-height: 24px;
     & span {
         margin-top: 35px;
+        color: var(--color-black);
     }
   }
   
@@ -2256,7 +2265,7 @@ textarea.form-control__input {
     right: 0;
     height: 4px;
     transform: translateY(-45%);
-    background: #22344966;
+    background: #1D36532B;
     border-radius: 2px;
     z-index: 1;
   }
@@ -2319,10 +2328,10 @@ textarea.form-control__input {
   }
 
   .range-container input[type="range"]::-webkit-slider-thumb:hover {
-    background-color: #0253b0;
+    background-color: var(--color-blue);
   }
 
   .range-container input[type="range"]::-moz-range-thumb:hover {
-    background-color: #0253b0;
+    background-color: var(--color-blue);
   }
   
